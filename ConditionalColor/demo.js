@@ -35,7 +35,6 @@ function init() {
 
     var chart = new OrgChart(document.getElementById("tree"), {
         layout: BALKANGraph.mixed,
-        mouseScrool: BALKANGraph.none,
         nodeBinding: {
             field_0: "name",
             field_1: "title",
