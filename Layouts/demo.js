@@ -2,7 +2,13 @@
 function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
-        toolbar: true,
+        toolbar: {
+            layout: true,
+            zoom: true,
+            fit: true,
+            expandAll: false
+        },
+
         layout: BALKANGraph.tree,
         align: BALKANGraph.ORIENTATION,
         nodeBinding: {
