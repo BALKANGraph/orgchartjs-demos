@@ -1,5 +1,6 @@
 
-window.onload = function () { 
+
+function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         scaleInitial: BALKANGraph.match.boundary,
         template: "derek",
@@ -33,4 +34,7 @@ window.onload = function () {
             { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://balkangraph.com/js/img/8.jpg" }
         ]
     });
+}
+window.onload = function () { 
+    init();
 };

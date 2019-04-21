@@ -1,4 +1,5 @@
-window.onload = function () {
+
+function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
         toolbar: true,
@@ -37,4 +38,8 @@ window.onload = function () {
     });
 
     chart.toolbarUI.showLayout();
+}
+
+window.onload = function () {
+  init();
 };

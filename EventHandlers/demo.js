@@ -1,4 +1,4 @@
-window.onload = function () {
+function init() {
     var c = document.getElementById("console");
 
     function update(sender, oldNode, newNode) {
@@ -93,4 +93,9 @@ window.onload = function () {
             { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://balkangraph.com/js/img/8.jpg" }
         ]
     });
+}
+
+
+window.onload = function () {
+    init();
 };

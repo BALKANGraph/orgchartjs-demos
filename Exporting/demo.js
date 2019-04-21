@@ -1,5 +1,4 @@
-
-window.onload = function () { 
+function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "olivia",
         layout: BALKANGraph.mixed,
@@ -40,4 +39,9 @@ window.onload = function () {
             { id: "16", pid: "4", name: "Alex Snider", title: "Sales Manager", img: "https://balkangraph.com/js/img/16.jpg" }
         ]
     });
+}
+
+
+window.onload = function () { 
+   init();
 };

@@ -1,5 +1,5 @@
 
-window.onload = function () {
+function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         scaleInitial: BALKANGraph.match.boundary,
         template: "luba",
@@ -32,6 +32,9 @@ window.onload = function () {
         chart.config.template = this.value;
         chart.draw();
     });
+}
 
+window.onload = function () {
+    init();
 }
 

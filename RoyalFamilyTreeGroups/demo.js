@@ -1,5 +1,5 @@
 
-window.onload = function () { 
+function init(){
 
     var familyGroupTag = {
         group: true,
@@ -45,4 +45,8 @@ window.onload = function () {
             { id: 18, pid: 12, name: "Prince Louis of Cambridge", img: "https://balkangraph.com/js/img/f19.png" }
         ]
     });
+}
+
+window.onload = function () { 
+    init();
 };

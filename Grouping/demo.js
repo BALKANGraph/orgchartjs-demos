@@ -1,5 +1,5 @@
 
-window.onload = function () { 
+function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "olivia",
         enableDragDrop: true,
@@ -68,4 +68,8 @@ window.onload = function () {
             { id: 13, pid: 7, tags: ["Sales"], name: "Steff Haley", title: "Sales", img: "https://balkangraph.com/js/img/14.jpg" }
         ]
     });    
+}
+
+window.onload = function () { 
+   init();
 };
