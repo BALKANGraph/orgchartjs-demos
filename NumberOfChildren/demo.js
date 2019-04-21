@@ -43,7 +43,6 @@ function init(){
         collapse: {
             level: 3
         },
-        scaleInitial: BALKANGraph.match.boundary,
         nodeBinding: {
             field_0: "name",
             field_1: "title",

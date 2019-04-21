@@ -3,8 +3,7 @@ function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "olivia",
         enableDragDrop: true,
-        nodeMouseClick: BALKANGraph.action.edit,
-        scaleInitial: BALKANGraph.match.boundary,
+        nodeMouseClick: OrgChart.action.edit,
         nodeMenu: {
             details: { text: "Details" },
             edit: { text: "Edit" },
@@ -24,26 +23,26 @@ function init(){
             Directors: {
                 group: true,
                 groupName: "Directors",
-                groupState: BALKANGraph.EXPAND,
+                groupState: OrgChart.EXPAND,
                 template: "group_grey"
             },
             HRs: {
                 group: true,
                 groupName: "HR Team",
-                groupState: BALKANGraph.COLLAPSE,
+                groupState: OrgChart.COLLAPSE,
 
                 template: "group_grey"
             },
             Sales: {
                 group: true,
                 groupName: "Sales Team",
-                groupState: BALKANGraph.EXPAND,
+                groupState: OrgChart.EXPAND,
                 template: "group_grey"
             },
             Devs: {
                 group: true,
                 groupName: "Dev Team",
-                groupState: BALKANGraph.EXPAND,
+                groupState: OrgChart.EXPAND,
                 template: "group_grey"
             }
         },

@@ -38,7 +38,6 @@ function init() {
     };
 
     var chart = new OrgChart(document.getElementById("tree"), {
-        scaleInitial: BALKANGraph.match.boundary,
         nodeBinding: {
             field_0: "name"
         },

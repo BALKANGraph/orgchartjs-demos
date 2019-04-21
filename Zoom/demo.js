@@ -1,12 +1,11 @@
 
 function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
-        layout: BALKANGraph.mixed,
+        layout: OrgChart.mixed,
         template: "polina",
         enableSearch: false,
         enableDragDrop: true,
-        scaleInitial: BALKANGraph.match.boundary,
-        mouseScrool: BALKANGraph.action.zoom,
+        mouseScrool: OrgChart.action.zoom,
         nodeBinding: {
             field_0: "name",
             field_1: "title",

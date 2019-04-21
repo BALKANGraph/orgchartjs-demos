@@ -117,9 +117,8 @@ function init(){
             }
         },
         enableSearch: false,
-        nodeMouseClick: BALKANGraph.action.none,
-        mouseScrool: BALKANGraph.action.zoom,
-        scaleInitial: BALKANGraph.match.boundary,
+        nodeMouseClick: OrgChart.action.none,
+        mouseScrool: OrgChart.action.zoom,
         nodeBinding: {
             name_1: "name1",
             name_2: "name2",

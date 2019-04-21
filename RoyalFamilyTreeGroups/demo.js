@@ -4,13 +4,12 @@ function init(){
     var familyGroupTag = {
         group: true,
         template: "group_grey",
-        groupState: BALKANGraph.EXPAND
+        groupState: OrgChart.EXPAND
     };
 
 
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "diva",
-        scaleInitial: BALKANGraph.match.boundary,
         enableDragDrop: true,
         nodeBinding: {
             field_0: "name",

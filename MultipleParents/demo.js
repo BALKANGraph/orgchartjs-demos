@@ -2,9 +2,8 @@
 function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
-        layout: BALKANGraph.mixed,
-        mouseScrool: BALKANGraph.none,
-        scaleInitial: BALKANGraph.match.boundary,
+        layout: OrgChart.mixed,
+        mouseScrool: OrgChart.none,
         nodeBinding: {
             field_0: "name",
             field_1: "title",
