@@ -4,7 +4,5 @@ authors:
   - "Plamen Peshev"
 description: "OrgChart JS demo demonstrates how to add Assistant node with specified template and change the template of the CEO using tags"
 name: "Assistant - OrgChart JS | BALKANGraph"
-resources: 
-  - https://balkangraph.com/js/latest/orgchart.js
 tags: "assistant,layout"
 ...

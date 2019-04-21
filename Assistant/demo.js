@@ -1,4 +1,4 @@
-window.onload = function () {
+function init(){
     var chart = new OrgChart(document.getElementById("tree"), {
         scaleInitial: BALKANGraph.match.boundary,
         enableDragDrop: true,
@@ -28,4 +28,8 @@ window.onload = function () {
             { id: 8, pid: 1, tags: ["assistant"], name: "Rudy Griffiths", title: "Assistant", img: "https://balkangraph.com/js/img/9.jpg" },
         ]
     });
+}
+
+window.onload = function () {
+    init();
 };
