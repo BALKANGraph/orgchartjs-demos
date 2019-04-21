@@ -1,45 +1,47 @@
-function init() {
-    var focusMode = true;
+var focusMode = true;
 
-    function lcsv() {
-        chart.importCSV();
+function lcsv() {
+    chart.importCSV();
+}
+
+function scsv() {
+    chart.exportCSV();
+}
+
+function lxml() {
+    chart.importXML();
+}
+
+function sxml() {
+    chart.exportXML();
+}
+
+function dmodeclick() {
+    if (chart.config.nodeMenu == null) {
+        chart.config.nodeMenu = nodeMenu;
+        chart.config.nodeMouseClick = OrgChart.action.details;
     }
-
-    function scsv() {
-        chart.exportCSV();
+    else {
+        chart.config.nodeMenu = null;
+        chart.config.nodeMouseClick = OrgChart.action.none;
     }
+    chart.draw();
+}
 
-    function lxml() {
-        chart.importXML();
-    }
+function fmodeclick() {
+    focusMode = !focusMode;
+}
 
-    function sxml() {
-        chart.exportXML();
-    }
+var nodeMenu = {
+    add: { text: 'Add' },
+    edit: { text: 'Edit' },
+    remove: { text: 'Remove' }
+};
 
-    function dmodeclick() {
-        if (chart.config.nodeMenu == null) {
-            chart.config.nodeMenu = nodeMenu;
-            chart.config.nodeMouseClick = OrgChart.action.details;
-        }
-        else {
-            chart.config.nodeMenu = null;
-            chart.config.nodeMouseClick = OrgChart.action.none;
-        }
-        chart.draw();
-    }
+var chart;
 
-    function fmodeclick() {
-        focusMode = !focusMode;
-    }
-
-    var nodeMenu = {
-        add: { text: 'Add' },
-        edit: { text: 'Edit' },
-        remove: { text: 'Remove' }
-    };
-
-    var chart = new OrgChart(document.getElementById('tree'), {
+function init() { 
+    chart = new OrgChart(document.getElementById('tree'), {
         template: 'luba',
         menu: {
             'csv-import': {
