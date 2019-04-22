@@ -4,7 +4,6 @@ function init() {
         template: "olivia",
         enableDragDrop: true,
         nodeMouseClick: BALKANGraph.action.edit,
-        scaleInitial: BALKANGraph.match.boundary,
         nodeMenu: {
             details: { text: "Details" },
             edit: { text: "Edit" },
