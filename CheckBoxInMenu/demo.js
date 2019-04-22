@@ -105,7 +105,7 @@ function init() {
                         childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS,    
                         rippleId: rippleId,
                         vertical: false,
-                        horizontal: false
+                        horizontal: true
                     });
                 return false;
             }
