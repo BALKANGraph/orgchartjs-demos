@@ -43,7 +43,6 @@ function init(){
         ]
     });
 
-    chart.toolbarUI.showLayout();
 }
 
 window.onload = function () {
