@@ -100,7 +100,14 @@ function init() {
                     if (node.parent == null) return true;
                     centerId = node.pid;
                 }
-                sender.center(centerId, BALKANGraph.COLLAPSE_PARENT_NEIGHBORS, BALKANGraph.COLLAPSE_SUB_CHILDRENS, rippleId);
+                sender.center(centerId, 
+                    {
+                        parentState: BALKANGraph.COLLAPSE_PARENT_NEIGHBORS,    
+                        childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS,    
+                        rippleId: rippleId,
+                        vertical: false,
+                        horizontal: false
+                    });
                 return false;
             }
             else {
