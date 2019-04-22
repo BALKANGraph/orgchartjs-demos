@@ -1,4 +1,4 @@
-var focusMode = true;
+var focusMode = false;
 
 function lcsv() {
     chart.importCSV();
@@ -89,7 +89,6 @@ function init() {
             level: 2,
             allChildren: true,
         },
-        nodeMenu: nodeMenu,
         onExpCollClick: function (sender, action, id, ids) {
             if (focusMode) {
                 var node = sender.getBGNode(id);
