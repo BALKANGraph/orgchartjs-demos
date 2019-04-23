@@ -1,0 +1,7 @@
+---
+authors: 
+  - "BALKAN Software"
+  - "Plamen Peshev"
+description: "Demonstrated how to operate with the search API. Click the Name button to find all nodes containing Name value, if only one node is found the node is centered."
+name: "Search API - OrgChart JS | BALKANGraph"
+...
