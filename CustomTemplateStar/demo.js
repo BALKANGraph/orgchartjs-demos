@@ -15,6 +15,8 @@
         OrgChart.templates.star.performance_2 = '{val}';
 
         function stars(count){
+            console.log(count)
+            count = parseInt(count);
             var stargroup = '<g transform="matrix(0.6,0,0,0.6,142,73)">';
 
             for(var i = 0; i < count; i++){
