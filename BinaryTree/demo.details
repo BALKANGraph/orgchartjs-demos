@@ -1,0 +1,7 @@
+---
+authors: 
+  - "BALKAN Software"
+  - "Plamen Peshev"
+description: "Binary Tree with dynamically created Empty nodes, if there is only ione children"
+name: "Binary Tree with Empty nodes - OrgChart JS | BALKANGraph"
+...
