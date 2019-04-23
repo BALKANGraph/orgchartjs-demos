@@ -1,7 +1,7 @@
 
         OrgChart.templates.star = Object.assign({}, OrgChart.templates.ana);
         OrgChart.templates.star.size = [300, 180];
-        OrgChart.templates.star.node = '<rect class="box" x="0" y="0" width="300" height="180" rx="5" ry="5" fill="#444444" stroke="#7a7a7a" stroke-width="2"></rect><rect x="100" y="40" width="190" height="25" fill="#333333"></rect><rect x="1" y="115" width="298" height="64" fill="#383838" rx="5" ry="5" class="box-footer"></rect>';
+        OrgChart.templates.star.node = '<rect class="box-node" x="0" y="0" width="300" height="180" rx="5" ry="5" fill="#444444" stroke="#7a7a7a" stroke-width="2"></rect><rect x="100" y="40" width="190" height="25" fill="#333333"></rect><rect x="1" y="115" width="298" height="64" fill="#383838" rx="5" ry="5" class="box-footer"></rect>';
         OrgChart.templates.star.image = '<image preserveAspectRatio="xMidYMid slice" xlink:href="{val}" x="5" y="5"  width="90" height="110"></image>';
         OrgChart.templates.star.name = '<text style="font-size: 16px;" fill="#e5e5e5" x="100" y="30" text-anchor="start">{val}</text>';
         OrgChart.templates.star.title = '<text style="font-size: 16px;" fill="#78A7CB" x="5" y="135" text-anchor="start">{val}</text>';
