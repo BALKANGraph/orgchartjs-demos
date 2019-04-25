@@ -12,7 +12,12 @@ window.onload = function () {
         mouseScrool: BALKANGraph.action.xScroll,
         showXScroll: BALKANGraph.scroll.visible,
         onSearchClick: function (sender, nodeId) {
-            sender.center(nodeId, BALKANGraph.COLLAPSE_PARENT_NEIGHBORS, BALKANGraph.COLLAPSE_SUB_CHILDRENS);
+
+            sender.center(nodeId,     {
+                parentState: BALKANGraph.COLLAPSE_PARENT_NEIGHBORS,
+                childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS
+            });
+
             return false;
         },
         onExpCollClick: function (sender, action, id, ids) {
@@ -24,7 +29,13 @@ window.onload = function () {
                 if (node.parent == null) return true;
                 centerId = node.pid;
             }
-            sender.center(centerId, BALKANGraph.COLLAPSE_PARENT_NEIGHBORS, BALKANGraph.COLLAPSE_SUB_CHILDRENS, rippleId);
+
+            sender.center(centerId,     {
+                parentState: BALKANGraph.COLLAPSE_PARENT_NEIGHBORS,
+                childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS,
+                rippleId: rippleId
+            });
+
             return false;
         },
         nodeBinding: {
