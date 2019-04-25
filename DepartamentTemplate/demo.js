@@ -1,4 +1,6 @@
-function init() {
+
+
+window.onload = function () {
     OrgChart.templates.company = Object.assign({}, OrgChart.templates.ana);
     OrgChart.templates.company.size = [200, 200];
     OrgChart.templates.company.node =
@@ -75,9 +77,4 @@ function init() {
 
         ]
     });
-}
-
-
-window.onload = function () {
-    init();
 };

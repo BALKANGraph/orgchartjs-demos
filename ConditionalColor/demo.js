@@ -1,5 +1,6 @@
 
-function init() { 
+
+window.onload = function () { 
     var nodes = [
         { id: "1", name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://balkangraph.com/js/img/1.jpg" },
         { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", email: "ava@domain.com", img: "https://balkangraph.com/js/img/2.jpg" },
@@ -42,9 +43,4 @@ function init() {
         },
         nodes: nodes
     });
-};
-
-
-window.onload = function () { 
-    init();
 };

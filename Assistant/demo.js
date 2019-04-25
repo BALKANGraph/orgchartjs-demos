@@ -1,4 +1,6 @@
-function init(){
+
+
+window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         enableDragDrop: true,
         tags: {
@@ -27,8 +29,4 @@ function init(){
             { id: 8, pid: 1, tags: ["assistant"], name: "Rudy Griffiths", title: "Assistant", img: "https://balkangraph.com/js/img/9.jpg" },
         ]
     });
-}
-
-window.onload = function () {
-    init();
 };

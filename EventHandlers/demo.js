@@ -1,4 +1,6 @@
-function init() {
+
+
+window.onload = function () {
     var c = document.getElementById("console");
 
     function update(sender, oldNode, newNode) {
@@ -50,7 +52,7 @@ function init() {
     };
 
 
-    
+
 
     var chart = new OrgChart(document.getElementById("tree"), {
         scaleInitial: BALKANGraph.match.boundary,
@@ -60,7 +62,7 @@ function init() {
         onRemove: remove,
         onAdd: add,
         onImageUploaded: imageUploaded,
-        onUpdateTags: updateTags, 
+        onUpdateTags: updateTags,
         onClick: click,
         onDbClick: dbclick,
         onRedraw: redraw,
@@ -93,9 +95,4 @@ function init() {
             { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://balkangraph.com/js/img/8.jpg" }
         ]
     });
-}
-
-
-window.onload = function () {
-    init();
 };

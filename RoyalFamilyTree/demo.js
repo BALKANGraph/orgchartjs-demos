@@ -1,5 +1,5 @@
 
-function init(){
+window.onload = function () {
     OrgChart.templates.family_template_11 = Object.assign({}, OrgChart.templates.ana);
     OrgChart.templates.family_template_11.size = [200, 140];
     OrgChart.templates.family_template_11.plus = "";
@@ -144,9 +144,5 @@ function init(){
             { id: "11", pid: 8, tags: ["family_template_12"], name1: "Prince Charlotte of Cambridge", img0: "https://balkangraph.com/js/img/f18.png" },
             { id: "12", pid: 8, tags: ["family_template_12"], name1: "Prince Louis of Cambridge", img0: "https://balkangraph.com/js/img/f19.png" }
         ]
-    });
-}
-
-window.onload = function () {
-    init();   
+    });   
 };

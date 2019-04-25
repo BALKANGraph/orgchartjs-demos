@@ -1,5 +1,6 @@
 
-function init(){
+
+window.onload = function () {
     OrgChart.templates.belinda.plus = "";
     OrgChart.templates.belinda.minus = "";
     OrgChart.templates.belinda.img_0 = '<clipPath id="{randId}"><circle cx="90" cy="60" r="40"></circle></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="50" y="20" width="80" height="80" ></image>';
@@ -101,9 +102,4 @@ function init(){
             { id: 13, pid: 9, text: "Wear a rain jacket", img: "https://balkangraph.com/js/img/black-jacket.svg" }
         ]
     });
-}
-
-
-window.onload = function () {
-    init();
 };

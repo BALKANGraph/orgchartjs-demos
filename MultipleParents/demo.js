@@ -1,5 +1,6 @@
 
-function init(){
+
+window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
         layout: OrgChart.mixed,
@@ -28,8 +29,4 @@ function init(){
             { id: 16, pid: 4, name: "Alex Snider", title: "Sales Manager", img: "https://balkangraph.com/js/img/16.jpg" }
         ]
     });
-}
-
-window.onload = function () {
-    init();
 };

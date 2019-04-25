@@ -1,6 +1,5 @@
 
-
-function init(){
+window.onload = function () { 
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "derek",
         enableDragDrop: true,
@@ -33,7 +32,4 @@ function init(){
             { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://balkangraph.com/js/img/8.jpg" }
         ]
     });
-}
-window.onload = function () { 
-    init();
 };

@@ -1,5 +1,5 @@
 
-function init(){
+window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "luba",
         layout: OrgChart.mixed,
@@ -31,9 +31,5 @@ function init(){
         chart.config.template = this.value;
         chart.draw();
     });
-}
-
-window.onload = function () {
-    init();
 }
 

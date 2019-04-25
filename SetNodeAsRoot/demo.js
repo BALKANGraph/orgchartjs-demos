@@ -1,4 +1,5 @@
-function init(){
+
+window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "luba",
         nodeMenu: {
@@ -38,8 +39,4 @@ function init(){
             { id: 16, pid: 4 }
         ]
     });
-}
-
-window.onload = function () {
-    init();
 };
