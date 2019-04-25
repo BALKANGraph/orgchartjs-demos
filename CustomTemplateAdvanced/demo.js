@@ -350,6 +350,10 @@ window.onload = function () {
             OrgChart.templates[name] = Object.assign({}, OrgChart.templates.dot);
             OrgChart.templates[name].size = [10,heidth];
             OrgChart.templates[name].node = '<rect x="-3" y="0" fill="#2E2E2E" width="17" height="' + heidth + '"></rect><circle fill="' + colors[level] + '" cx="5" cy="' + (heidth / 2) + '" r="5"></circle>';
+            OrgChart.templates[name].ripple = {
+                radius: 0,
+                color: 'none'
+            };
         }
 
         return {
