@@ -1,11 +1,17 @@
 
 
+var chart;
 window.onload = function () {
-    var chart = new OrgChart(document.getElementById("tree"), {
-        template: "olivia",
-        layout: BALKANGraph.mixed,
-        mouseScrool: BALKANGraph.none,
+    chart = new OrgChart(document.getElementById("tree"), {
+        template: "luba",
+        layout: OrgChart.mixed,
+        mouseScrool: OrgChart.none,
         menu: {
+            pdfPreview: { 
+                text: "PDF Preview", 
+                icon: OrgChart.icon.pdf(24,24, '#7A7A7A'),
+                onClick: preview
+            },
             pdf: { text: "Export PDF" },
             png: { text: "Export PNG" },
             svg: { text: "Export SVG" },
@@ -16,7 +22,6 @@ window.onload = function () {
             png: { text: "Export PNG" },
             svg: { text: "Export SVG" }
         },
-        scaleInitial: BALKANGraph.match.boundary,
         nodeBinding: {
             field_0: "name",
             field_1: "title",
@@ -41,4 +46,10 @@ window.onload = function () {
             { id: "16", pid: "4", name: "Alex Snider", title: "Sales Manager", img: "https://balkangraph.com/js/img/16.jpg" }
         ]
     });
+
+    function preview(){
+        OrgChart.pdfPrevUI.show(chart, {
+            format: 'A4'
+        });
+    }
 };
