@@ -14,7 +14,7 @@ window.onload = function () {
                 icon: OrgChart.icon.pdf(24, 24),
                 onClick: function () {
                     chart.exportPDF({
-                        extraHtml: '<div style="text-align:center;">my title goes here<div>',
+                        header: '<div style="text-align:center;">my title goes here<div>',
                         format: 'A4'
                     });
                 }

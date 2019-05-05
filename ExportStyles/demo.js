@@ -37,12 +37,8 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         template: 'olivia',
         menu: {
-            exportPdf: {
-                text: 'Export PDF',
-                icon: OrgChart.icon.pdf(24,24),
-                onClick: function(){chart.exportPDF({
-                    extraHtml: document.getElementById('myStyles').outerHTML
-                })}
+            pdf: {
+                text: 'Export PDF'
             }
         },
         layout: BALKANGraph.mixed,
@@ -50,7 +46,12 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img"
-        },
-        nodes: nodes
+        }
     });
+
+    chart.on('exportstart', function(sender, options, svg, format){
+        svg.querySelector('defs').innerHTML += document.getElementById('myStyles').outerHTML;
+    });
+
+    chart.load(nodes);
 };
