@@ -1,9 +1,30 @@
-
-
 window.onload = function () {
+    var currentNode = '';
+    var clientXY = [0,0];
+
+
     var chart = new OrgChart(document.getElementById("tree"), {
         nodeBinding: {
             field_0: "name"
+        }
+    });
+
+    var menu = new OrgChart.menuUI();
+    menu.init(chart, {
+        addAsAssistant: {
+            icon: '',
+            onClick: function(){
+                currentNode.tags = ['assistant'];
+                chart.addNode(currentNode);
+            },
+            text: 'Add As Assistant'
+        },        
+        addAsRegular: {
+            icon: '',            
+            onClick: function(){
+                chart.addNode(currentNode);
+            },
+            text: 'Add As Regular'
         }
     });
 
@@ -15,6 +36,7 @@ window.onload = function () {
             var nodeElement = nodeElements[i];
             nodeElement.ondrop = function(ev) {
                 ev.preventDefault();   
+                clientXY = [ev.clientX, ev.clientY];
                 var id = ev.dataTransfer.getData("id");
                 var item = document.querySelector('[data-id="' + id + '"]');
                 var name = item.innerHTML;
@@ -23,13 +45,14 @@ window.onload = function () {
                 while(!nodeElement.hasAttribute('node-id')){
                     nodeElement = nodeElement.parentNode;
                 }                
-                var pid = nodeElement.getAttribute('node-id');               
+                var pid = nodeElement.getAttribute('node-id');  
+                
                 
                 chart.addNode({
                     id: id,
                     pid: pid,
                     name: name
-                });
+                }, true);
 
                 item.parentNode.removeChild(item);
             }
@@ -40,6 +63,12 @@ window.onload = function () {
         }
         
     });
+
+    chart.on('add', function(sender, node){
+        currentNode = node;
+        menu.show(clientXY[0], clientXY[1]);
+        return false;
+    })
 
     chart.load([
         {id: 1, name: 'Janae Barrett'},
