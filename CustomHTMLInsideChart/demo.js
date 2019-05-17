@@ -25,7 +25,7 @@ window.onload = function () {
             var legent = document.createElement("div");
             legent.style.position = 'absolute';
             legent.style.bottom = '10px';
-            legent.style.left = '10px';
+            legent.style.right = '10px';
             legent.style.color = '#757575';
             legent.innerHTML = document.querySelector('#legent-content').innerHTML;;
             chart.element.appendChild(legent);
