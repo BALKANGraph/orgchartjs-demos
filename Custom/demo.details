@@ -1,0 +1,7 @@
+---
+authors: 
+  - "BALKAN Software"
+  - "Plamen Peshev"
+description: "Demonstrates how to definf custom template, custom edit form and add footer in the exported PDF document"
+name: "Custom - OrgChart JS | BALKANGraph"
+...
