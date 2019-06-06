@@ -72,7 +72,6 @@ window.onload = function () {
         subtreeSeparation: 70,
         levelSeparation: 80,
         editUI:  new editForm(),
-        exportUrl: 'http://localhost:1337',
         menu: {
             saveAsPdf:{
                 text: 'Save PDF',
