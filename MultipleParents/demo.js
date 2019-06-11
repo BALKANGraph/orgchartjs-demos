@@ -1,10 +1,12 @@
 
 
 window.onload = function () {
+    OrgChart.templates.ula.secondLink = '<path stroke-linejoin="round" stroke="#F57C00" stroke-width="1px" fill="none" d="{d}" />'
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
-        layout: OrgChart.mixed,
-        mouseScrool: OrgChart.none,
+        layout: BALKANGraph.mixed,
+        mouseScrool: BALKANGraph.none,
+        scaleInitial: BALKANGraph.match.boundary,
         nodeBinding: {
             field_0: "name",
             field_1: "title",
@@ -20,7 +22,7 @@ window.onload = function () {
             { id: 7, pid: 2, name: "Knox Macias", title: "QA", img: "https://balkangraph.com/js/img/7.jpg" },
             { id: 8, pid: 3, name: "Nash Ingram", title: ".NET Team Lead", email: "kohen@domain.com", img: "https://balkangraph.com/js/img/8.jpg" },
             { id: 9, pid: 3, name: "Sage Barnett", title: "JS Team Lead", img: "https://balkangraph.com/js/img/9.jpg" },
-            { id: 10, pid: 8, spids: [2], name: "Alice Gray", title: "Programmer & QA", img: "https://balkangraph.com/js/img/10.jpg" },
+            { id: 10, pid: 8, spids: [2, 4], name: "Alice Gray", title: "Programmer & QA", img: "https://balkangraph.com/js/img/10.jpg" },
             { id: 11, pid: 8, name: "Anne Ewing", title: "Programmer", img: "https://balkangraph.com/js/img/11.jpg" },
             { id: 12, pid: 9, name: "Reuben Mcleod", title: "Programmer", img: "https://balkangraph.com/js/img/12.jpg" },
             { id: 13, pid: 9, name: "Ariel Wiley", title: "Programmer", img: "https://balkangraph.com/js/img/13.jpg" },

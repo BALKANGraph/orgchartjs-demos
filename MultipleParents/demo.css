@@ -12,3 +12,14 @@ html, body {
     height: 100%;
 }
 
+[second-link-id] path {
+    stroke: red;
+   
+}
+
+[second-link-id='[10][4]'] {
+    stroke-dasharray: 10;
+}
+    [second-link-id='[10][4]'] path {
+        stroke: #F57C00;
+    }
