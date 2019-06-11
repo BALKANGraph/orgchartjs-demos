@@ -4,9 +4,7 @@ window.onload = function () {
     OrgChart.templates.ula.secondLink = '<path stroke-linejoin="round" stroke="#F57C00" stroke-width="1px" fill="none" d="{d}" />'
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
-        layout: BALKANGraph.mixed,
-        mouseScrool: BALKANGraph.none,
-        scaleInitial: BALKANGraph.match.boundary,
+        layout: OrgChart.mixed,
         nodeBinding: {
             field_0: "name",
             field_1: "title",
