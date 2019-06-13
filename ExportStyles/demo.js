@@ -48,9 +48,9 @@ window.onload = function () {
             img_0: "img"
         }
     });
-
-    chart.on('exportstart', function(sender, options, svg, format){
-        svg.querySelector('defs').innerHTML += document.getElementById('myStyles').outerHTML;
+    
+    chart.on('exportstart', function(sender, args){
+        args.content += document.getElementById('myStyles').outerHTML;
     });
 
     chart.load(nodes);
