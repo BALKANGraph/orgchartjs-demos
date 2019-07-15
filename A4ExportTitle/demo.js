@@ -9,19 +9,21 @@ window.onload = function () {
             title: 'pid'
         },
         menu: {
-            pdfWithTitle: {
+            pdfWithTitle: {                
                 text: 'A4 PDF',
                 icon: OrgChart.icon.pdf(24, 24),
                 onClick: function () {
                     chart.exportPDF({
-                        header: '<div style="text-align:center;">my title goes here<div>',
-                        format: 'A4'
+                        header: 'my header goes here',
+                        footer: 'my footer goes here',
+                        format: 'A4',
+                        margin: [60, 20, 60, 20]
                     });
                 }
             }
         }
     });
-
+    
     chart.load([
         { id: 1 },
         { id: 2, pid: 1 },
