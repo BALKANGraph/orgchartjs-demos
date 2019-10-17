@@ -3,7 +3,6 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "derek",
         enableDragDrop: true,
-        toolbar: true,
         menu: {
             pdf: { text: "Export PDF" },
             png: { text: "Export PNG" },
