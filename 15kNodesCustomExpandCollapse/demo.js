@@ -7,15 +7,15 @@ window.onload = function () {
             level: 2,
             allChildren: true,
         },
-        nodeMouseClick: BALKANGraph.action.none,
-        align: BALKANGraph.ORIENTATION,
-        mouseScrool: BALKANGraph.action.xScroll,
-        showXScroll: BALKANGraph.scroll.visible,
+        nodeMouseClick: OrgChart.action.none,
+        align: OrgChart.ORIENTATION,
+        mouseScrool: OrgChart.action.xScroll,
+        showXScroll: OrgChart.scroll.visible,
         onSearchClick: function (sender, nodeId) {
 
             sender.center(nodeId,     {
-                parentState: BALKANGraph.COLLAPSE_PARENT_NEIGHBORS,
-                childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS
+                parentState: OrgChart.COLLAPSE_PARENT_NEIGHBORS,
+                childrenState: OrgChart.COLLAPSE_SUB_CHILDRENS
             });
 
             return false;
@@ -24,15 +24,15 @@ window.onload = function () {
             var node = sender.getBGNode(id);
             var centerId = id;
             var rippleId = id;
-            if (action == BALKANGraph.COLLAPSE) {
+            if (action == OrgChart.COLLAPSE) {
                 var node = sender.getBGNode(id);
                 if (node.parent == null) return true;
                 centerId = node.pid;
             }
 
             sender.center(centerId,     {
-                parentState: BALKANGraph.COLLAPSE_PARENT_NEIGHBORS,
-                childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS,
+                parentState: OrgChart.COLLAPSE_PARENT_NEIGHBORS,
+                childrenState: OrgChart.COLLAPSE_SUB_CHILDRENS,
                 rippleId: rippleId
             });
 

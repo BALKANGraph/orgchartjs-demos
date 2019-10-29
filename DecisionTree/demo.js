@@ -18,9 +18,9 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         enableSearch: false,
         template: "belinda",
-        nodeMouseClick: BALKANGraph.action.expandCollapse,
-        mouseScrool: BALKANGraph.action.yScroll,
-        showYScroll: BALKANGraph.scroll.visible,
+        nodeMouseClick: OrgChart.action.expandCollapse,
+        mouseScrool: OrgChart.action.yScroll,
+        showYScroll: OrgChart.scroll.visible,
         nodeBinding: {
             field_0: "text",
             img_0: "img"
@@ -41,7 +41,7 @@ window.onload = function () {
             return data.text == "YES" || data.text == "NO";
         },
         onExpCollClick: function (sender, action, id, ids) {
-            if (action == BALKANGraph.EXPAND) {
+            if (action == OrgChart.EXPAND) {
                 var node = sender.getBGNode(id);
                 if (node.parent) {
                     sender.expand(id, ids, function () {
@@ -64,7 +64,7 @@ window.onload = function () {
                     return false;
                 }
             }
-            if (action == BALKANGraph.COLLAPSE) {
+            if (action == OrgChart.COLLAPSE) {
                 var node = sender.getBGNode(id);
                 if (node.parent) {
                     ids = [];

@@ -10,7 +10,7 @@ window.onload = function () {
     });
 
     chart.on('expcollclick', function(sender, action, id, ids){  
-        if (action == BALKANGraph.EXPAND) {
+        if (action == OrgChart.EXPAND) {
             sender.expand(id, ids, function(){              
                 sender.center(id);
             });

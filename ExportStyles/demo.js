@@ -41,7 +41,7 @@ window.onload = function () {
                 text: 'Export PDF'
             }
         },
-        layout: BALKANGraph.mixed,
+        layout: OrgChart.mixed,
         nodeBinding: {
             field_0: "name",
             field_1: "title",

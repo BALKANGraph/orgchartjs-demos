@@ -86,7 +86,7 @@ window.onload = function () {
             field_0: 'id',
             field_1: 'pid'
         },
-        align: BALKANGraph.ORIENTATION,
+        align: OrgChart.ORIENTATION,
         collapse: {
             level: 2,
             allChildren: true,
@@ -96,15 +96,15 @@ window.onload = function () {
                 var node = sender.getBGNode(id);
                 var centerId = id;
                 var rippleId = id;
-                if (action == BALKANGraph.COLLAPSE) {
+                if (action == OrgChart.COLLAPSE) {
                     var node = sender.getBGNode(id);
                     if (node.parent == null) return true;
                     centerId = node.pid;
                 }
                 sender.center(centerId, 
                     {
-                        parentState: BALKANGraph.COLLAPSE_PARENT_NEIGHBORS,    
-                        childrenState: BALKANGraph.COLLAPSE_SUB_CHILDRENS,    
+                        parentState: OrgChart.COLLAPSE_PARENT_NEIGHBORS,    
+                        childrenState: OrgChart.COLLAPSE_SUB_CHILDRENS,    
                         rippleId: rippleId,
                         vertical: false,
                         horizontal: true

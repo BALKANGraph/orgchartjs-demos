@@ -9,8 +9,8 @@ window.onload = function () {
             expandAll: false
         },
 
-        layout: BALKANGraph.tree,
-        align: BALKANGraph.ORIENTATION,
+        layout: OrgChart.tree,
+        align: OrgChart.ORIENTATION,
         nodeBinding: {
             field_0: "name",
             field_1: "title",

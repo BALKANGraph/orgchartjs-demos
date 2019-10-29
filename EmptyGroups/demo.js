@@ -1,5 +1,13 @@
 
-window.onload = function () { 
+window.onload = function () {
+    OrgChart.REMOVE_GROUP_IF_HAS_ONE_NODE = false;
+    
+    OrgChart.templates.empty = Object.assign({}, OrgChart.templates.base);
+    OrgChart.templates.empty.size = [210, 40];
+    OrgChart.templates.empty.node = '';
+    OrgChart.templates.empty.plus = '';
+    OrgChart.templates.empty.minus = '';
+    
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "olivia",
         enableDragDrop: true,
@@ -20,6 +28,9 @@ window.onload = function () {
             img_0: "img"
         },
         tags: {
+            empty: {
+              template: 'empty'
+            },
             Directors: {
                 group: true,
                 groupName: "Directors",
@@ -45,8 +56,28 @@ window.onload = function () {
                 groupState: OrgChart.EXPAND,
                 template: "group_grey"
             }
-        },
-        nodes: [
+        }
+    });
+    
+    chart.on('drop', function(sender, draggedNodeId, droppedNodeId){
+      var draggedNode = sender.getBGNode(draggedNodeId);
+      var droppedNode = sender.getBGNode(droppedNodeId);
+      
+      if (droppedNode.isGroup){
+        if (droppedNode.bgnodes.length == 1 && droppedNode.bgnodes[0].templateName == 'empty'){
+        	sender.remove(droppedNode.bgnodes[0].id);
+        }
+      }
+      
+      if (draggedNode.isChildOfGroup){
+      	var groupNode = sender.getBGNode(draggedNode._groupParentNodeId);
+        if (groupNode.bgnodes.length == 1){
+        sender.add({id: OrgChart._guid(), pid: droppedNode.pid, tags: [draggedNode._groupParentNodeId, 'empty']})
+        }
+      }
+    });
+    
+    chart.load([
             { id: 1, tags: ["Directors"], name: "Billy Moore", title: "CEO", img: "https://balkangraph.com/js/img/2.jpg" },
             { id: 2, tags: ["Directors"], name: "Marley Wilson", title: "Director", img: "https://balkangraph.com/js/img/3.jpg" },
             { id: 3, tags: ["Directors"], name: "Bennie Shelton", title: "Shareholder", img: "https://balkangraph.com/js/img/4.jpg" },
@@ -63,8 +94,6 @@ window.onload = function () {
             { id: 10, pid: 4, tags: ["Devs"], name: "Skylar Parrish", title: "node.js Developer", img: "https://balkangraph.com/js/img/8.jpg" },
             { id: 11, pid: 4, tags: ["Devs"], name: "Ashton Koch", title: "C# Developer", img: "https://balkangraph.com/js/img/9.jpg" },
 
-            { id: 12, pid: 7, tags: ["Sales"], name: "Bret Fraser", title: "Sales", img: "https://balkangraph.com/js/img/13.jpg" },
-            { id: 13, pid: 7, tags: ["Sales"], name: "Steff Haley", title: "Sales", img: "https://balkangraph.com/js/img/14.jpg" }
-        ]
-    });    
+            { id: 12, pid: 7, tags: ["empty", "Sales"] }
+        ])
 };

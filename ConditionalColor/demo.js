@@ -35,7 +35,7 @@ window.onload = function () {
     }
 
     var chart = new OrgChart(document.getElementById("tree"), {
-        layout: BALKANGraph.mixed,
+        layout: OrgChart.mixed,
         nodeBinding: {
             field_0: "name",
             field_1: "title",
