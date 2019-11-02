@@ -14,8 +14,8 @@ window.onload = function () {
         },
         slinks: [
             {from: 7, to: 1, label: 'text', template: 'myTemplate1'}, 
-            {from: 5, to: 0, template: 'myTemplate2', label: 'reports to' },
-           {from: 2, to: 6, template: 'myTemplate3', label: 'lorem ipsum' },
+            {from: 5, to: 0, label: 'reports to' },
+           {from: 2, to: 6, template: 'blue', label: 'lorem ipsum' },
         ]
     });
 
