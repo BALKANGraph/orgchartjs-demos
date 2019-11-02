@@ -2,8 +2,8 @@
 
 window.onload = function () {
 
-    OrgChart.slinkTemplates.myTemplate3 = Object.assign({}, OrgChart.slinkTemplates.yellow);
-    OrgChart.slinkTemplates.myTemplate3.link = '<path  marker-start="url(#arrowSlinkYellow)" marker-end="url(#dotSlinkYellow)" stroke-linejoin="round" stroke="#FFCA28" stroke-width="2" fill="none" d="{d}" />';
+    OrgChart.slinkTemplates.myTemplate1 = Object.assign({}, OrgChart.slinkTemplates.yellow);
+    OrgChart.slinkTemplates.myTemplate1.link = '<path  marker-start="url(#arrowSlinkYellow)" marker-end="url(#dotSlinkYellow)" stroke-linejoin="round" stroke="#FFCA28" stroke-width="2" fill="none" d="{d}" />';
 
 
     var chart = new OrgChart(document.getElementById("tree"), { 
