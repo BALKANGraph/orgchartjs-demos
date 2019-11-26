@@ -38,7 +38,7 @@ window.onload = function () {
                 group: true,
                 groupName: "Sales Team",
                 groupState: OrgChart.EXPAND,
-                template: "group_grey"
+                template: "group_grey_one_column"
             },
             Devs: {
                 group: true,
