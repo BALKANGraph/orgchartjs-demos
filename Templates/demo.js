@@ -4,9 +4,10 @@ window.onload = function () {
         template: "luba",
         layout: OrgChart.mixed,
         nodeBinding: {
+            img_0: "img",
             field_0: "name",
-            field_1: "title",
-            img_0: "img"
+            field_1: "title"
+            
         },
         nodes: [
             { id: "1", name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://balkangraph.com/js/img/1.jpg" },
