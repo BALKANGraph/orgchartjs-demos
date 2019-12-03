@@ -29,15 +29,15 @@ window.onload = function () {
             selectedId = null;
         });
         chart.load([
-            { id: "1", name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://balkangraph.com/js/img/1.jpg" },
-            { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", email: "ava@domain.com", img: "https://balkangraph.com/js/img/2.jpg" },
-            { id: "3", pid: "1", name: "Janae Barrett", title: "Technical Director", img: "https://balkangraph.com/js/img/3.jpg" },
-            { id: "4", pid: "2", name: "Aaliyah Webb", title: "Manager", email: "jay@domain.com", img: "https://balkangraph.com/js/img/4.jpg" },
-            { id: "5", pid: "2", name: "Elliot Ross", title: "QA", img: "https://balkangraph.com/js/img/5.jpg" },
-            { id: "6", pid: "3", name: "Anahi Gordon", title: "QA", img: "https://balkangraph.com/js/img/6.jpg" },
-            { id: "7", pid: "3", name: "Knox Macias", title: "QA", img: "https://balkangraph.com/js/img/7.jpg" },
-            { id: "8", pid: "4", name: "Nash Ingram", title: ".NET Team Lead", email: "kohen@domain.com", img: "https://balkangraph.com/js/img/8.jpg" },
-            { id: "9", pid: "4", name: "Sage Barnett", title: "JS Team Lead", img: "https://balkangraph.com/js/img/9.jpg" },
+            { id: "1", name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://cdn.balkan.app/shared/1.jpg" },
+            { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", email: "ava@domain.com", img: "https://cdn.balkan.app/shared/2.jpg" },
+            { id: "3", pid: "1", name: "Janae Barrett", title: "Technical Director", img: "https://cdn.balkan.app/shared/3.jpg" },
+            { id: "4", pid: "2", name: "Aaliyah Webb", title: "Manager", email: "jay@domain.com", img: "https://cdn.balkan.app/shared/4.jpg" },
+            { id: "5", pid: "2", name: "Elliot Ross", title: "QA", img: "https://cdn.balkan.app/shared/5.jpg" },
+            { id: "6", pid: "3", name: "Anahi Gordon", title: "QA", img: "https://cdn.balkan.app/shared/6.jpg" },
+            { id: "7", pid: "3", name: "Knox Macias", title: "QA", img: "https://cdn.balkan.app/shared/7.jpg" },
+            { id: "8", pid: "4", name: "Nash Ingram", title: ".NET Team Lead", email: "kohen@domain.com", img: "https://cdn.balkan.app/shared/8.jpg" },
+            { id: "9", pid: "4", name: "Sage Barnett", title: "JS Team Lead", img: "https://cdn.balkan.app/shared/9.jpg" },
 
         ]);
 

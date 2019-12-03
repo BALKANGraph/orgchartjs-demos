@@ -87,19 +87,19 @@ window.onload = function () {
             }
         },
         nodes: [
-            { id: 1, text: "Is it raining?", img: "https://balkangraph.com/js/img/raindrops-cloud.svg" },
+            { id: 1, text: "Is it raining?", img: "https://cdn.balkan.app/shared/raindrops-cloud.svg" },
             { id: 2, pid: 1, tags: ["yes"], text: "YES" },
             { id: 3, pid: 1, tags: ["no"], text: "NO" },
-            { id: 4, pid: 2, text: "Is it windy?", img: "https://balkangraph.com/js/img/wind.svg" },
+            { id: 4, pid: 2, text: "Is it windy?", img: "https://cdn.balkan.app/shared/wind.svg" },
             { id: 5, pid: 4, tags: ["yes"], text: "YES" },
             { id: 6, pid: 4, tags: ["no"], text: "NO" },
-            { id: 7, pid: 5, text: "Is it extremely windy?", img: "https://balkangraph.com/js/img/cyclone.svg" },
+            { id: 7, pid: 5, text: "Is it extremely windy?", img: "https://cdn.balkan.app/shared/cyclone.svg" },
             { id: 8, pid: 7, tags: ["yes"], text: "YES" },
             { id: 9, pid: 7, tags: ["no"], text: "NO" },
-            { id: 10, pid: 3, text: "Don't bring anything", img: "https://balkangraph.com/js/img/empty.svg" },
-            { id: 11, pid: 6, text: "Use an umbrella", img: "https://balkangraph.com/js/img/umbrella.svg" },
-            { id: 12, pid: 8, text: "Stay home", img: "https://balkangraph.com/js/img/home.svg" },
-            { id: 13, pid: 9, text: "Wear a rain jacket", img: "https://balkangraph.com/js/img/black-jacket.svg" }
+            { id: 10, pid: 3, text: "Don't bring anything", img: "https://cdn.balkan.app/shared/empty.svg" },
+            { id: 11, pid: 6, text: "Use an umbrella", img: "https://cdn.balkan.app/shared/umbrella.svg" },
+            { id: 12, pid: 8, text: "Stay home", img: "https://cdn.balkan.app/shared/home.svg" },
+            { id: 13, pid: 9, text: "Wear a rain jacket", img: "https://cdn.balkan.app/shared/black-jacket.svg" }
         ]
     });
 };

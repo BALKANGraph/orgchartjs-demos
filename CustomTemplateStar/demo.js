@@ -53,9 +53,9 @@ window.onload = function () {
             performance_2: binder
         },
         nodes: [
-            { id: 1, performance_2: 1, performance_1: 'PERFORMANCE', jobgrade_2: 5, jobgrade_1: 'JOB GRADE', count: 6, ou: 'Directors', title: 'CEO', name: 'Jack Hill', image: 'https://balkangraph.com/js/img/1.jpg' },
-            { id: 2, performance_2: 3, performance_1: 'PERFORMANCE', jobgrade_2: 13, jobgrade_1: 'JOB GRADE', count: 4, pid: 1, ou: 'Sales', title: 'Marketing', name: 'Janae Barrett', image: 'https://balkangraph.com/js/img/2.jpg' },
-            { id: 3, performance_2: 5, performance_1: 'PERFORMANCE', jobgrade_2: 777, jobgrade_1: 'JOB GRADE', tags: ['blue'], content_1: 'JOB GRADE', count: 125, pid: 1, ou: 'R&D', title: 'IT', name: 'Anahi Gordon', image: 'https://balkangraph.com/js/img/3.jpg' },
+            { id: 1, performance_2: 1, performance_1: 'PERFORMANCE', jobgrade_2: 5, jobgrade_1: 'JOB GRADE', count: 6, ou: 'Directors', title: 'CEO', name: 'Jack Hill', image: 'https://cdn.balkan.app/shared/1.jpg' },
+            { id: 2, performance_2: 3, performance_1: 'PERFORMANCE', jobgrade_2: 13, jobgrade_1: 'JOB GRADE', count: 4, pid: 1, ou: 'Sales', title: 'Marketing', name: 'Janae Barrett', image: 'https://cdn.balkan.app/shared/2.jpg' },
+            { id: 3, performance_2: 5, performance_1: 'PERFORMANCE', jobgrade_2: 777, jobgrade_1: 'JOB GRADE', tags: ['blue'], content_1: 'JOB GRADE', count: 125, pid: 1, ou: 'R&D', title: 'IT', name: 'Anahi Gordon', image: 'https://cdn.balkan.app/shared/3.jpg' },
         ]
     });
 

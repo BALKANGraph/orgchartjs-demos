@@ -94,8 +94,8 @@ window.onload = function () {
     });
 
     chart.load([
-        {id: 0, Name: 'Jack Hill', Title: 'Alternate Title', Email: 'jdoe@balkangraph.com', Phone: '1 888 888 8888', Mobile: '1 999 999 9999', Division: 'Division Code', Region: 'NA', Country: 'United States', Location: 'Corporate', Headquorters: '', Coy: 963, Supervisor: 'Tim Doe', 'Dotted Line': 'Jane Doe',  Image: 'https://balkangraph.com/js/img/3.jpg'},
-        {id: 1, pid: 0, Name: 'Ashley Barnett', Title: 'Alternate Title', Email: 'jdoe@tifs.com', Phone: '1 888 888 8888', Mobile: '1 999 999 9999', Division: 'Division Code', Region: 'NA', Country: 'United States', Location: 'Corporate', Headquorters: '', Coy: 963, Supervisor: 'Tim Doe', 'Dotted Line': 'Jane Doe', Image: 'https://balkangraph.com/js/img/4.jpg'},
-        {id: 2, pid: 0, Name: 'Elliot Patel', Title: 'Alternate Title', Email: 'jdoe@tifs.com', Phone: '1 888 888 8888', Mobile: '1 999 999 9999', Division: 'Division Code', Region: 'NA', Country: 'United States', Location: 'Corporate', Headquorters: '', Coy: 963, Supervisor: 'Tim Doe', 'Dotted Line': 'Jane Doe', Image: 'https://balkangraph.com/js/img/5.jpg'}
+        {id: 0, Name: 'Jack Hill', Title: 'Alternate Title', Email: 'jdoe@balkangraph.com', Phone: '1 888 888 8888', Mobile: '1 999 999 9999', Division: 'Division Code', Region: 'NA', Country: 'United States', Location: 'Corporate', Headquorters: '', Coy: 963, Supervisor: 'Tim Doe', 'Dotted Line': 'Jane Doe',  Image: 'https://cdn.balkan.app/shared/3.jpg'},
+        {id: 1, pid: 0, Name: 'Ashley Barnett', Title: 'Alternate Title', Email: 'jdoe@tifs.com', Phone: '1 888 888 8888', Mobile: '1 999 999 9999', Division: 'Division Code', Region: 'NA', Country: 'United States', Location: 'Corporate', Headquorters: '', Coy: 963, Supervisor: 'Tim Doe', 'Dotted Line': 'Jane Doe', Image: 'https://cdn.balkan.app/shared/4.jpg'},
+        {id: 2, pid: 0, Name: 'Elliot Patel', Title: 'Alternate Title', Email: 'jdoe@tifs.com', Phone: '1 888 888 8888', Mobile: '1 999 999 9999', Division: 'Division Code', Region: 'NA', Country: 'United States', Location: 'Corporate', Headquorters: '', Coy: 963, Supervisor: 'Tim Doe', 'Dotted Line': 'Jane Doe', Image: 'https://cdn.balkan.app/shared/5.jpg'}
     ]);
 };

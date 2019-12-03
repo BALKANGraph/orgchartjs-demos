@@ -22,10 +22,10 @@ OrgChart.templates.noMenuTemplate.nodeMenuButton =  '';
         },
 
         nodes: [
-            { id: 1, name: "Billy Moore", title: "CEO", img: "https://balkangraph.com/js/img/2.jpg" },
-            { id: 2, pid: 1, tags: ["noMenu"], name: "Billie Rose", title: "Dev Team Lead", img: "https://balkangraph.com/js/img/5.jpg" },
+            { id: 1, name: "Billy Moore", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
+            { id: 2, pid: 1, tags: ["noMenu"], name: "Billie Rose", title: "Dev Team Lead", img: "https://cdn.balkan.app/shared/5.jpg" },
 
-            { id: 3, pid: 1, name: "Glenn Bell", title: "HR", img: "https://balkangraph.com/js/img/10.jpg" },
-            { id: 4, pid: 1, name: "Blair Francis", title: "HR", img: "https://balkangraph.com/js/img/11.jpg" }
+            { id: 3, pid: 1, name: "Glenn Bell", title: "HR", img: "https://cdn.balkan.app/shared/10.jpg" },
+            { id: 4, pid: 1, name: "Blair Francis", title: "HR", img: "https://cdn.balkan.app/shared/11.jpg" }
         ]
     });    

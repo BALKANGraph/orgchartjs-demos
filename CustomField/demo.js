@@ -9,9 +9,9 @@ window.onload = function () {
           field_1: "title",
       },
      nodes: [
-          { id: 1, name: "Amber McKenzie", title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut scelerisque eros.", img: "https://balkangraph.com/js/img/2.jpg" },
-          { id: 2, pid: 1, name: "Ava Field", title: "Suspendisse molestie dolor porttitor ante lobortis, id dapibus turpis eleifend.", img: "https://balkangraph.com/js/img/3.jpg"},
-          { id: 3, pid: 1, name: "Rhys Harper", title: "Sed varius ligula non odio vulputate feugiat.", img: "https://balkangraph.com/js/img/4.jpg"}
+          { id: 1, name: "Amber McKenzie", title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut scelerisque eros.", img: "https://cdn.balkan.app/shared/2.jpg" },
+          { id: 2, pid: 1, name: "Ava Field", title: "Suspendisse molestie dolor porttitor ante lobortis, id dapibus turpis eleifend.", img: "https://cdn.balkan.app/shared/3.jpg"},
+          { id: 3, pid: 1, name: "Rhys Harper", title: "Sed varius ligula non odio vulputate feugiat.", img: "https://cdn.balkan.app/shared/4.jpg"}
       ]
   });   
   
