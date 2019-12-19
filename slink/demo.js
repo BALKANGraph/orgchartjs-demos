@@ -1,3 +1,4 @@
+window.onload = function() {
 OrgChart.slinkTemplates.myorange = Object.assign({}, OrgChart.slinkTemplates.orange);
 OrgChart.slinkTemplates.myorange.defs = '';
 OrgChart.slinkTemplates.myorange.link = '<path stroke-dasharray="4, 2" stroke="grey" stroke-width="1" fill="none" d="{d}" />'
@@ -32,3 +33,4 @@ OrgChart.slinkTemplates.myorange.link = '<path stroke-dasharray="4, 2" stroke="g
            ];
        
        chart.load(nodes);
+        }

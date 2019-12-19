@@ -1,4 +1,4 @@
-
+window.onload = function() {
         OrgChart.templates.wework = Object.assign({}, OrgChart.templates.ana);
 
         OrgChart.templates.wework.node = '<rect x="0" y="0" height="120" width="250" fill="#039BE5" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>'
@@ -67,3 +67,4 @@
             }
             return null;
         }
+    }

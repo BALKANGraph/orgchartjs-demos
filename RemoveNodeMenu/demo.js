@@ -1,3 +1,5 @@
+window.onload = function() {
+
 OrgChart.templates.noMenuTemplate = Object.assign({}, OrgChart.templates.olivia);
 OrgChart.templates.noMenuTemplate.nodeMenuButton =  '';
 
@@ -29,3 +31,4 @@ OrgChart.templates.noMenuTemplate.nodeMenuButton =  '';
             { id: 4, pid: 1, name: "Blair Francis", title: "HR", img: "https://cdn.balkan.app/shared/11.jpg" }
         ]
     });    
+}
