@@ -38,9 +38,7 @@ window.onload = function () {
         for (var id in nodes) {
             var node = nodes[id];
             if (node.parent && node.parent.children.length == 1) {
-
-                var siblingNode = new OrgChart.node(node.id + 'sibling', node.parent.id, null, ['empty'], 'empty');
-
+                var siblingNode = new OrgChart.node(node.id + 'sibling', node.parent.id,  ['empty'], 'empty');
                 if (node.parent.id == 6) //add left
                     node.parent.children.splice(0, 0, siblingNode);
                 else //add right
