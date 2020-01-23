@@ -1,19 +1,14 @@
-html, body{
+html, body {
+    margin: 0px;
+    padding: 0px;
     width: 100%;
     height: 100%;
-    padding: 0;
-    margin:0;
-    overflow: hidden;
     font-family: Helvetica;
-  }
-  #tree{
-    width:100%;
-    height:100%;
-  }
-  
-  #btn{
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 100000;
-  }
+    overflow: hidden;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
