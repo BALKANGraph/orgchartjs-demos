@@ -55,24 +55,24 @@ window.onload = function () {
                 }
             },
             nodes: [
-                { id: 0, tags: ["Directors", "MyCustomTemplate"], name: "Skylar Parrish", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
+                { id: 0, tags: ["Directors", "MyCustomTemplate"], name: "Skylar Parrish", title: "CEO" },
     
-                { id: 1, tags: ["Directors"], name: "Billy Moore", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
-                { id: 2, tags: ["Directors"], name: "Marley Wilson", title: "Director", img: "https://cdn.balkan.app/shared/3.jpg" },
-                { id: 3, tags: ["Directors"], name: "Bennie Shelton", title: "Shareholder", img: "https://cdn.balkan.app/shared/4.jpg" },
-    
-    
-                { id: 5, pid: 1, tags: ["HRs"], name: "Glenn Bell", title: "HR", img: "https://cdn.balkan.app/shared/10.jpg" },
-                { id: 6, pid: 1, tags: ["HRs"], name: "Blair Francis", title: "HR", img: "https://cdn.balkan.app/shared/11.jpg" },
+                { id: 1, tags: ["Directors"], name: "Billy Moore", title: "CEO" },
+                { id: 2, tags: ["Directors"], name: "Marley Wilson", title: "Director" },
+                { id: 3, tags: ["Directors"], name: "Bennie Shelton", title: "Shareholder" },
     
     
-                { id: 8, pid: 1, tags: ["Devs"], name: "Jordan Harris", title: "JS Developer", img: "https://cdn.balkan.app/shared/6.jpg" },
-                { id: 9, pid: 1, tags: ["Devs"], name: "Will Woods", title: "JS Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
-                { id: 10, pid: 1, tags: ["Devs"], name: "Skylar Parrish", title: "node.js Developer", img: "https://cdn.balkan.app/shared/8.jpg" },
-                { id: 11, pid: 1, tags: ["Devs"], name: "Ashton Koch", title: "C# Developer", img: "https://cdn.balkan.app/shared/9.jpg" },
+                { id: 5, pid: 1, tags: ["HRs"], name: "Glenn Bell", title: "HR" },
+                { id: 6, pid: 1, tags: ["HRs"], name: "Blair Francis", title: "HR" },
     
-                { id: 12, pid: 1, tags: ["Sales"], name: "Bret Fraser", title: "Sales", img: "https://cdn.balkan.app/shared/13.jpg" },
-                { id: 13, pid: 1, tags: ["Sales"], name: "Steff Haley", title: "Sales", img: "https://cdn.balkan.app/shared/14.jpg" }
+    
+                { id: 8, pid: 1, tags: ["Devs"], name: "Jordan Harris", title: "JS Developer" },
+                { id: 9, pid: 1, tags: ["Devs"], name: "Will Woods", title: "JS Developer" },
+                { id: 10, pid: 1, tags: ["Devs"], name: "Skylar Parrish", title: "node.js Developer" },
+                { id: 11, pid: 1, tags: ["Devs"], name: "Ashton Koch", title: "C# Developer" },
+    
+                { id: 12, pid: 1, tags: ["Sales"], name: "Bret Fraser", title: "Sales" },
+                { id: 13, pid: 1, tags: ["Sales"], name: "Steff Haley", title: "Sales" }
             ]
       });
 };
