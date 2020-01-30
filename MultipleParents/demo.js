@@ -1,43 +1,27 @@
+
+
 window.onload = function () {
-
-
-    function print(nodeId) {
-            window.print();
-        
-    }
-
-    var chart = new OrgChart(document.getElementById("tree"), {
-    enableSearch: false,
-      
-         menu: {
-            pdf: { text: "Export PDF" },
-            png: { text: "Export PNG" },
-            svg: { text: "Export SVG" },
-            csv: { text: "Export CSV" },
-            print: {
-                    text: "Print",
-                    icon: OrgChart.icon.pdf(24, 24, "#7A7A7A"),
-                    onClick: print
-                }
-        },
-
+    var chart = new OrgChart(document.getElementById("tree"), { 
+        orientation: OrgChart.orientation.left,  
         nodeBinding: {
-            field_0: "name",
-            field_1: "title",
-            img_0: "img"
+            field_0: "id",
+            field_1: "pid"
         },
+        slinks: [
+            {from: 7, to: 1 }, 
+            {from: 5, to: 0, label: 'reports to' },
+            {from: 2, to: 6, template: 'blue' },
+        ]
+    });
 
-        nodeMenu: {
-            edit: { text: "Edit" },
-        },
-
-      });
-
-
-    chart.load( [
-            { id: "1", name: "Jack Hill", title: "Chairman and CEO", img: "https://cdn.balkan.app/shared/1.jpg" },
-            { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", img: "https://cdn.balkan.app/shared/2.jpg" },
-            { id: "3", pid: "1", name: "Janae Barrett", title: "Technical Director", img: "https://cdn.balkan.app/shared/3.jpg"  },
-
-        ])
+    chart.load([
+        { id: 0},
+        { id: 1, pid: 0 },
+        { id: 2, pid: 0 },
+        { id: 3, pid: 1 },
+        { id: 4, pid: 2 },
+        { id: 5, pid: 1 },
+        { id: 6, pid: 2 },
+        { id: 7, pid: 5 }
+    ]);
 };
