@@ -18,6 +18,16 @@ window.onload = function () {
       	console.log('single click')
       }, 400);        
     });   
+
+    //if you'd like to show the node details, use the following code:
+
+    // chart.on('click', function(sender, node){    
+    // 	clearTimeout(sclicktimeout);        
+    //  	sclicktimeout = setTimeout(function(){      
+    //   	chart.editUI.show(node.id);
+    //   	console.log('single click')
+    //   }, 400);        
+    // });   
     
     
     chart.on('dbclick', function(){
