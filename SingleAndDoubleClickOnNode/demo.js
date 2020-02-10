@@ -19,12 +19,13 @@ window.onload = function () {
       }, 400);        
     });   
 
-    //if you'd like to show the node details, use the following code:
+    //if you'd like to show the node edit form, use the following code:
 
     // chart.on('click', function(sender, node){    
     // 	clearTimeout(sclicktimeout);        
     //  	sclicktimeout = setTimeout(function(){      
     //   	chart.editUI.show(node.id);
+    //      //	chart.editUI.show(node.id, true); //to show the details form
     //   	console.log('single click')
     //   }, 400);        
     // });   
