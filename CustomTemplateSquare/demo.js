@@ -75,4 +75,3 @@ window.onload = function () {
 
     chart.load(nodes);
   }
-};
