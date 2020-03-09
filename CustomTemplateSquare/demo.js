@@ -15,7 +15,14 @@ window.onload = function () {
     '<feMerge>' + 
     '<feMergeNode in="shadowMatrixOuter1" /><feMergeNode in="SourceGraphic" /></feMerge></filter>';
 
-    
+    OrgChart.templates.myTemplate.ripple = {
+      radius: 0,
+      color: "#F57C00",
+      rect: { x: 0, y: 20, width: 140, height: 110 }
+    };
+
+
+
     OrgChart.templates.myTemplate.img_0 = 
       '<clipPath id="{randId}"><circle  cx="70" cy="20" r="30"></circle></clipPath>' +
       '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="40" y="-10"  width="60" height="60"></image>';
