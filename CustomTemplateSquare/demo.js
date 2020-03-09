@@ -18,8 +18,7 @@ window.onload = function () {
     
     OrgChart.templates.myTemplate.img_0 = 
       '<clipPath id="{randId}"><circle  cx="70" cy="20" r="30"></circle></clipPath>' +
-      '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="40" y="-10"  width="60" height="60"></image>' +
-      '<circle stroke="#58D68D" stroke-width="3" fill="#58D68D" cx="50" cy="0" r="8"></circle> <text x="45" y="5" fill="white" font-size="smaller">3</text>';
+      '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="40" y="-10"  width="60" height="60"></image>';
 
     OrgChart.templates.myTemplate.field_0 = '<text width="160" style="font-size: 15px;" fill="#757575" x="70" y="65" text-anchor="middle" font-weight="bold">{val}</text>';
     OrgChart.templates.myTemplate.field_1 = '<text width="120" style="font-size: 12px;" fill="#757575" x="70" y="85" text-anchor="middle" font-weight="bold">{val}</text>';
