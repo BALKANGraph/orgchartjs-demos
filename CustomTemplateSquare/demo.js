@@ -97,8 +97,8 @@ window.onload = function () {
             { id: 2, pid: 1, Name: "Ashley Barnett", Title: "Dev Manager", team: "Overall team: x", img: "https://cdn.balkan.app/shared/3.jpg" },
             { id: 3, pid: 1, Name: "Caden Ellison", Title: "Dev Manager", team: "Overall team: x", img: "https://cdn.balkan.app/shared/4.jpg" },
             { id: 4, pid: 1, tags: ["dotted"], Name: "Elliot Patel", Title: "Sales", team: "Overall team: x", img: "https://cdn.balkan.app/shared/5.jpg" },
-            { id: 5, pid: 2, tags: ["vacant"], Name: "Vacant", Title: "Sales", "Job Function": "Project Manager", img: "vacant.svg" },
-            { id: 7, pid: 2, tags: ["vacant"], Name: "Vacant", Title: "Sales", "Job Function": "Project Manager", img: "vacant.svg" }
+            { id: 5, pid: 2, tags: ["vacant"], Name: "Vacant", Title: "Sales", "Job Function": "Project Manager", img: "https://cdn.balkan.app/shared/vacant.svg" },
+            { id: 7, pid: 2, tags: ["vacant"], Name: "Vacant", Title: "Sales", "Job Function": "Project Manager", img: "https://cdn.balkan.app/shared/vacant.svg" }
         ];
 
 
