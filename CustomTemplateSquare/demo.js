@@ -59,77 +59,102 @@ window.onload = function () {
       '<circle stroke="#D7DBDD" stroke-width="3" fill="#D7DBDD" cx="70" cy="10" r="8"></circle> ' + 
       '<path d="M55,34 C55,17 85,17 85,34" stroke="#D7DBDD" stroke-width="3" fill="#D7DBDD"></path>';
 
+      OrgChart.templates.myTemplateVacant.img_0 = 
+      '<clipPath id="{randId}"><circle  cx="70" cy="20" r="30"></circle></clipPath>' +
+      '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="40" y="-10"  width="20" height="20"></image>';
 
 
-    var chart = new OrgChart(document.getElementById("tree"), {
-      template: "myTemplate",
-      levelSeparation: 100,
-      siblingSeparation: 70,
-      nodeBinding: {
-          field_0: "name",
-          field_1: "title",
-          field_2: "team",
-          img_0: "img"
-      },
-      nodeMenu: {
-          details: { text: "Details" },
-          edit: { text: "Edit" },
-          add: { text: "Add" },
-          remove: { text: "Remove" }
-      },
-      tags: {
-          dotted: {
-              template: "myTemplateDotted"
-          },
-          vacant: {
-            template: "myTemplateVacant"
-          }
-      },     
-     
-  });
+      var chart = new OrgChart(document.getElementById("tree"), {
+        template: "myTemplate",
+        levelSeparation: 100,
+        siblingSeparation: 70,
+        nodeBinding: {
+            field_0: "Name",
+            field_1: "Title",
+            field_2: "team",
+            img_0: "img"
+        },
+        nodeMenu: {
+            details: { text: "Details" },
+            edit: { text: "Edit" },
+            add: { text: "Add" },
+            remove: { text: "Remove" }
+        },
+        tags: {
+            dotted: {
+                template: "myTemplateDotted"
+            },
+            vacant: {
+              template: "myTemplateVacant"
+            }
+        },     
+       
+    });
 
-  nodes = [
-          { id: 1, name: "Denny Curtis", title: "CEO", team: "Overall team: x", img: "https://cdn.balkan.app/shared/2.jpg" },
-          { id: 2, pid: 1, name: "Ashley Barnett", title: "Dev Manager", team: "Overall team: x", img: "https://cdn.balkan.app/shared/3.jpg" },
-          { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", team: "Overall team: x", img: "https://cdn.balkan.app/shared/4.jpg" },
-          { id: 4, pid: 1, tags: ["dotted"], name: "Elliot Patel", title: "Sales", team: "Overall team: x" },
-          { id: 5, pid: 2, tags: ["vacant"], name: "Vacant", title: "Sales", team: "Overall team: x" },
-          { id: 7, pid: 2, tags: ["vacant"], name: "Vacant", title: "Sales", team: "Overall team: x" }
-      ];
-
-
-      
-  var selectedNode = null;
-
-  function switchSelected(node) {
-
-    if (selectedNode != null) {
-      selectedNode.classList.remove("selected");
-    }  
-    node.classList.add("selected");
-    selectedNode = node;
-  }
+    nodes = [
+            { id: 1, Name: "Denny Curtis", Title: "CEO", team: "Overall team: x", img: "https://cdn.balkan.app/shared/2.jpg", "Business Unit": "HTCTQR", "Job Function": "Project Manager",
+            "Work Location": "Oxford Street, London, UK", "Work Phone": "+23 432739845789342", "Mobile Phone": "+91 7983428943598" },
+            { id: 2, pid: 1, Name: "Ashley Barnett", Title: "Dev Manager", team: "Overall team: x", img: "https://cdn.balkan.app/shared/3.jpg" },
+            { id: 3, pid: 1, Name: "Caden Ellison", Title: "Dev Manager", team: "Overall team: x", img: "https://cdn.balkan.app/shared/4.jpg" },
+            { id: 4, pid: 1, tags: ["dotted"], Name: "Elliot Patel", Title: "Sales", team: "Overall team: x", img: "https://cdn.balkan.app/shared/5.jpg" },
+            { id: 5, pid: 2, tags: ["vacant"], Name: "Vacant", Title: "Sales", "Job Function": "Project Manager", img: "vacant.svg" },
+            { id: 7, pid: 2, tags: ["vacant"], Name: "Vacant", Title: "Sales", "Job Function": "Project Manager", img: "vacant.svg" }
+        ];
 
 
-  chart.on('click', function(sender, args){
-    var nodeElement = sender.getNodeElement(args.node.id);  
-    switchSelected(nodeElement);
-  });
+        
+    var selectedNode = null;
 
-  document.querySelector('body').addEventListener('click', function(evt) {
-  
-    if (evt.target.classList.contains('edit-photo') ) {
-      selectedNode.classList.remove("selected");  
-  
+    function switchSelected(node) {
+
+      if (selectedNode != null) {
+        selectedNode.classList.remove("selected");
+      }  
+      node.classList.add("selected");
+      selectedNode = node;
     }
 
-  }, true); 
+
+    chart.on('click', function(sender, args){
+      var nodeElement = sender.getNodeElement(args.node.id);  
+      switchSelected(nodeElement);
+
+    });
+
+    document.querySelector('body').addEventListener('click', function(evt) {
+    
+      if (evt.target.classList.contains('edit-photo') ) {
+        selectedNode.classList.remove("selected");  
+      }
+    }, true);     
 
 
-  chart.nodeMenuUI.on('show', function(sender, args){
-     var nodeElement = chart.getNodeElement(args.firstNodeId); 
-     switchSelected(nodeElement);
-  });
+    chart.nodeMenuUI.on('show', function(sender, args){
+       var nodeElement = chart.getNodeElement(args.firstNodeId); 
+       switchSelected(nodeElement);
+    });
 
-  chart.load(nodes);
-}
+    chart.editUI.on('field', function(sender, args){
+
+      if (args.type == 'details' && args.name == 'team'){
+        return false;
+      }
+
+       
+      if (args.type == "details" && (args.name == "Business Unit" || args.name == "Work Location" 
+        || args.name == "Work Phone" || args.name == "Mobile Phone") ) {
+        var nodeId = sender.node.id;
+        var result = nodes.filter(obj => {
+          return obj.id === nodeId;
+        })
+
+        if (result[0].Name == 'Vacant') {
+          return false;
+        }
+        
+      }
+	  });
+
+
+    chart.load(nodes);
+  }
