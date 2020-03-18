@@ -97,6 +97,7 @@ window.onload = function () {
 
   nodes = [
           { id: 1, tags: ["root"], name: "Jack Hill", title: "CEO" },
+          { id: 9, pid: 1, tags: ["assistant", "root"], title: "Sales Manager", name: "Lexie Cole" },
           { id: 2, pid: 1, tags: ["orange"], title: "Sales Manager", name: "Lexie Cole" },
           { id: 3, pid: 1, name: "Janae Barrett", title: "Dev Manager" },
           { id: 4, pid: 2, tags: ["orange"], name: "Aaliyah Webb", title: "Sales" },
