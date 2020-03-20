@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "Drag And Drop Item from the left hand side list to a node. The Items are added from an array to the list."
-name: "Drag And Drop Items to the Chart for array - OrgChart JS | BALKANGraph"
+name: "Drag And Drop Items to the Chart from array - OrgChart JS | BALKANGraph"
 ...
