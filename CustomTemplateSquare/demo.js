@@ -45,6 +45,13 @@ window.onload = function () {
     '<rect x="-110" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
     '<circle cx="-102" cy="15" r="1" fill="red"></circle><circle cx="-98" cy="15" r="1" fill="red"></circle><circle cx="-94" cy="15" r="1" fill="red"></circle></g>';
   
+    OrgChart.templates.myTemplate.linkAdjuster = {
+      fromX: 0,
+      fromY: -5,
+      toX: 0,
+      toY: 0
+    }
+
 
     OrgChart.templates.myTemplateDotted = Object.assign({}, OrgChart.templates.myTemplate);
     
