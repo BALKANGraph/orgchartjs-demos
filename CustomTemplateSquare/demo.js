@@ -57,6 +57,13 @@ window.onload = function () {
     
     OrgChart.templates.myTemplateDotted.link = 
       '<path stroke-dasharray="6, 4" stroke-linejoin="round" stroke="grey" stroke-width="1px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}" />';
+
+      OrgChart.templates.myTemplateDotted.linkAdjuster = {
+        fromX: 0,
+        fromY: -5,
+        toX: 0,
+        toY: 0
+      }
       
     OrgChart.templates.myTemplateVacant = Object.assign({}, OrgChart.templates.myTemplate);
 
@@ -69,6 +76,13 @@ window.onload = function () {
       OrgChart.templates.myTemplateVacant.img_0 = 
       '<clipPath id="{randId}"><circle  cx="70" cy="20" r="30"></circle></clipPath>' +
       '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="40" y="-10"  width="20" height="20"></image>';
+
+      OrgChart.templates.myTemplateVacant.linkAdjuster = {
+        fromX: 0,
+        fromY: -5,
+        toX: 0,
+        toY: 0
+      }
 
 
       var chart = new OrgChart(document.getElementById("tree"), {
