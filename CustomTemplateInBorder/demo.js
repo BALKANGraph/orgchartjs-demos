@@ -1,5 +1,9 @@
 window.onload = function () {
-        
+      
+    OrgChart.templates.split = Object.assign({}, OrgChart.templates.ana);
+    OrgChart.templates.split.size = [10, 10];
+    OrgChart.templates.split.node = '<circle cx="5" cy="5" r="5" fill="none" stroke-width="1" stroke="#ED9422"></circle>';
+
     OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
     OrgChart.templates.myTemplate.size = [200, 85];
     OrgChart.templates.myTemplate.node = 
@@ -8,6 +12,8 @@ window.onload = function () {
         '<rect fill="url(#grad2)" x="20" y="10" height="65" width="160" fill="white" rx="15" ry="15"></rect>' +
         '<circle cx="100" cy="-25" r="8" fill="white" stroke-width="1" stroke="#ED9422"></circle>' +
         '<circle cx="100" cy="-25" r="3.5" fill="#ED9422"></circle>';
+
+
     
     OrgChart.templates.myTemplate.defs = 
       '<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">' +

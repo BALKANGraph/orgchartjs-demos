@@ -1,5 +1,8 @@
 window.onload = function () {
-        
+    OrgChart.templates.split = Object.assign({}, OrgChart.templates.ana);
+    OrgChart.templates.split.size = [10, 10];
+    OrgChart.templates.split.node = '<circle cx="5" cy="5" r="5" fill="none" stroke-width="1" stroke="#ED9422"></circle>';
+
     OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
     OrgChart.templates.myTemplate.size = [140, 180];
     OrgChart.templates.myTemplate.node = '<rect x="0" y="0" width="140" height="180"  fill="#044B94" fill-opacity="0" stroke="none"></rect>' +
