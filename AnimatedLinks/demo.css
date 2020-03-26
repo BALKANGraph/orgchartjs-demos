@@ -1,0 +1,43 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+    font-family: Helvetica;
+  }
+  #tree{
+    width:100%;
+    height:100%;
+  }
+  
+  .path {
+    animation: dash 5s linear alternate infinite;
+  
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 100;
+      opacity: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+  }
+  
+  
+  .path1 {
+    animation: dash 5s linear alternate infinite;
+  
+  }
+  
+  @keyframes dash1 {
+    from {
+      stroke-dashoffset: 100;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
