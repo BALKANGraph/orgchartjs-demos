@@ -7,7 +7,7 @@ window.onload = function () {
      '<path class="path" stroke-width="4" fill="none" stroke="#ffffff" stroke-dasharray="10"  d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
          var chart = new OrgChart(document.getElementById("tree"), {
              template: "ula",
-             nodes: [{id: 0}, {id: 1, pid: 0}],
+             nodes: [{id: 0}, {id: 1, pid: 0}, {id: 2, pid: 0}, {id: 3, pid: 1}, {id: 4, pid: 1}, {id: 5, pid: 2}, {id: 6, pid: 3}],
  
              slinks: [
                  {from: 0, to: 1, template: 'blue' }
