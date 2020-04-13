@@ -50,6 +50,7 @@ window.onload = function () {
     });
     
     chart.on('exportstart', function(sender, args){
+        args.content += '<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">';
         args.content += document.getElementById('myStyles').outerHTML;
     });
 
