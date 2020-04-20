@@ -27,7 +27,7 @@ window.onload = function() {
     });
 
     chart.on('remove', (sender, nodeId) => {
-      alert('asf');
+      alert('Node' + nodeId + "is deleting...");
     });
 
     chart.on('redraw', (sender) => {
