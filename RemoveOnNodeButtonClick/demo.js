@@ -27,7 +27,7 @@ window.onload = function() {
     });
 
     chart.on('remove', (sender, nodeId) => {
-      alert('Node' + nodeId + "is deleting...");
+      alert('Node ' + nodeId + ' is deleting...');
     });
 
     chart.on('redraw', (sender) => {
