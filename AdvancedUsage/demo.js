@@ -212,7 +212,9 @@ window.onload = function () {
     ]);
 
     
-    function change(){
+    function change(e){
+        e.preventDefault();
+        e.stopPropagation();
         var slider = document.getElementById('slider');
         chart.config.tags.green.template = 'green' + slider.value;
         chart.config.tags.orange.template = 'orange'+ slider.value;
