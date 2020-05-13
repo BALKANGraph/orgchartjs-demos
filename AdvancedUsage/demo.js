@@ -240,5 +240,5 @@ window.onload = function () {
             }
             change();
         }, 200);
-    });
+    }, { passive: false });
 };
