@@ -212,9 +212,7 @@ window.onload = function () {
     ]);
 
     
-    function change(e){
-        e.preventDefault();
-        e.stopPropagation();
+    function change(){
         var slider = document.getElementById('slider');
         chart.config.tags.green.template = 'green' + slider.value;
         chart.config.tags.orange.template = 'orange'+ slider.value;
@@ -230,7 +228,8 @@ window.onload = function () {
 
     var timeout = null;
     window.addEventListener("wheel", function(event){
-        
+        event.preventDefault();
+        event.stopPropagation();
         clearTimeout(timeout);
         timeout = setTimeout(function(){
             if (event.deltaY < 0 && slider.value < 3){
