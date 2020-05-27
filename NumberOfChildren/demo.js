@@ -19,23 +19,6 @@ window.onload = function () {
         { id: 16, pid: 4, name: "Alex Snider", title: "Sales Manager", img: "https://cdn.balkan.app/shared/16.jpg" }
     ];
 
-
-    for (var i = 0; i < nodes.length; i++) {
-        nodes[i].field_number_children = childCount(nodes[i].id);
-    }
-
-    function childCount(id) {
-        let count = 0;
-        for (var i = 0; i < nodes.length; i++) {
-            if (nodes[i].pid == id) {
-                count++;
-                count += childCount(nodes[i].id);
-            }
-        }
-
-        return count;
-    }
-
     OrgChart.templates.rony.field_number_children = '<circle cx="60" cy="110" r="15" fill="#F57C00"></circle><text fill="#ffffff" x="60" y="115" text-anchor="middle">{val}</text>';
 
     var chart = new OrgChart(document.getElementById("tree"), {
@@ -47,8 +30,11 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img",
-            field_number_children: "field_number_children"
-        },
-        nodes: nodes
+            field_number_children: function(sender, node){
+            	return OrgChart.childrenCount(sender, node);
+            }
+        }
     });
+
+    chart.load(nodes);
 };
