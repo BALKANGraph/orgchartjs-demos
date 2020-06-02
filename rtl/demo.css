@@ -1,0 +1,27 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+direction: rtl;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+[data-id="search"] input {
+    direction: rtl;
+}
+
+
+.chart-menu{
+    text-align: start !important;
+}
+
+.field_1 tspan{
+    text-anchor: start !important;
+}
