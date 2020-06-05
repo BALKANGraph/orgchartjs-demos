@@ -1,0 +1,62 @@
+<script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
+<style id="myStyles">
+    .manager rect{
+        stroke: #039BE5;
+    }
+    
+    .sales rect{
+        stroke: #F57C00;
+    }
+    
+    .it rect{
+        stroke: #FFCA28;
+    }
+
+    #legend {
+        position: absolute;
+        bottom: 10px;
+        right: 50px;
+        color: #757575;
+        z-index: 1;
+    }
+
+    #manager {
+        width: 16px;
+        height:16px; 
+        background-color:#039BE5; 
+        display: inline-block; 
+        border-radius: 15px;
+    }
+
+    #sales {
+        width: 16px;
+        height:16px; 
+        background-color:#F57C00; 
+        display: inline-block; 
+        border-radius: 15px;
+    }
+
+    #it {
+        width: 16px;
+        height:16px; 
+        background-color:#FFCA28; 
+        display: inline-block; 
+        border-radius: 15px;
+    }
+
+    </style>
+<div id="tree"></div>
+
+<div id="legend">
+    <div id="legend-content">
+        <div>
+            <div id="manager"></div>  Manager
+        </div>
+        <div>
+            <div id="sales"></div>  Sales
+        </div>        
+        <div>
+            <div id="it"></div>  IT
+        </div>
+    </div>
+</div>
