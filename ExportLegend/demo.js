@@ -1,7 +1,7 @@
 window.onload = function () {
         
     function pdf(nodeId) {
-        OrgChart.pdfPrevUI.show(chart, {
+        chart.exportPDF({
                 format: "A4",
                 header: 'My Header',
                 footer: 'My Footer. Page {current-page} of {total-pages}'
