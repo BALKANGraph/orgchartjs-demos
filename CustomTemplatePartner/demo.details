@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Custom template with qsare shape and three different type of nodes."
-name: "Custom Template square - OrgChart JS | BALKANGraph"
+description: "Custom template a with partner (assistant) in the same node."
+name: "Custom Template with a Partnere - OrgChart JS | BALKANGraph"
 ...
