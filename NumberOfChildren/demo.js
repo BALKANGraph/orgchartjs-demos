@@ -37,11 +37,9 @@ window.onload = function () {
     });
 
         chart.editUI.on('field', function(sender, args){
-       
-        console.log(args.name);
-            if (String(args.name).includes('childrenCount(sender, node)')){
-                		return false;
-            }
+                if (String(args.name).includes('childrenCount(sender, node)')){
+                            return false;
+                }
         });
     
     chart.load(nodes);
