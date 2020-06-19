@@ -42,7 +42,7 @@ window.onload = function () {
     chart.on('click', function (sender, args) {
         return data.text == "YES" || data.text == "NO";
      });  
-
+/
      chart.on('expcollclick', function (sender, action, id, ids) {
         if (action == OrgChart.EXPAND) {
             var node = sender.getBGNode(id);
