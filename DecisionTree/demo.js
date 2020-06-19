@@ -36,70 +36,73 @@ window.onload = function () {
         collapse: {
             level: 2,
             allChildren: true,
-        },
-        onClick: function (sender, data) {
-            return data.text == "YES" || data.text == "NO";
-        },
-        onExpCollClick: function (sender, action, id, ids) {
-            if (action == OrgChart.EXPAND) {
-                var node = sender.getBGNode(id);
-                if (node.parent) {
-                    sender.expand(id, ids, function () {
-                        sender.expand(ids[0], sender.getBGNode(ids[0]).childrenIds, function () {
-                            var ids = [];
-                            for (var i = 0; i < node.parent.childrenIds.length; i++) {
-                                var firstLevelChildId = node.parent.childrenIds[i];
-                                if (firstLevelChildId != node.id) {
-                                    ids.push(firstLevelChildId);
-                                }
-                            }
+        },     
+    });
 
-                            sender.collapse(id, ids, function () {
-                                sender.center(id);
-                            });
-                        });
+    chart.on('click', function (sender, args) {
+        return data.text == "YES" || data.text == "NO";
+     });  
 
-                    });
-
-                    return false;
-                }
-            }
-            if (action == OrgChart.COLLAPSE) {
-                var node = sender.getBGNode(id);
-                if (node.parent) {
-                    ids = [];
-                    function collapseIds(n) {
-                        if (n) {
-                            for (var i = 0; i < n.childrenIds.length; i++) {
-                                ids.push(n.childrenIds[i]);
-                                collapseIds(sender.getBGNode(n.childrenIds[i]));
+     chart.on('expcollclick', function (sender, action, id, ids) {
+        if (action == OrgChart.EXPAND) {
+            var node = sender.getBGNode(id);
+            if (node.parent) {
+                sender.expand(id, ids, function () {
+                    sender.expand(ids[0], sender.getBGNode(ids[0]).childrenIds, function () {
+                        var ids = [];
+                        for (var i = 0; i < node.parent.childrenIds.length; i++) {
+                            var firstLevelChildId = node.parent.childrenIds[i];
+                            if (firstLevelChildId != node.id) {
+                                ids.push(firstLevelChildId);
                             }
                         }
-                    }
-                    collapseIds(node);
-                    sender.collapse(id, ids, function () {
-                        sender.expand(id, node.parent.collapsedChildrenIds, function () {
+
+                        sender.collapse(id, ids, function () {
                             sender.center(id);
                         });
                     });
-                    return false;
-                }
+
+                });
+
+                return false;
             }
-        },
-        nodes: [
-            { id: 1, text: "Is it raining?", img: "https://cdn.balkan.app/shared/raindrops-cloud.svg" },
-            { id: 2, pid: 1, tags: ["yes"], text: "YES" },
-            { id: 3, pid: 1, tags: ["no"], text: "NO" },
-            { id: 4, pid: 2, text: "Is it windy?", img: "https://cdn.balkan.app/shared/wind.svg" },
-            { id: 5, pid: 4, tags: ["yes"], text: "YES" },
-            { id: 6, pid: 4, tags: ["no"], text: "NO" },
-            { id: 7, pid: 5, text: "Is it extremely windy?", img: "https://cdn.balkan.app/shared/cyclone.svg" },
-            { id: 8, pid: 7, tags: ["yes"], text: "YES" },
-            { id: 9, pid: 7, tags: ["no"], text: "NO" },
-            { id: 10, pid: 3, text: "Don't bring anything", img: "https://cdn.balkan.app/shared/empty.svg" },
-            { id: 11, pid: 6, text: "Use an umbrella", img: "https://cdn.balkan.app/shared/umbrella.svg" },
-            { id: 12, pid: 8, text: "Stay home", img: "https://cdn.balkan.app/shared/home.svg" },
-            { id: 13, pid: 9, text: "Wear a rain jacket", img: "https://cdn.balkan.app/shared/black-jacket.svg" }
-        ]
-    });
+        }
+        if (action == OrgChart.COLLAPSE) {
+            var node = sender.getBGNode(id);
+            if (node.parent) {
+                ids = [];
+                function collapseIds(n) {
+                    if (n) {
+                        for (var i = 0; i < n.childrenIds.length; i++) {
+                            ids.push(n.childrenIds[i]);
+                            collapseIds(sender.getBGNode(n.childrenIds[i]));
+                        }
+                    }
+                }
+                collapseIds(node);
+                sender.collapse(id, ids, function () {
+                    sender.expand(id, node.parent.collapsedChildrenIds, function () {
+                        sender.center(id);
+                    });
+                });
+                return false;
+            }
+        }
+     });  
+
+    chart.load( [
+        { id: 1, text: "Is it raining?", img: "https://cdn.balkan.app/shared/raindrops-cloud.svg" },
+        { id: 2, pid: 1, tags: ["yes"], text: "YES" },
+        { id: 3, pid: 1, tags: ["no"], text: "NO" },
+        { id: 4, pid: 2, text: "Is it windy?", img: "https://cdn.balkan.app/shared/wind.svg" },
+        { id: 5, pid: 4, tags: ["yes"], text: "YES" },
+        { id: 6, pid: 4, tags: ["no"], text: "NO" },
+        { id: 7, pid: 5, text: "Is it extremely windy?", img: "https://cdn.balkan.app/shared/cyclone.svg" },
+        { id: 8, pid: 7, tags: ["yes"], text: "YES" },
+        { id: 9, pid: 7, tags: ["no"], text: "NO" },
+        { id: 10, pid: 3, text: "Don't bring anything", img: "https://cdn.balkan.app/shared/empty.svg" },
+        { id: 11, pid: 6, text: "Use an umbrella", img: "https://cdn.balkan.app/shared/umbrella.svg" },
+        { id: 12, pid: 8, text: "Stay home", img: "https://cdn.balkan.app/shared/home.svg" },
+        { id: 13, pid: 9, text: "Wear a rain jacket", img: "https://cdn.balkan.app/shared/black-jacket.svg" }
+    ])
 };
