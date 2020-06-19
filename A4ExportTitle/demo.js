@@ -12,19 +12,17 @@ window.onload = function () {
             pdfWithTitle: {                
                 text: 'A4 PDF',
                 icon: OrgChart.icon.pdf(24, 24),
+                onClick: function () {
+                    chart.exportPDF({
+                        header: 'my header goes here',
+                        footer: 'my footer goes here',
+                        format: 'A4',
+                        margin: [60, 20, 60, 20]
+                    });
+                }
             }
         }
     });
-    
-    chart.on('click', function (sender, args) {
-        chart.exportPDF({
-            header: 'my header goes here',
-            footer: 'my footer goes here',
-            format: 'A4',
-            margin: [60, 20, 60, 20]
-        });
-     });  
-
 
     chart.load([
         { id: 1 },
