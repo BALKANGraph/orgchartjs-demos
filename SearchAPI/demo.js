@@ -2,7 +2,7 @@
 
 
 window.onload = function () {
-    function exportStart(sender, options, svg) {
+    function exportStart(sender, svg) {
         var id = 3;
         var rect = svg.querySelector('[node-id="' + id + '"] rect');
         rect.style.fill = "#F57C00";
@@ -19,7 +19,7 @@ window.onload = function () {
             field_0: "id",
             field_1: "pid"
         },
-        onRedraw: onRedrawHandler,
+
         onExportStart: exportStart,
         menu: {
             pdf: { text: "Export PDF" }
@@ -32,15 +32,7 @@ window.onload = function () {
                 text: "remove"
             }
         },
-        nodes: [
-            { id: 1 },
-            { id: 2, pid: 1 },
-            { id: 3, pid: 1 },
-            { id: "Name", pid: 2 },
-            { id: 5, pid: 2 },
-            { id: 6, pid: 3 },
-            { id: "Name 1", pid: 3 }
-        ]
+        
     });
 
     var elements = document.getElementsByClassName("search-btn");
@@ -57,4 +49,24 @@ window.onload = function () {
             }
         });
     }
+
+    chart.on('redraw', function (sender) {
+        onRedrawHandler(sender);
+     });  
+
+     chart.on('exportstart', function (sender, args) {
+        exportStart(sender, args.content);
+     });  
+
+    nodes = [
+        { id: 1 },
+        { id: 2, pid: 1 },
+        { id: 3, pid: 1 },
+        { id: "Name", pid: 2 },
+        { id: 5, pid: 2 },
+        { id: 6, pid: 3 },
+        { id: "Name 1", pid: 3 }
+    ];
+
+    chart.load(nodes);
 }
