@@ -62,6 +62,12 @@ window.onload = function () {
             addInGroup: { text: "Add in group" },
             addAsChild: { text: "Add as child" }
         },
+        menu: {
+            pdf: { text: "Export PDF" },
+            png: { text: "Export PNG" },
+            svg: { text: "Export SVG" },
+            csv: { text: "Export CSV" }
+        },
         nodeMenu: {
             details: { text: "Details" },
             edit: { text: "Edit" },
