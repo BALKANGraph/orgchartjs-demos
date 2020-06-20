@@ -77,51 +77,51 @@ window.onload = function () {
     });
 
     chart.on('update', function (sender, oldNode, newNode) {
-        update
+        update(sender, oldNode, newNode)
     });  
 
     chart.on('remove', function (sender, nodeId) {
-        remove
+        remove(nodeId)
     });  
 
     chart.on('add', function (sender, node) {
-        add
+        add(sender, node)
      }); 
      
      chart.editUI.on('imageuploaded', function (sender, file, inputHtmlElement) {
-        imageUploaded
+        imageUploaded(file, inputHtmlElement)
      });  
 
      chart.on('updatetags', function (sender, tags) {
-        updateTags
+        updateTags(sender, tags)
      });  
     
      chart.on('click', function (sender, args) {
-        click
+        click(sender, node)
      });  
 
      chart.on('dbclick', function (sender, node) {
-        dbclick
+        dbclick(sender, node)
       });  
 
       chart.on('redraw', function (sender) {
-        redraw
+        redraw(sender)
      });  
 
      chart.on('expcollclick', function (sender, action, id, ids) {
-        expCollClick
+        expCollClick(sender, action, id, ids)
      });  
 
      chart.on('exportstart', function (sender, args) {
-        exportStart
+        exportStart(sender, type, filename)
      });  
 
      chart.on('exportend', function (sender, args) {
-        exportEnd
+        exportEnd(sender, type, filename, content)
      });  
 
      chart.on('searchclick', function (sender, nodeId) {
-        searchClick
+        searchClick(sender, nodeId)
      });  
 
     nodes = [
