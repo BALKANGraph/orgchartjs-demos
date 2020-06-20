@@ -2,11 +2,11 @@
 
 
 window.onload = function () {
-    function exportStart(sender, svg) {
-        var id = 3;
-        var rect = svg.querySelector('[node-id="' + id + '"] rect');
-        rect.style.fill = "#F57C00";
-    }
+    // function exportStart(sender, svg) {
+    //     var id = 3;
+    //     var rect = svg.querySelector('[node-id="' + id + '"] rect');
+    //     rect.style.fill = "#F57C00";
+    // }
 
     function onRedrawHandler(sender) {
         var rect = sender.getNodeElement(3).getElementsByTagName("rect")[0];
@@ -19,9 +19,9 @@ window.onload = function () {
             field_0: "id",
             field_1: "pid"
         },
-        menu: {
-            pdf: { text: "Export PDF" }
-        },
+        // menu: {
+        //     pdf: { text: "Export PDF" }
+        // },
         nodeMenu: {
             add: {
                 text: "add"
@@ -52,9 +52,9 @@ window.onload = function () {
         onRedrawHandler(sender);
      });  
 
-     chart.on('exportstart', function (sender, args) {
-        exportStart(sender, args.content);
-     });  
+    //  chart.on('exportstart', function (sender, args) {
+    //     exportStart(sender, args.content);
+    //  });  
 
     nodes = [
         { id: 1 },
