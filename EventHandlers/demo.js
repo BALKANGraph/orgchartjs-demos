@@ -58,18 +58,6 @@ window.onload = function () {
         scaleInitial: OrgChart.match.boundary,
         enableDragDrop: true,
         enableSearch: false,
-        onUpdate: update,
-        onRemove: remove,
-        onAdd: add,
-        onImageUploaded: imageUploaded,
-        onUpdateTags: updateTags,
-        onClick: click,
-        onDbClick: dbclick,
-        onRedraw: redraw,
-        onExpCollClick: expCollClick,
-        onExportStart: exportStart,
-        onExportEnd: exportEnd,
-        onSearchClick: searchClick,
         dragDropMenu: {
             addInGroup: { text: "Add in group" },
             addAsChild: { text: "Add as child" }
@@ -85,14 +73,66 @@ window.onload = function () {
             field_1: "title",
             img_0: "img"
         },
-        nodes: [
-            { id: 1, name: "Denny Curtis", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
-            { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", img: "https://cdn.balkan.app/shared/3.jpg" },
-            { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", img: "https://cdn.balkan.app/shared/4.jpg" },
-            { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
-            { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
-            { id: 6, pid: 3, name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
-            { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" }
-        ]
+        
     });
+
+    chart.on('update', function (sender, oldNode, newNode) {
+        update
+    });  
+
+    chart.on('remove', function (sender, nodeId) {
+        remove
+    });  
+
+    chart.on('add', function (sender, node) {
+        add
+     }); 
+     
+     chart.editUI.on('imageuploaded', function (sender, file, inputHtmlElement) {
+        imageUploaded
+     });  
+
+     chart.on('updatetags', function (sender, tags) {
+        updateTags
+     });  
+    
+     chart.on('click', function (sender, args) {
+        click
+     });  
+
+     chart.on('dbclick', function (sender, node) {
+        dbclick
+      });  
+
+      chart.on('redraw', function (sender) {
+        redraw
+     });  
+
+     chart.on('expcollclick', function (sender, action, id, ids) {
+        expCollClick
+     });  
+
+     chart.on('exportstart', function (sender, args) {
+        exportStart
+     });  
+
+     chart.on('exportend', function (sender, args) {
+        exportEnd
+     });  
+
+     chart.on('searchclick', function (sender, nodeId) {
+        searchClick
+     });  
+
+    nodes = [
+        { id: 1, name: "Denny Curtis", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
+        { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", img: "https://cdn.balkan.app/shared/3.jpg" },
+        { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", img: "https://cdn.balkan.app/shared/4.jpg" },
+        { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
+        { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
+        { id: 6, pid: 3, name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
+        { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" }
+    ];
+
+    chart.load(nodes);
 };
