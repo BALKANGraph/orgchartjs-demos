@@ -19,8 +19,6 @@ window.onload = function () {
             field_0: "id",
             field_1: "pid"
         },
-
-        onExportStart: exportStart,
         menu: {
             pdf: { text: "Export PDF" }
         },
