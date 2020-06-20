@@ -19,8 +19,8 @@ window.onload = function () {
         c.innerHTML += "redraw(sender)<br />";
     };
 
-    function click(sender, node) {
-        c.innerHTML += "click(sender, node)<br />";
+    function click(sender, args) {
+        c.innerHTML += "click(sender, args)<br />";
     };
 
     function dbclick(sender, node) {
@@ -77,7 +77,7 @@ window.onload = function () {
     });
 
     chart.on('update', function (sender, oldNode, newNode) {
-        update(sender, oldNode, newNode)
+        update(sender, oldNode, newNode);
     });  
 
     chart.on('remove', function (sender, nodeId) {
@@ -97,7 +97,7 @@ window.onload = function () {
      });  
     
      chart.on('click', function (sender, args) {
-        click(sender, node)
+        click(sender, args)
      });  
 
      chart.on('dbclick', function (sender, node) {
@@ -113,11 +113,11 @@ window.onload = function () {
      });  
 
      chart.on('exportstart', function (sender, args) {
-        exportStart(sender, type, filename)
+        exportStart(sender, args)
      });  
 
      chart.on('exportend', function (sender, args) {
-        exportEnd(sender, type, filename, content)
+        exportEnd(sender, args)
      });  
 
      chart.on('searchclick', function (sender, nodeId) {
