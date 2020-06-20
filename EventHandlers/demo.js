@@ -57,7 +57,7 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         scaleInitial: OrgChart.match.boundary,
         enableDragDrop: true,
-    //    enableSearch: false,
+        enableSearch: false,
         dragDropMenu: {
             addInGroup: { text: "Add in group" },
             addAsChild: { text: "Add as child" }
