@@ -1,6 +1,3 @@
-
-
-
 window.onload = function () {
     // function exportStart(sender, svg) {
     //     var id = 3;
@@ -8,10 +5,6 @@ window.onload = function () {
     //     rect.style.fill = "#F57C00";
     // }
 
-    function onRedrawHandler(sender) {
-        var rect = sender.getNodeElement(3).getElementsByTagName("rect")[0];
-        rect.style.fill = "#F57C00";
-    }
 
     var chart;
     chart = new OrgChart(document.getElementById("tree"), {
