@@ -121,7 +121,7 @@ html, body{
       height: 2em;
       top: 50%;
       margin: -1em 0 0;
-      background: url(customTemplateTooltip.svg) no-repeat center center;
+      background: url(https://balkangraph.com/OrgChartJS-Demos/customTemplateTooltip.svg) no-repeat center center;
       background-size: 100%;
   }
   
