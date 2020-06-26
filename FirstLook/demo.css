@@ -1,0 +1,93 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+    overflow: hidden;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+
+[lcn='it-team']>rect {
+    fill: #FFCA28;
+}
+
+[lcn='sales-team']>rect {
+    fill: #F57C00;
+}
+
+[lcn='top-management']>rect {
+    fill: #f2f2f2;
+}
+
+[lcn='top-management']>text,
+.assistant>text {
+    fill: #aeaeae;
+}
+
+[lcn='top-management'] circle,
+[lcn='assistant'] {
+    fill: #aeaeae;
+}
+
+.assistant>rect {
+    fill: #ffffff;
+}
+
+.assistant [control-node-menu-id]>circle {
+    fill: #aeaeae;
+}
+
+.hr-team>rect {
+    fill: #b4ffff;
+}
+
+.hr-team>text {
+    fill: #039BE5;
+}
+
+.hr-team>[control-node-menu-id] line {
+    stroke: #039BE5;
+}
+
+.hr-team>g>.ripple {
+    fill: #00efef;
+}
+
+.it-team>rect {
+    fill: #fff5d8;
+}
+
+.it-team>text {
+    fill: #ecaf00;
+}
+
+.it-team>[control-node-menu-id] line {
+    stroke: #ecaf00;
+}
+
+.it-team>g>.ripple {
+    fill: #ecaf00;
+}
+
+.sales-team>rect {
+    fill: #ffeedd;
+}
+
+.sales-team>text {
+    fill: #F57C00;
+}
+
+.sales-team>[control-node-menu-id] line {
+    stroke: #F57C00;
+}
+
+.sales-team>g>.ripple {
+    fill: #F57C00;
+}
+
