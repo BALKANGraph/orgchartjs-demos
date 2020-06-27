@@ -43,35 +43,35 @@ html, body {
     fill: #aeaeae;
 }
 
-.hr-team>rect {
+.it-team>rect {
     fill: #b4ffff;
 }
 
-.hr-team>text {
+.it-team>text {
     fill: #039BE5;
 }
 
-.hr-team>[control-node-menu-id] line {
+.it-team>[control-node-menu-id] line {
     stroke: #039BE5;
 }
 
-.hr-team>g>.ripple {
+.it-team>g>.ripple {
     fill: #00efef;
 }
 
-.it-team>rect {
+.hr-team>rect {
     fill: #fff5d8;
 }
 
-.it-team>text {
+.hr-team>text {
     fill: #ecaf00;
 }
 
-.it-team>[control-node-menu-id] line {
+.hr-team>[control-node-menu-id] line {
     stroke: #ecaf00;
 }
 
-.it-team>g>.ripple {
+.hr-team>g>.ripple {
     fill: #ecaf00;
 }
 
