@@ -1,7 +1,9 @@
 
 window.onload = function () { 
-	OrgChart.SEARCH_PLACEHOLDER = "يبحث";
+		OrgChart.SEARCH_PLACEHOLDER = "يبحث";
 
+		OrgChart.templates.ana.field_1 = '<text width="130" text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="start">{val}</text>';
+		
 		var chart = new OrgChart(document.getElementById("tree"), {
 			enableDragDrop: true,
 			menu: {

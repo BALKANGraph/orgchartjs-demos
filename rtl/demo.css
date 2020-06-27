@@ -21,7 +21,3 @@ direction: rtl;
 .chart-menu{
     text-align: start !important;
 }
-
-.field_1 tspan{
-    text-anchor: start !important;
-}

@@ -1,4 +1,4 @@
-
+     
 window.onload = function () {
     var children_count = 0;
   
@@ -22,21 +22,9 @@ window.onload = function () {
 
     
     chart.editUI.on('show', function(sender, nodeId){
-    	var children = {
-      	    count: 0
-        };            
-      
-    	childrenCount(children, nodeId);
-        children_count = children.count
+        children_count = OrgChart.childrenCount(chart, chart.getNode(nodeId));
     });
     
-    function childrenCount(children,  nodeId){
-    		var node = chart.getBGNode(nodeId);
-      	    for(var i = 0; i < node.childrenIds.length; i++){
-                children.count++;
-                childrenCount(children, node.childrenIds[i]);
-  	    }
-    }    
     
     chart.load([
             { id: 1, name: "Denny Curtis", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg"},

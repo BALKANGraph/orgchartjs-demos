@@ -25,8 +25,8 @@ window.onload = function () {
       ];
 
       chart.on('drop', function (sender, draggedNodeId, droppedNodeId) {
-        var draggedNode = sender.getBGNode(draggedNodeId);
-        var droppedNode = sender.getBGNode(droppedNodeId);
+        var draggedNode = sender.getNode(draggedNodeId);
+        var droppedNode = sender.getNode(droppedNodeId);
         
         if (draggedNode.level == droppedNode.level){
         

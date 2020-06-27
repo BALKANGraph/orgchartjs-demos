@@ -1,5 +1,4 @@
 
-
 window.onload = function () {
    
     OrgChart.templates.neet = Object.assign({}, OrgChart.templates.base);
@@ -230,7 +229,7 @@ window.onload = function () {
     chart.on('expcollclick', function(sender, state, id){ 
         var tags = chart._get(id).tags;
         if (isDot(tags)){   
-            var node = sender.getBGNode(id);
+            var node = sender.getNode(id);
             chart._get(id).tags = ['neet_' + (node.level)];                          
         }
     });
@@ -243,14 +242,14 @@ window.onload = function () {
                 if (dotEl){
                     dotEl.addEventListener('mouseover', function(){
                         var nid = this.getAttribute('node-id');
-                        var level = chart.getBGNode(nid).level;
+                        var level = chart.getNode(nid).level;
                         var circle = this.querySelector('circle');
                         circle.setAttribute('fill', '#757575');
                     });
 
                     dotEl.addEventListener('mouseleave', function(){
                         var nid = this.getAttribute('node-id');
-                        var level = chart.getBGNode(nid).level;
+                        var level = chart.getNode(nid).level;
                         var circle = this.querySelector('circle');
                         circle.setAttribute('fill', colors[level]);
                     });
@@ -279,8 +278,8 @@ window.onload = function () {
                     cnode.h = t.heidth;
                     cnode.collapsedChildrenIds = cnode.childrenIds;
                     chart._get(cnode.id).tags = [t.name];  
-                    if (!chart.hasTag(t.name)){
-                        chart.addTag(t.name, {template: t.name})
+                    if (!chart.config.tags[t.name]){
+                        chart.config.tags[t.name] = {template: t.name}
                     }                          
                 }
                 first_walk(cnode);
@@ -302,9 +301,9 @@ window.onload = function () {
             node.w = parseInt(t.size);
             node.h = parseInt(t.size);
             chart._get(node.id).tags = [t.name];       
-            if (!chart.hasTag(t.name)){
-                chart.addTag(t.name, {template: t.name})
-            }
+            if (!chart.config.tags[t.name]){
+                        chart.config.tags[t.name] = {template: t.name}
+            }      
         }            
     }     
     

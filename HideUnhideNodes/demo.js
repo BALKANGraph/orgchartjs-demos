@@ -53,12 +53,12 @@ window.onload = function () {
     'C334.572,126.862,331.585,120.825,325.996,118.947z"/>';
 
     var hide = function (id) {
-        var node = chart.getBGNode(id);
+        var node = chart.getNode(id);
         chart.collapse(node.pid, id);
     };
 
     var unhide = function (id) {
-        var node = chart.getBGNode(id);
+        var node = chart.getNode(id);
         chart.expand(node.id, node.childrenIds);
     };
 

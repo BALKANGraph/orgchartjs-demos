@@ -1,4 +1,3 @@
-
 window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "ula",
@@ -20,7 +19,7 @@ window.onload = function () {
             level: 2
         },
         expand: {
-            nodes: [2, 4],
+            nodes: [7, 16],
             allChildren: true
         },
         nodes: [

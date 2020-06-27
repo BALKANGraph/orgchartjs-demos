@@ -1,5 +1,4 @@
 
-
 window.onload = function () {
 
     var tooltip = '<g data-tooltip-id="{id}" transform="matrix(0,0,0,0,{x},{y})" ><path stroke="#FFCA28" fill="#fff" \
@@ -58,9 +57,9 @@ window.onload = function () {
 
 
     OrgChart.events.on('render', function (sender, args) {
-        for (var id in args.res.visibleNodes) {
-            var node = args.res.visibleNodes[id];
-            var data = sender.get(id);
+        for (var i = 0; i < args.res.visibleNodeIds.length; i++) {
+            var node = sender.getNode(args.res.visibleNodeIds[i]);
+            var data = sender.get(node.id);
             if (data.tooltip) {
                 var sss = OrgChart.wrapText(data.tooltip, tooltipText);
 
@@ -68,7 +67,7 @@ window.onload = function () {
                 args.content += tooltip
                     .replace('{x}', node.x + node.w / 2)
                     .replace('{y}', node.y + 5)
-                    .replace('{id}', id)
+                    .replace('{id}', node.id)
                     .replace('{text}', tooltipText.replace('{val}', OrgChart.wrapText(data.tooltip, tooltipText)));
             }
         }

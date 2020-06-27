@@ -9,8 +9,8 @@ window.onload = function () {
         sticky: false
     });
 
-    chart.on('expcollclick', function(sender, action, id, ids){  
-        if (action == OrgChart.EXPAND) {
+    chart.on('expcollclick', function(sender, collapse, id, ids){  
+        if (!collapse) {
             sender.expand(id, ids, function(){              
                 sender.center(id);
             });

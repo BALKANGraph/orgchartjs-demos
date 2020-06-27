@@ -51,7 +51,6 @@ window.onload = function () {
       var nodeElements = document.querySelectorAll('[node-id]');
       
       for(var i = 0; i < nodeElements.length; i++){
-        debugger;
           var nodeElement = nodeElements[i];
           nodeElement.ondrop = function(ev) {
               ev.preventDefault();   
@@ -74,7 +73,7 @@ window.onload = function () {
                   pid: pid,
                   name: name,
                   zip: zip
-              }, true);
+              }, null, true);
 
               item.parentNode.removeChild(item);
           }

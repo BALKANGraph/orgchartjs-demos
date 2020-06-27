@@ -9,25 +9,15 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img"
-        },
-          tags: {
-            M: {
-                group: true,
-                groupName: "Directors",
-                groupState: OrgChart.EXPAND,
-                template: "group_grey"
-            }
         }
     });
     
        chart.nodeMenuUI.on('show', function(sender, args){
-       		alert(sender.obj.getBGNode(args.firstNodeId).tags);
+       		alert(sender.obj.getNode(args.firstNodeId).tags);
           
-          var node = sender.obj.getBGNode(args.firstNodeId);
+          var node = sender.obj.getNode(args.firstNodeId);
           
-          if (node.isChildOfGroup){
-          	node = sender.obj.getBGNode(node._groupParentNodeId);
-          }
+        
        		if (node.childrenIds.length){
            args.menu = {
               add: { text: "Add New" },

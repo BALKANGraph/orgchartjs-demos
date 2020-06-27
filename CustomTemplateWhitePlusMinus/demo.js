@@ -69,9 +69,9 @@ OrgChart.templates.white.img_0 =
   
 
   var expand = function (id) {
-        var node = chart.getBGNode(id);
+        var node = chart.getNode(id);
         var childId = node.childrenIds[0];
-        var childNode = chart.getBGNode(childId);
+        var childNode = chart.getNode(childId);
         chart.expand(childId, childNode.childrenIds);
   };
 
@@ -125,7 +125,7 @@ nodes = [
 
 
     chart.on('add', function (sender, node) {
-      var currentNode = chart.getBGNode(node.pid);
+      var currentNode = chart.getNode(node.pid);
       if (currentNode.level != 0) {
         if (currentNode.childrenIds.length == 1) {
           var addUnderNode = currentNode.childrenIds[0];

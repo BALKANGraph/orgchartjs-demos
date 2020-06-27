@@ -1,5 +1,3 @@
-
-
 window.onload = function () {
     var selectedId = null;
         OrgChart.templates.luba.defs += '<filter id="f1" > \
@@ -7,6 +5,7 @@ window.onload = function () {
                     </filter>';
         var chart = new OrgChart(document.getElementById("tree"), {
             template: 'luba',
+            orientation: OrgChart.orientation.bottom,
             nodeBinding: {
                 field_0: "name",
                 field_1: "title",
@@ -45,7 +44,7 @@ window.onload = function () {
             if (selectedId == null){
                 return;
             }
-            var node = chart.getBGNode(selectedId);
+            var node = chart.getNode(selectedId);
             var skipBlur = [node.id];
             var skipBlurLink = [];
             while (node.parent) {

@@ -1,5 +1,6 @@
 
 
+
 window.onload = function () {
     OrgChart.templates.belinda.plus = "";
     OrgChart.templates.belinda.minus = "";
@@ -40,15 +41,16 @@ window.onload = function () {
     });
 
     chart.on('click', function (sender, args) {
+        var data = sender.get(args.node.id);
         return data.text == "YES" || data.text == "NO";
      });  
 
-     chart.on('expcollclick', function (sender, action, id, ids) {
-        if (action == OrgChart.EXPAND) {
-            var node = sender.getBGNode(id);
+     chart.on('expcollclick', function (sender, collapse, id, ids) {
+        if (!collapse) {
+            var node = sender.getNode(id);
             if (node.parent) {
                 sender.expand(id, ids, function () {
-                    sender.expand(ids[0], sender.getBGNode(ids[0]).childrenIds, function () {
+                    sender.expand(ids[0], sender.getNode(ids[0]).childrenIds, function () {
                         var ids = [];
                         for (var i = 0; i < node.parent.childrenIds.length; i++) {
                             var firstLevelChildId = node.parent.childrenIds[i];
@@ -68,7 +70,7 @@ window.onload = function () {
             }
         }
         if (action == OrgChart.COLLAPSE) {
-            var node = sender.getBGNode(id);
+            var node = sender.getNode(id);
             if (node.parent) {
                 ids = [];
                 function collapseIds(n) {

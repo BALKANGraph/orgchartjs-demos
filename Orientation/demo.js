@@ -1,5 +1,4 @@
 
-
 window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         enableSearch: false,
@@ -22,7 +21,6 @@ window.onload = function () {
     }
 
     document.querySelector('#orientation').addEventListener('change', function(){
-        chart.config.orientation = parseInt(this.value);
-        chart.draw();
+        chart.setOrientation(parseInt(this.value));
     });
 };

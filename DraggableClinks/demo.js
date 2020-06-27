@@ -56,7 +56,7 @@ function mousedownHandler(e) {
 
 
 
-    var fromnode = sender.getBGNode(this.getAttribute('node-id'));
+    var fromnode = sender.getNode(this.getAttribute('node-id'));
     var tonode = null;
 
 
@@ -77,7 +77,7 @@ function mousedownHandler(e) {
     };
 
     var mouseenterHandler = function () {
-        tonode = sender.getBGNode(this.getAttribute('node-id'));
+        tonode = sender.getNode(this.getAttribute('node-id'));
     }
 
     var mouseleaveHandler = function () {
