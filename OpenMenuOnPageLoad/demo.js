@@ -17,8 +17,7 @@ window.onload = function () {
     
     chart.on('init', function(){
         var menu = document.querySelector('[control-export-menu]');
-    		menu.click()
-    		debugger;
+    		menu.click();
     });
     
     chart.load([
