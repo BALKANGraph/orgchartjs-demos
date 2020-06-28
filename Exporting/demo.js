@@ -1,5 +1,3 @@
-
-
 var chart;
 window.onload = function () {
     chart = new OrgChart(document.getElementById("tree"), {
@@ -26,8 +24,14 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img"
-        },
-        nodes: [
+        }
+    });
+
+    chart.on('init', function(){
+        preview();
+    })
+
+    chart.load([
             { id: "1", name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://cdn.balkan.app/shared/1.jpg" },
             { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", email: "ava@domain.com", img: "https://cdn.balkan.app/shared/2.jpg" },
             { id: "3", pid: "1", name: "Janae Barrett", title: "Technical Director", img: "https://cdn.balkan.app/shared/3.jpg" },
@@ -44,8 +48,7 @@ window.onload = function () {
             { id: "14", pid: "4", name: "Lucas West", title: "Marketer", img: "https://cdn.balkan.app/shared/14.jpg" },
             { id: "15", pid: "4", name: "Adan Travis", title: "Designer", img: "https://cdn.balkan.app/shared/15.jpg" },
             { id: "16", pid: "4", name: "Alex Snider", title: "Sales Manager", img: "https://cdn.balkan.app/shared/16.jpg" }
-        ]
-    });
+        ]);
 
     function preview(){
         OrgChart.pdfPrevUI.show(chart, {
