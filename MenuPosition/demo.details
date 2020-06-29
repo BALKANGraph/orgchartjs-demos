@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This example change the menu position and add a print option."
-name: "Menu position and print option - OrgChart JS | BALKANGraph"
+description: "This example changes the menu position."
+name: "Menu position - OrgChart JS | BALKANGraph"
 ...
