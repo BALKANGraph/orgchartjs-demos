@@ -1,10 +1,5 @@
 window.onload = function () {
 
-
-    function print(nodeId) {
-        window.print();
-    }
-
     var chart = new OrgChart(document.getElementById("tree"), {
         enableSearch: false,
 
@@ -12,12 +7,7 @@ window.onload = function () {
             pdf: { text: "Export PDF" },
             png: { text: "Export PNG" },
             svg: { text: "Export SVG" },
-            csv: { text: "Export CSV" },
-            print: {
-                text: "Print",
-                icon: OrgChart.icon.pdf(24, 24, "#7A7A7A"),
-                onClick: print
-            }
+            csv: { text: "Export CSV" }
         },
 
         nodeBinding: {
@@ -26,9 +16,6 @@ window.onload = function () {
             img_0: "img"
         },
 
-        nodeMenu: {
-            edit: { text: "Edit" },
-        }
     });
 
 
