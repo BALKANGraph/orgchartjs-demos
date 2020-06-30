@@ -54,6 +54,13 @@ OrgChart.templates.white.img_0 =
   OrgChart.templates.circle.minus = '<circle cx="15" cy="-15" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="0"></circle>'
     + '<line x1="4" y1="-15" x2="26" y2="-15" stroke-width="1" stroke="#aeaeae"></line>';
 
+    OrgChart.templates.circle.linkAdjuster = {
+      fromX: 0,
+      fromY: -17,
+      toX: 0,
+      toY: 0
+    }
+
   OrgChart.templates.white.plus = '';
   OrgChart.templates.white.minus = '';
 
