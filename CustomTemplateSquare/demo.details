@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Custom template with qsare shape and three different type of nodes."
-name: "Custom Template square - OrgChart JS | BALKANGraph"
+description: "Custom template with square shape, three different type of nodes and Custom Edit form."
+name: "Custom Template With Custom Edit Form - OrgChart JS | BALKANGraph"
 ...
