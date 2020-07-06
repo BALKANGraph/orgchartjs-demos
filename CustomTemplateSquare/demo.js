@@ -177,7 +177,7 @@ window.onload = function () {
 	  });
    
     chart.on('init', function(sender){
-      sender.editUI.show(0);
+      sender.editUI.show(1);
     });
 
     chart.load(nodes);
