@@ -175,7 +175,10 @@ window.onload = function () {
         
       }
 	  });
-
+   
+    chart.on('init', function(sender){
+      sender.editUI.show(0);
+    });
 
     chart.load(nodes);
   }
