@@ -1,7 +1,7 @@
 window.onload = function () {
    
     var chart = new OrgChart(document.getElementById("tree"), {
-        template: "luba",
+        template: "derek",
         align: OrgChart.ORIENTATION,
         toolbar: {
             layout: true,
