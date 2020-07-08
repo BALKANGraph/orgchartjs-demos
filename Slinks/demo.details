@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Additional links between nodes."
-name: "Multiple Parents - OrgChart JS | BALKANGraph"
+description: "Slinks - Additional links between nodes."
+name: "Slinks - OrgChart JS | BALKANGraph"
 ...
