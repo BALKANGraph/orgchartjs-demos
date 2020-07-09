@@ -2,6 +2,7 @@ window.onload = function () {
    
     var chart = new OrgChart(document.getElementById("tree"), {
         template: "derek",
+        layout: OrgChart.tree,
         align: OrgChart.ORIENTATION,
         toolbar: {
             layout: true,
