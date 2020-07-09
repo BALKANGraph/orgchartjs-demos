@@ -1,3 +1,3 @@
-# Curve links
-C link, second parent relation, curved link
+# Curved links
+You can specify aditional curved links in OrgChart JS.
 
