@@ -17,7 +17,7 @@ window.onload = function() {
         'c-1.836,1.224-4.284,3.06-6.12,4.284c3.672-3.672,7.344-7.956,11.016-11.628C180.324,92.469,180.324,92.469,180.324,93.081z"/>' +
     '</svg>';
 
-    OrgChart.templates.ana.field_1 = btn  + '<rect data-remove-button="{val}" x="215" y="0" rx="5" ry="5" opacity="0" height="35" width="35"></rect> ';
+    OrgChart.templates.ana.field_1 = btn  + '<rect data-remove-button="{val}" x="215" y="0" rx="5" ry="5" fill="red" opacity="0" height="35" width="35"></rect> ';
 
     let chart = new OrgChart(document.getElementById("tree"), {
       nodeBinding: {
