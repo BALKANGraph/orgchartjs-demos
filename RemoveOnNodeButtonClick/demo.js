@@ -37,7 +37,7 @@ window.onload = function() {
         removeButton.addEventListener('click', (e) => {
           e.preventDefault();
           e.cancelBubble = true;
-          chart.removeNode(removeButton.getAttribute('data-remove-button'), true);
+          chart.removeNode(removeButton.getAttribute('data-remove-button'), null, true);
           return false;
         });
       });
