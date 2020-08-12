@@ -1,87 +1,35 @@
-window.onload = function () {
-    var currentNode = '';
-    var clientXY = [0,0];
+OrgChart.templates.myInvisibleGroup = Object.assign({}, OrgChart.templates.group);
+OrgChart.templates.myInvisibleGroup.node = "";
 
+OrgChart.templates.floatingTemplate = Object.assign({}, OrgChart.templates.ana);
+OrgChart.templates.floatingTemplate.size = [250, 60];
+OrgChart.templates.floatingTemplate.node = '<rect x="0" y="0" height="60" width="250" fill="#ffffff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
+OrgChart.templates.floatingTemplate.field_0 = '<text width="230" style="font-size: 18px;" fill="#039BE5" x="125" y="35" text-anchor="middle">{val}</text>';
 
-    var chart = new OrgChart(document.getElementById("tree"), {
-        nodeBinding: {
-            field_0: "name"
-        }
-    });
-
-    var menu = new OrgChart.menuUI();
-    menu.init(chart, {
-        addAsAssistant: {
-            icon: '',
-            onClick: function(){
-                currentNode.tags = ['assistant'];
-                chart.addNode(currentNode);
+var chart = new OrgChart(document.getElementById("tree"), {
+    enableDragDrop: true,
+    nodeBinding: {
+        field_0: "name"
+    },
+    tags: { 
+        "invisible": {
+            subTreeConfig: {	
+                columns: 1
             },
-            text: 'Add As Assistant'
-        },        
-        addAsRegular: {
-            icon: '',            
-            onClick: function(){
-                chart.addNode(currentNode);
-            },
-            text: 'Add As Regular'
+            template: "myInvisibleGroup"
+        },
+        floatingNode : {
+            template: "floatingTemplate"
         }
-    });
-
-    chart.on('redraw', function(){
-
-        var nodeElements = document.querySelectorAll('[node-id]');
-        
-        for(var i = 0; i < nodeElements.length; i++){
-            var nodeElement = nodeElements[i];
-            nodeElement.ondrop = function(ev) {
-                ev.preventDefault();   
-                clientXY = [ev.clientX, ev.clientY];
-                var id = ev.dataTransfer.getData("id");
-                var item = document.querySelector('[data-id="' + id + '"]');
-                var name = item.innerHTML;
-
-                var nodeElement = ev.target;
-                while(!nodeElement.hasAttribute('node-id')){
-                    nodeElement = nodeElement.parentNode;
-                }                
-                var pid = nodeElement.getAttribute('node-id');  
-                
-                
-                chart.addNode({
-                    id: id,
-                    pid: pid,
-                    name: name
-                }, true);
-
-                item.parentNode.removeChild(item);
-            }
-
-            nodeElement.ondragover = function(ev) {
-                ev.preventDefault();
-            }
-        }
-        
-    });
-
-    chart.on('add', function(sender, node){
-        currentNode = node;
-        menu.show(clientXY[0], clientXY[1]);
-        return false;
-    })
-
-    chart.load([
-        {id: 1, name: 'Janae Barrett'},
-        {id: 2, pid: 1, name: 'Lexie Cole' },
-        {id: 3, pid: 1, name: 'Aaliyah Webb' },
-    ]);
-
-    var items = document.querySelectorAll('.item');
-    for(var i = 0; i < items.length; i++){
-        var item = items[i];
-        item.draggable = true;
-        item.ondragstart = function(ev) {
-            ev.dataTransfer.setData("id", ev.target.getAttribute('data-id'));
-        }
-    }
-};
+    },
+    nodes: [
+        { id: "0", tags: ["invisible"]},
+        { id: 1, stpid: "0", name: "Amber McKenzie" },
+        { id: 2, pid: 1, name: "Ava Field" },
+        { id: 3, pid: 1, name: "Peter Stevens" },
+        { id: 4, tags: ["invisible"]},
+        { id: 5, stpid: 4, tags: ["floatingNode"], name: "floating topic"},
+        { id: 6, stpid: 4, tags: ["floatingNode"], name: "floating topic"},
+        { id: 7, stpid: 4, tags: ["floatingNode"], name: "floating topic"}
+    ]
+});
