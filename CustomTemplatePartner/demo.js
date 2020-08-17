@@ -3,7 +3,7 @@ window.onload = function () {
   var nodes = [
       { id: 1, name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://cdn.balkan.app/shared/1.jpg" },
       { id: 2, pid: 1, name: "Lexie Cole", title: "QA Lead", email: "ava@domain.com", img: "https://cdn.balkan.app/shared/2.jpg" },
-      { id: 3, pid: 1, tags: ["partner"], name: "Janae Barrett", title: "Technical Director", img: "https://cdn.balkan.app/shared/3.jpg", 
+      { id: 3, pid: 1, tags: ["thepartner"], name: "Janae Barrett", title: "Technical Director", img: "https://cdn.balkan.app/shared/3.jpg", 
           partnerImg: "https://cdn.balkan.app/shared/11.jpg", partnerName: "Harold Breuvart"},
       { id: 4, pid: 1, name: "Aaliyah Webb", title: "Manager", email: "jay@domain.com", img: "https://cdn.balkan.app/shared/4.jpg" },
       { id: 5, pid: 2, name: "Elliot Ross", title: "QA", img: "https://cdn.balkan.app/shared/5.jpg" },
@@ -45,7 +45,7 @@ window.onload = function () {
           img_1: "partnerImg",
       },
       tags: {
-          "partner": {
+          "thepartner": {
               template: "myTemplate"
           }
       }
