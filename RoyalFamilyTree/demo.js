@@ -1,148 +1,60 @@
 
 window.onload = function () {
-    OrgChart.templates.family_template_11 = Object.assign({}, OrgChart.templates.ana);
-    OrgChart.templates.family_template_11.size = [200, 140];
-    OrgChart.templates.family_template_11.plus = "";
-    OrgChart.templates.family_template_11.minus = "";
-    OrgChart.templates.family_template_11.node = '';
-    OrgChart.templates.family_template_11.rippleRadius = 45;
-    OrgChart.templates.family_template_11.name_1 = '<text class="name_1" style="font-size: 12px;" fill="#000000" x="100" y="105" text-anchor="middle">{val}</text>';
-    OrgChart.templates.family_template_11.name_2 = '<text class="name_2" style="font-size: 12px;" fill="#000000" x="235" y="105" text-anchor="middle">{val}</text>';
-    OrgChart.templates.family_template_11.name_3 = '<text class="name_3" style="font-size: 12px;" fill="#000000" x="370" y="105" text-anchor="middle">{val}</text>';
-    OrgChart.templates.family_template_11.title_1 = '<text class="title_1" style="font-size: 12px;" fill="#aeaeae" x="100" y="120" text-anchor="middle">{val}</text>';
-    OrgChart.templates.family_template_11.title_2 = '<text class="title_2" style="font-size: 12px;" fill="#aeaeae" x="235" y="120" text-anchor="middle">{val}</text>';
-    OrgChart.templates.family_template_11.title_3 = '<text class="title_3" style="font-size: 12px;" fill="#aeaeae" x="370" y="120" text-anchor="middle">{val}</text>';
-    OrgChart.templates.family_template_11.img_0 = '<clipPath id="{randId}"><circle cx="100" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#aeaeae" cx="100" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="5"  width="80" height="80"></image>';
-    OrgChart.templates.family_template_11.linkAdjuster =
-        {
-            fromX: 0,
-            fromY: 0,
-            toX: 0,
-            toY: 0
-        };
-
-
-    OrgChart.templates.family_template_12 = Object.assign({}, OrgChart.templates.family_template_11);
-    OrgChart.templates.family_template_12.img_0 = '<clipPath id="{randId}"><circle cx="100" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#039BE5" cx="100" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="5"  width="80" height="80"></image>';
-    OrgChart.templates.family_template_12.linkAdjuster =
-        {
-            fromX: 0,
-            fromY: 0,
-            toX: 0,
-            toY: -95
-        };
-
-
-
-    OrgChart.templates.family_template_21 = Object.assign({}, OrgChart.templates.family_template_11);
-    OrgChart.templates.family_template_21.size = [335, 140];
-    OrgChart.templates.family_template_21.node = '<line x1="145" x2="190" y1="45" y2="45" stroke-width="1" stroke="#000000"></line>';
-    OrgChart.templates.family_template_21.img_1 = '<clipPath id="{randId}"><circle cx="235" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#aeaeae" cx="235" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="195" y="5"  width="80" height="80"></image>';
-    OrgChart.templates.family_template_21.linkAdjuster =
-        {
-            fromX: 65,
-            fromY: 0,
-            toX: 0,
-            toY: -95
-        };
-
-    OrgChart.templates.family_template_22 = Object.assign({}, OrgChart.templates.family_template_21);
-    OrgChart.templates.family_template_22.linkAdjuster =
-        {
-            fromX: -70,
-            fromY: 0,
-            toX: 65,
-            toY: -95
-        };
-
-    OrgChart.templates.family_template_23 = Object.assign({}, OrgChart.templates.family_template_21);
-    OrgChart.templates.family_template_23.img_1 = '<clipPath id="{randId}"><circle cx="235" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#039BE5" cx="235" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="195" y="5"  width="80" height="80"></image>';
-    OrgChart.templates.family_template_23.linkAdjuster =
-        {
-            fromX: 65,
-            fromY: 0,
-            toX: 65,
-            toY: -95
-        };
-
-    OrgChart.templates.family_template_24 = Object.assign({}, OrgChart.templates.family_template_21);
-    OrgChart.templates.family_template_24.img_0 = '<clipPath id="{randId}"><circle cx="100" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#039BE5" cx="100" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="5"  width="80" height="80"></image>';
-
-
-    OrgChart.templates.family_template_25 = Object.assign({}, OrgChart.templates.family_template_21);
-    OrgChart.templates.family_template_25.img_1 = '<clipPath id="{randId}"><circle cx="235" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#039BE5" cx="235" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="195" y="5"  width="80" height="80"></image>';
-
-
-
-
-    OrgChart.templates.family_template_31 = Object.assign({}, OrgChart.templates.family_template_21);
-    OrgChart.templates.family_template_31.size = [470, 140];
-    OrgChart.templates.family_template_31.node = '<line x1="145" x2="190" y1="45" y2="45" stroke-width="1" stroke="#000000"></line><line x1="280" x2="325" y1="45" y2="45" stroke-width="1" stroke="#F57C00"></line>';
-    OrgChart.templates.family_template_31.img_1 = '<clipPath id="{randId}"><circle cx="235" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#039BE5" cx="235" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="195" y="5"  width="80" height="80"></image>';
-
-    OrgChart.templates.family_template_31.img_2 = '<clipPath id="{randId}"><circle cx="370" cy="45" r="40"></circle></clipPath><circle stroke-width="3" fill="none" stroke="#aeaeae" cx="370" cy="45" r="45"></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="330" y="5"  width="80" height="80"></image>';
-    OrgChart.templates.family_template_31.linkAdjuster =
-        {
-            fromX: 0,
-            fromY: 0,
-            toX: 0,
-            toY: -95
-        };
+    OrgChart.templates.family_template = Object.assign({}, OrgChart.templates.ana);
+    OrgChart.templates.family_template.size = [86, 86];
+    OrgChart.templates.family_template.plus = "";
+    OrgChart.templates.family_template.minus = "";
+    OrgChart.templates.family_template.node = '<circle stroke-width="3" fill="none" stroke="#aeaeae" cx="43" cy="43" r="43"></circle>';
+    OrgChart.templates.family_template.rippleRadius = 40;
+    OrgChart.templates.family_template.name = '<text style="font-size: 12px;" fill="#000000" x="43" y="100" text-anchor="middle">{val}</text>';
+    OrgChart.templates.family_template.title = '<text style="font-size: 12px;" fill="#aeaeae" x="43" y="115" text-anchor="middle">{val}</text>';
+    OrgChart.templates.family_template.img = '<clipPath id="{randId}"><circle cx="43" cy="43" r="40"></circle></clipPath></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="3" y="3"  width="80" height="80"></image>';
+    OrgChart.templates.family_template.node = '<circle stroke-width="3" fill="none" stroke="#aeaeae" cx="43" cy="43" r="43"></circle>';
+    OrgChart.templates.family_template.defs = '<g transform="matrix(0.05,0,0,0.05,-13,-15.5)" id="baby"><circle cx="260" cy="310" r="200" fill="#ffffff"></circle><path fill="#aeaeae" d="m468.64 268.32h-13.591c-18.432-89.348-95.612-157.432-189.139-161.798-.501-.185-1.015-.348-1.545-.482-18.363-4.622-31.188-22.595-31.188-43.707 0-17.828 14.468-32.333 32.252-32.333 12.573 0 22.802 10.258 22.802 22.866 0 8.284 6.716 15 15 15s15-6.716 15-15c0-29.15-23.687-52.866-52.802-52.866-34.326 0-62.252 27.962-62.252 62.333 0 17.876 5.828 34.443 15.769 47.432-80.698 15.127-144.725 78.25-161.291 158.555h-13.591c-24.103 0-43.712 19.596-43.712 43.683 0 24.086 19.609 43.682 43.712 43.682h14.692c20.935 89.871 101.582 157.018 197.596 157.018s176.66-67.148 197.596-157.018h14.692c24.103 0 43.712-19.596 43.712-43.682 0-24.087-19.609-43.683-43.712-43.683zm-265.054 55.257c-8.284-.024-14.981-6.758-14.958-15.043.007-2.337-.708-13.999-15.481-14.041-.026 0-.053 0-.08 0-14.697 0-15.475 11.62-15.481 13.953-.023 8.284-6.75 15.007-15.043 14.957-8.284-.024-14.98-6.759-14.957-15.043.038-13.322 5.349-25.101 14.955-33.166 8.223-6.904 19.065-10.702 30.543-10.702h.148c11.534.033 22.412 3.896 30.63 10.876 9.559 8.12 14.803 19.928 14.765 33.25-.023 8.27-6.735 14.957-14.999 14.957-.013.002-.027.002-.042.002zm52.766 129.374c-26.485 0-48.033-21.533-48.033-48.002 0-8.284 6.716-15 15-15s15 6.716 15 15c0 9.926 8.089 18.002 18.033 18.002s18.033-8.076 18.033-18.002c0-8.284 6.716-15 15-15s15 6.716 15 15c-.001 26.469-21.548 48.002-48.033 48.002zm113.765-129.374c-.015 0-.029 0-.044 0-8.284-.024-14.98-6.759-14.957-15.043.016-5.445-1.993-9.263-6.14-11.673-5.407-3.142-13.27-3.165-18.695-.053-4.161 2.387-6.191 6.193-6.207 11.638-.023 8.27-6.735 14.957-14.999 14.957-.015 0-.029 0-.043 0-8.284-.024-14.981-6.758-14.958-15.043.046-16.149 7.802-29.845 21.281-37.576 14.814-8.497 33.929-8.443 48.695.138 13.434 7.807 21.112 21.547 21.066 37.696-.023 8.271-6.735 14.959-14.999 14.959z"/> </g>';
+    OrgChart.templates.family_template_blue = Object.assign({}, OrgChart.templates.family_template);
+    OrgChart.templates.family_template_blue.node = '<circle stroke-width="3" fill="none" stroke="#039BE5" cx="43" cy="43" r="43"></circle>';
 
     var chart = new OrgChart(document.getElementById("tree"), {
-        tags: {
-            "family_template_11": {
-                template: "family_template_11"
-            },
-            "family_template_21": {
-                template: "family_template_21"
-            },
-            "family_template_31": {
-                template: "family_template_31"
-            },
-            "family_template_22": {
-                template: "family_template_22"
-            },
-            "family_template_23": {
-                template: "family_template_23"
-            },
-            "family_template_24": {
-                template: "family_template_24"
-            },
-            "family_template_25": {
-                template: "family_template_25"
-            },
-            "family_template_12": {
-                template: "family_template_12"
-            }
-        },
+        template: "family_template",
         enableSearch: false,
-        nodeMouseClick: OrgChart.action.none,
-        mouseScrool: OrgChart.action.zoom,
+        siblingSeparation: 100,
         nodeBinding: {
-            name_1: "name1",
-            name_2: "name2",
-            name_3: "name3",
-            title_1: "title1",
-            title_2: "title2",
-            title_3: "title3",
-            img_0: "img0",
-            img_1: "img1",
-            img_2: "img2"
+            field_0: 'id',
+            name: "name",
+            title: "title",
+            img: "img",
         },
-        nodes: [
-            { id: "1", tags: ["family_template_24"], name1: "King George VI", name2: "Queen Elizabeth,", title2: "The Queen Mother", img0: "https://cdn.balkan.app/shared/f1.png", img1: "https://cdn.balkan.app/shared/f2.png" },
-            { id: "2", pid: 1, tags: ["family_template_25"], name1: "Prince Philip", name2: "Queen Elizabeth II", title1: "Duke of Edinburgh", img0: "https://cdn.balkan.app/shared/f3.png", img1: "https://cdn.balkan.app/shared/f5.png" },
-            { id: "3", pid: 1, tags: ["family_template_11"], name1: "Princess Margaret", img0: "https://cdn.balkan.app/shared/f6.png" },
-            { id: "4", pid: 2, tags: ["family_template_31"], name1: "Camila,", name2: "Charles,", name3: "Diana,", title1: "Duchess of Cornwall", title2: "Prince of Wales", title3: "Princess of Wales", img0: "https://cdn.balkan.app/shared/f7.png", img1: "https://cdn.balkan.app/shared/f8.png", img2: "https://cdn.balkan.app/shared/f9.png" },
-            { id: "5", pid: 2, tags: ["family_template_11"], name1: "Anne", title1: "Princess Royal", img0: "https://cdn.balkan.app/shared/f10.png" },
-            { id: "6", pid: 2, tags: ["family_template_11"], name1: "Prince Andrew", title1: "Duke of York", img0: "https://cdn.balkan.app/shared/f11.png" },
-            { id: "7", pid: 2, pid: 2, tags: ["family_template_11"], name1: "Prince Edward", title1: "Earl of Wessex", img0: "https://cdn.balkan.app/shared/f12.png" },
-            { id: "8", pid: 4, tags: ["family_template_23"], name1: "Catherine,", name2: "Prince William", title1: "Duchess of Cambridge", title2: "Duch of Cambridge", img0: "https://cdn.balkan.app/shared/f13.png", img1: "https://cdn.balkan.app/shared/f14.png" },
-            { id: "9", pid: 4, tags: ["family_template_22"], name1: "Prince Harry", name2: "Meghan Markle", img0: "https://cdn.balkan.app/shared/f15.png", img1: "https://cdn.balkan.app/shared/f16.png" },
-            { id: "10", pid: 8, tags: ["family_template_12"], name1: "Prince George of Cambridge", img0: "https://cdn.balkan.app/shared/f17.png" },
-            { id: "11", pid: 8, tags: ["family_template_12"], name1: "Prince Charlotte of Cambridge", img0: "https://cdn.balkan.app/shared/f18.png" },
-            { id: "12", pid: 8, tags: ["family_template_12"], name1: "Prince Louis of Cambridge", img0: "https://cdn.balkan.app/shared/f19.png" }
-        ]
-    });   
+        tags: {
+            blue: {
+                template: "family_template_blue"
+            }
+        }
+    });
+
+    chart.on('render-link', function(sender, args){
+        if (args.cnode.ppid != undefined){
+            args.html += '<use xlink:href="#baby" x="'+ args.p.xa +'" y="'+ args.p.ya +'"/>';
+        }
+    });
+
+    chart.load([          
+            { id: 1, tags: ["blue"], name: "King George VI", img: "https://cdn.balkan.app/shared/f1.png"},
+            { id: 2, pid: 1, tags: ["partner"], name: "Queen Elizabeth", title: "The Queen Mother", img: "https://cdn.balkan.app/shared/f2.png" },
+            { id: 3, pid: 1, tags: ["blue"],  ppid: 2, name: "Queen Elizabeth II", img: "https://cdn.balkan.app/shared/f5.png"},
+            { id: 4, pid: 3, tags: ["left-partner"], name: "Prince Philip", title: "Duke of Edinburgh", img: "https://cdn.balkan.app/shared/f3.png"},
+            { id: 5, pid: 1, ppid: 2, name: "Princess Margaret", img: "https://cdn.balkan.app/shared/f6.png"},
+            { id: 6, pid: 3,tags: ["blue"], ppid: 4, name: "Charles", title: "Prince of Wales", img: "https://cdn.balkan.app/shared/f8.png"},
+            { id: 7, pid: 6, tags: ["partner"] , name: "Diana", title: "Princess of Wales", img: "https://cdn.balkan.app/shared/f9.png"},
+            { id: 8, pid: 6, tags: ["partner"], name: "Camila", title: "Duchess of Cornwall", img: "https://cdn.balkan.app/shared/f7.png" },
+            { id: 9, pid: 3, ppid: 4 , name: "Anne", title: "Princess Royal", img: "https://cdn.balkan.app/shared/f10.png"},
+            { id: 10, pid: 3, ppid: 4 , name: "Prince Andrew", title: "Duke of York", img: "https://cdn.balkan.app/shared/f11.png"},
+            { id: 11, pid: 3, ppid: 4, name: "Prince Edward", title: "Earl of Wessex", img: "https://cdn.balkan.app/shared/f12.png"},
+            { id: 12, pid: 6, ppid: 7, tags: ["blue"], name: "Prince William", title: "Duch of Cambridge", img: "https://cdn.balkan.app/shared/f14.png"},
+            { id: 13, pid: 6, ppid: 7, name: "Prince Harry", img: "https://cdn.balkan.app/shared/f15.png"},
+            { id: 14, pid: 12, tags: ["left-partner"], name: "Catherine", title: "Duchess of Cambridge", img: "https://cdn.balkan.app/shared/f13.png"},
+            { id: 15, pid: 13, tags: ["right-partner"], name: "Meghan Markle", img: "https://cdn.balkan.app/shared/f16.png"},
+            { id: 16, pid: 12, ppid: 14, tags: ["blue"], name: "Prince George of Cambridge", img: "https://cdn.balkan.app/shared/f17.png"},
+            { id: 17, pid: 12, ppid: 14, tags: ["blue"], name: "Prince Charlotte of Cambridge", img: "https://cdn.balkan.app/shared/f18.png"},
+            { id: 18, pid: 12, ppid: 14, tags: ["blue"], name: "Prince Louis of Cambridge", img: "https://cdn.balkan.app/shared/f19.png"}
+        ]);
 };
