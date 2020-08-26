@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Add CSS on export."
+description: "Add CSS on export and preview."
 name: "Export Styles - OrgChart JS | BALKANGraph"
 ...

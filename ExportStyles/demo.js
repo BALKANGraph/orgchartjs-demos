@@ -34,12 +34,25 @@ window.onload = function () {
         }
     }
 
+         function pdfPreview(nodeId) {
+            OrgChart.pdfPrevUI.show(chart, {
+                format: "A4",
+                header: 'My Header',
+                footer: 'My Footer. Page {current-page} of {total-pages}'
+            });
+        }
+
     var chart = new OrgChart(document.getElementById("tree"), {
         template: 'olivia',
         menu: {
             pdf: {
                 text: 'Export PDF'
-            }
+            },
+            pdfPreview: {
+                    text: "PDF Preview",
+                    icon: OrgChart.icon.pdf(24, 24, "#7A7A7A"),
+                    onClick: pdfPreview
+            },
         },
         layout: OrgChart.mixed,
         nodeBinding: {
@@ -50,8 +63,8 @@ window.onload = function () {
     });
     
     chart.on('exportstart', function(sender, args){
-        args.content += '<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">';
-        args.content += document.getElementById('myStyles').outerHTML;
+        args.styles += '<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">';
+        args.styles += document.getElementById('myStyles').outerHTML;
     });
 
     chart.load(nodes);
