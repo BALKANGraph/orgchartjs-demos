@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo demonstrates how to create nodes containing lists with dynamic templates."
+description: "This demo demonstrates how to change the loading animation."
 name: "Lists in nodes with dynamic templates - OrgChart JS | BALKANGraph"
 ...
