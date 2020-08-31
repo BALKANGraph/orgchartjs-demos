@@ -25,7 +25,7 @@
        page.innerSize = {w: 515, h: 742};
        page.size = {w: 595, h: 842};
 
-      page.html += '<h1>This is the content of the second page.</h1>';
+      page.html = '<h1>This is the content of the second page.</h1>';
    
       args.pages.push(page);
       args.styles += '<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">';
