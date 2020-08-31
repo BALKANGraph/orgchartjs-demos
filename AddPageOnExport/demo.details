@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo demonstrates how to add page with another content on export."
+description: "This demo demonstrates how to add page with another content on export and add style for that page."
 name: "Add Page on Export - OrgChart JS | BALKANGraph"
 ...
