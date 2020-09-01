@@ -89,13 +89,7 @@ window.onload = function () {
             title: 'Title',
             division: 'Division',
             image: 'Image'
-        },
-        nodeMenu: {
-            details: { text: "Details" },
-            edit: { text: "Edit" },
-            add: { text: "Add" },
-            remove: { text: "Remove" }
-        },
+        }
     });
     
     chart.load([
