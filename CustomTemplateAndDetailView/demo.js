@@ -25,6 +25,7 @@ window.onload = function () {
     };
     
     editForm.prototype.show = function (nodeId) {
+        that.hide();
         var node = this.chart.get(nodeId);
         var editHtml = '<table cellpadding="0" cellspacing="0" class="t">'
             + '<tr>'
