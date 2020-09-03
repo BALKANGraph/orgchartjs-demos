@@ -1,3 +1,4 @@
+window.onload = function () {
 var editForm = function () {
     this.nodeId = null;
 };
@@ -75,3 +76,4 @@ chart.on('redraw', function (sender) {
         { id: 2, pid: 1, name: "Ava Field", title: "IT Manager" },
         { id: 3, pid: 1, name: "Peter Stevens", title: "HR Manager" }
     ]);
+}
