@@ -40,7 +40,7 @@ window.onload = function () {
 
       var node = chart.getNode(nodeId);
       iterate(sender, node, ids);
-      console.log(ids);
+
       for(var i = 0; i < ids.length; i++)
       {
         sender.remove(ids[i]);
