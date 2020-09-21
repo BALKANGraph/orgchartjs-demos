@@ -7,10 +7,10 @@ window.onload = function () {
     { id: 4, pid: 1 },
     { id: 5, pid: 1 },
     { id: 6, pid: 1 },
-    // { id: 7, pid: 1 },
-    // { id: 8, pid: 1 },
-    // { id: 9, pid: 1 },
-    // { id: 10, pid: 1 }
+    { id: 7, pid: 1 },
+    { id: 8, pid: 1 },
+    { id: 9, pid: 1 },
+    { id: 10, pid: 1 }
     ];
 
 
