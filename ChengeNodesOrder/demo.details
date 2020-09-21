@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "This demo shows you how to change the order of the nodes in the same level using drag and drop ."
-name: "Chenge order with drag and drop - OrgChart JS | BALKANGraph"
+name: "Change order with drag and drop - OrgChart JS | BALKANGraph"
 ...
