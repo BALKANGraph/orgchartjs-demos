@@ -19,7 +19,7 @@ window.onload = function () {
             field_0: 'id',
             field_1: 'pid'
         },
-        roots: [1, 2],
+        roots: [2, 3],
         nodes: [
             { id: 1 },
             { id: 2, pid: 1 },
