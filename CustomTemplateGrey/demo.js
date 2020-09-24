@@ -16,7 +16,7 @@ window.onload = function () {
     '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="15"  width="80" height="80"></image>';
 
     OrgChart.templates.grey.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,270,5)" control-node-menu-id="{id}">' + 
-    '<rect x="-110" y="-28" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
+    '<rect x="-105" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
     '<circle cx="-100" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-93" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-86" cy="15" r="2" fill="#1b9ce2"></circle></g>';
 
     OrgChart.templates.grey.minus = '<circle cx="15" cy="-13" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
