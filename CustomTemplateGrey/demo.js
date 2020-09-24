@@ -19,11 +19,11 @@ window.onload = function () {
     '<rect x="-105" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
     '<circle cx="-100" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-93" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-86" cy="15" r="2" fill="#1b9ce2"></circle></g>';
 
-    OrgChart.templates.grey.minus = '<circle cx="15" cy="-13" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
-    + '<line x1="4" y1="-13" x2="26" y2="-13" stroke-width="1" stroke="#aeaeae"></line>';
-    OrgChart.templates.grey.plus = '<circle cx="15" cy="-13" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
-    + '<line x1="4" y1="-13" x2="26" y2="-13" stroke-width="1" stroke="#aeaeae"></line>'
-    + '<line x1="15" y1="-24" x2="15" y2="-2" stroke-width="1" stroke="#aeaeae"></line>';
+    OrgChart.templates.grey.minus = '<circle cx="15" cy="-13" r="15" fill="#fafafa" stroke="#aeaeae" stroke-width="1"></circle>'
+    + '<line x1="5" y1="-13" x2="25" y2="-13" stroke-width="1" stroke="#aeaeae"></line>';
+    OrgChart.templates.grey.plus = '<circle cx="15" cy="-13" r="15" fill="#fafafa" stroke="#aeaeae" stroke-width="1"></circle>'
+    + '<line x1="5" y1="-13" x2="25" y2="-13" stroke-width="1" stroke="#aeaeae"></line>'
+    + '<line x1="15" y1="-23" x2="15" y2="-3" stroke-width="1" stroke="#aeaeae"></line>';
 
     OrgChart.templates.grey.linkAdjuster = {
       fromX: 0,
