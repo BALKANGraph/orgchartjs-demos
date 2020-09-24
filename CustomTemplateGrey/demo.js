@@ -17,7 +17,7 @@ window.onload = function () {
 
     OrgChart.templates.grey.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,270,5)" control-node-menu-id="{id}">' + 
     '<rect x="-105" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
-    '<circle cx="-100" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-93" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-86" cy="15" r="2" fill="#1b9ce2"></circle></g>';
+    '<circle cx="-100" cy="15" r="2.5" fill="#1b9ce2"></circle><circle cx="-93" cy="15" r="2.5" fill="#1b9ce2"></circle><circle cx="-86" cy="15" r="2.5" fill="#1b9ce2"></circle></g>';
 
     OrgChart.templates.grey.minus = '<circle cx="15" cy="-13" r="15" fill="#fafafa" stroke="#aeaeae" stroke-width="1"></circle>'
     + '<line x1="5" y1="-13" x2="25" y2="-13" stroke-width="1" stroke="#aeaeae"></line>';
