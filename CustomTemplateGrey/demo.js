@@ -1,7 +1,7 @@
 window.onload = function () {
   OrgChart.templates.ana.link = '<path stroke-linejoin="round" stroke="#aeaeae" stroke-width="1px" fill="none" d="{edge}" />';
   OrgChart.templates.grey = Object.assign({}, OrgChart.templates.ana);
-  OrgChart.templates.grey.size = [200, 172];
+  OrgChart.templates.grey.size = [200, 200];
   OrgChart.templates.grey.node =  
     '<rect x="0" y="0" rx="5" ry="5" height="172" width="200" fill="#fafafa" stroke-width="1" stroke="#aeaeae"></rect>' +
     '<circle cx="100" cy="55" fill="#ffffff" r="35" stroke="#757575" stroke-width="0.5"></circle>' +
@@ -16,8 +16,22 @@ window.onload = function () {
     '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="15"  width="80" height="80"></image>';
 
     OrgChart.templates.grey.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,270,5)" control-node-menu-id="{id}">' + 
-    '<rect x="-110" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
+    '<rect x="-110" y="-28" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
     '<circle cx="-100" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-93" cy="15" r="2" fill="#1b9ce2"></circle><circle cx="-86" cy="15" r="2" fill="#1b9ce2"></circle></g>';
+
+    OrgChart.templates.grey.minus = '<circle cx="15" cy="-13" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
+    + '<line x1="4" y1="-13" x2="26" y2="-13" stroke-width="1" stroke="#aeaeae"></line>';
+    OrgChart.templates.grey.plus = '<circle cx="15" cy="-13" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
+    + '<line x1="4" y1="-13" x2="26" y2="-13" stroke-width="1" stroke="#aeaeae"></line>'
+    + '<line x1="15" y1="-24" x2="15" y2="-2" stroke-width="1" stroke="#aeaeae"></line>';
+
+    OrgChart.templates.grey.linkAdjuster = {
+      fromX: 0,
+      fromY: 0,
+      toX: 0,
+      toY: -13
+    }
+
   var chart = new OrgChart(document.getElementById("tree"), {
     template: "grey",
     nodeBinding: {
