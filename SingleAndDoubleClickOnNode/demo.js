@@ -21,14 +21,15 @@ window.onload = function () {
 
     //if you'd like to show the node edit form, use the following code:
 
-    // chart.on('click', function(sender, node){    
+    // chart.on('click', function(sender, args){    
     // 	clearTimeout(sclicktimeout);        
-    //  	sclicktimeout = setTimeout(function(){      
-    //   	chart.editUI.show(node.id);
-    //      //	chart.editUI.show(node.id, true); //to show the details form
-    //   	console.log('single click')
-    //   }, 400);        
-    // });   
+    //   	sclicktimeout = setTimeout(function(){      
+    //    	chart.editUI.show(args.node.id);
+    //       	chart.editUI.show(args.node.id, true); //to show the details form
+    //    	console.log('single click')
+    //    }, 400);        
+    //  });   
+    
     
     
     chart.on('dbclick', function(){
