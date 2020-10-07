@@ -54,7 +54,7 @@ window.onload = function () {
 
     var hide = function (id) {
         var node = chart.getNode(id);
-        chart.collapse(node.pid, id);
+        chart.collapse(node.pid, [id]);
     };
 
     var unhide = function (id) {
