@@ -1,19 +1,6 @@
-
 window.onload = function () {
 
-    var tooltip = '<g data-tooltip-id="{id}" transform="matrix(0,0,0,0,{x},{y})" ><path stroke="#FFCA28" fill="#fff" \
-    d="M 0,0 \
-    L -10,-10 \
-    H -85 \
-    Q -90,-10 -90,-15  \
-    V -65   \
-    Q -90,-70 -85,-70 \
-    H 85 \
-    Q 90,-70 90,-65 \
-    V -15 \
-    Q 90,-10 85,-10 \
-    H 10  \
-    L 0,0 z" ></path>{text}</g>';
+    var tooltip = '<g data-t-id="{id}" transform="matrix(0.001,0,0,0.001,{x},{y})" ><path stroke="#FFCA28" fill="#fff" d="M 0,0 L -10,-10 H -85 Q -90,-10 -90,-15  V -65   Q -90,-70 -85,-70 H 85 Q 90,-70 90,-65 V -15 Q 90,-10 85,-10 H 10  L 0,0 z" ></path>{text}</g>';
 
     var tooltipText = '<text text-anchor="middle" width="130" fill="#F57C00" x="0" y="-32">{val}</text>';
 
@@ -34,8 +21,10 @@ window.onload = function () {
             var nodeElement = nodeElements[i];
             nodeElement.addEventListener('mouseover', function () {
                 var id = this.getAttribute('node-id');
-                var tooltipElement = document.querySelector('[data-tooltip-id="' + id + '"]');
+                var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
+                if (!tooltipElement) return;
                 var transformStart = OrgChart._getTransform(tooltipElement);
+                
                 var transformEnd = transformStart.slice(0);
                 transformEnd[0] = 1;
                 transformEnd[3] = 1;
@@ -43,14 +32,13 @@ window.onload = function () {
             });
             nodeElement.addEventListener('mouseleave', function () {
                 var id = this.getAttribute('node-id');
-                setTimeout(function () {
-                    var tooltipElement = document.querySelector('[data-tooltip-id="' + id + '"]');
-                    var transformStart = OrgChart._getTransform(tooltipElement);
-                    var transformEnd = transformStart.slice(0);
-                    transformEnd[0] = 0;
-                    transformEnd[3] = 0;
-                    OrgChart.anim(tooltipElement, { transform: transformStart }, { transform: transformEnd }, 300, OrgChart.anim.inBack);
-                }, 300);
+                var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
+                if (!tooltipElement) return;
+                var transformStart = OrgChart._getTransform(tooltipElement);
+                var transformEnd = transformStart.slice(0);
+                transformEnd[0] = 0.001;
+                transformEnd[3] = 0.001;
+                OrgChart.anim(tooltipElement, { transform: transformStart }, { transform: transformEnd }, 300, OrgChart.anim.inBack);
             });
         }
     });
