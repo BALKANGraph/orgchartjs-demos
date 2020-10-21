@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Enabled fetures - Drag&drop, Sub trees, Mixed orintations, Edit, Search, Assistant and meny more"
-name: "First Look - OrgChart JS | BALKANGraph"
+description: "Create a Form with input field in a node"
+name: "Input Field in a Node - OrgChart JS | BALKANGraph"
 ...
