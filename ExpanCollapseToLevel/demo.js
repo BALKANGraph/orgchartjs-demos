@@ -40,7 +40,6 @@ window.onload = function () {
             var level = e.target.value;
             var expandIds = [];
             var collapseIds = [];
-            console.log(chart.nodes);
             var nodeLevel = -1;
             for (var i in chart.nodes) {
                 if (!chart.nodes[i].level){
