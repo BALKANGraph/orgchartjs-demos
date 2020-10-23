@@ -26,7 +26,6 @@ window.onload = function () {
         function getLevel(node){
             var pnodeId = node.pid;
             var nodeLevel = 0;
-            var currentNode = node;
             while(pnodeId){
                 nodeLevel++;
                 var currentNode = chart.get(pnodeId);
