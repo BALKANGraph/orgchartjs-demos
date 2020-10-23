@@ -44,7 +44,6 @@ window.onload = function () {
             for (var i in chart.nodes) {
                 if (!chart.nodes[i].level){
                     nodeLevel = getLevel(chart.nodes[i]);
-                    console.log("nodeLevel " + nodeLevel);
                 }
                 else {
                     nodeLevel = chart.nodes[i].level;
