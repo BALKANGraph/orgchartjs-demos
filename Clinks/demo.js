@@ -1,13 +1,19 @@
+OrgChart.clinkTemplates.forTo0 = Object.assign({}, OrgChart.clinkTemplates.orange);
+OrgChart.clinkTemplates.forTo0.label = '<text transform="translate(300, 750) rotate(-90)" fill="#F57C00" text-anchor="middle" x="{x}" y="{y}">{val}</text>';
 
-
-window.onload = function () {
-    var chart = new OrgChart(document.getElementById('tree'), {
-        template: 'olivia',
-        orientation: OrgChart.orientation.top,
+   
+   var chart = new OrgChart(document.getElementById('tree'), {
+    		mouseScrool: OrgChart.action.none,
+        nodeBinding:{
+        	field_0: 'id',        	
+          field_1: 'pid'
+        },
         clinks: [
-            {from: 4, to: 0, label: 'text'}, 
+            {from: 4, to: 0, template: 'forTo0', label: 'text'}, 
             {from: 4, to: 5, template: 'blue', label: '4 reports to 3' },
             {from: 2, to: 6, template: 'yellow', label: 'lorem ipsum' },
+                 
+
         ]             
     });
 
@@ -20,4 +26,3 @@ window.onload = function () {
             { id: 5, pid: 1 },
             { id: 6, pid: 2 }
         ]);
-};
