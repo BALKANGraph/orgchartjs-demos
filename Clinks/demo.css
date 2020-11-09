@@ -8,3 +8,13 @@ body {
     font-family: Helvetica;
 }
 
+
+.clink-selected path{
+    stroke: blue !important;
+    marker-start: url(#dotSelected) !important;
+    marker-end: url(#arrowSelected) !important;
+}
+
+.clink-selected text{
+    fill: blue !important;
+}
