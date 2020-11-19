@@ -111,7 +111,6 @@ window.onload = function () {
 
    var chart = new OrgChart(document.getElementById("tree"), {
         enableSearch: false,
-        nodeMouseClick: OrgChart.action.expandCollapse,
         siblingSeparation: 6,
         nodeBinding: {
             img: "img"
