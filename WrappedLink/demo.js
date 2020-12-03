@@ -17,7 +17,7 @@ var field_template = '<text width="230" text-overflow="ellipsis"  style="font-si
                 },
                 nodes: [
                     { id: 1, name: "some longer link name", link: "https://balkangraph.com" },
-                    { id: 2, pid: 1, name: "webcall.me", link: "https://webcall.me"  },
+                    { id: 2, pid: 1, name: "another longer link name", link: "https://webcall.me"  },
                     { id: 3, pid: 1, name: "GetOrgChart", link: "http://getorgchart.com" }
                 ]
             });
