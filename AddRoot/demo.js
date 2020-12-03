@@ -16,6 +16,7 @@ window.onload = function () {
                     })
                     .update(mainNode)
                     .draw();
+                    chart.center(1);
                 }
             },
             add: { text: "Add Child" },
