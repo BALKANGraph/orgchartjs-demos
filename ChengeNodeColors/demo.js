@@ -78,15 +78,13 @@ nodes = [
                 select.onchange = function(){
                     var nodeId = sender.node.id;
                     var nodeIndex = nodes.findIndex((node => node.id == nodeId));
-                    if (nodes[nodeIndex].tags == undefined)
-                      var color = document.getElementById("color").value;                        
-                      nodes[nodeIndex].tags = [color];  
-                };                
+                    var color = document.getElementById("color").value;                        
+                    nodes[nodeIndex].tags = [color];             
+                }
                 txt.parentNode.appendChild(select);
             }
         }
-      }
-         
+      }   
     });
 
 
