@@ -1,14 +1,14 @@
 window.onload = function () {
 
-  var colors = ["#e4a8f9", "#e1d276", "#99ea86"]
+  var colors = ["#FFCA28", "#F57C00", "#039be5"]
 
-  OrgChart.templates.ana.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[0] + '" stroke-width="1" stroke="' + colors[0] + '" rx="5" ry="5"></rect>';
+  OrgChart.templates.ana.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[0] + '" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
   OrgChart.templates.color0 = Object.assign({}, OrgChart.templates.ana);
-  OrgChart.templates.color0.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[0] + '" stroke-width="1" stroke="' + colors[0] + '" rx="5" ry="5"></rect>';
+  OrgChart.templates.color0.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[0] + '" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
   OrgChart.templates.color1 = Object.assign({}, OrgChart.templates.ana);
-  OrgChart.templates.color1.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[1] + '" stroke-width="1" stroke="' + colors[1] + '" rx="5" ry="5"></rect>';
+  OrgChart.templates.color1.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[1] + '" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
   OrgChart.templates.color2 = Object.assign({}, OrgChart.templates.ana);
-  OrgChart.templates.color2.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[2] + '" stroke-width="1" stroke="' + colors[2] + '" rx="5" ry="5"></rect>';
+  OrgChart.templates.color2.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[2] + '" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
   OrgChart.templates.color1Group = Object.assign({}, OrgChart.templates.group);
   OrgChart.templates.color1Group.node = '<rect rx="50" ry="50" x="0" y="0" height="{h}" width="{w}" fill="' + colors[1] + '" stroke-width="0"></rect>';
   OrgChart.templates.color2Group = Object.assign({}, OrgChart.templates.group);
@@ -64,9 +64,9 @@ nodes = [
                
                 var select = document.createElement('select');
                 select.innerHTML = '<option value="">select a color</option>'
-                + '<option value="color0">pink</option>' 
-                + '<option value="color1">yellow</option>' 
-                + '<option value="color2">gree</option>';
+                + '<option value="color0">yellow</option>' 
+                + '<option value="color1">orange</option>' 
+                + '<option value="color2">blue</option>';
                 select.style.width = '100%';   
                 select.id = "color";                 
                 select.setAttribute('val', '');
