@@ -57,11 +57,13 @@ nodes = [
     ];
 
     chart.editUI.on('field', function(sender, args){
+      console.log(sender.node.id);
+      if ((sender.node.id != "color2Group") && (sender.node.id != "color1Group")) {
         if (args.type == 'edit' && args.name == 'title'){
 
             var txt = args.field.querySelector('input');
             if (txt){
-               
+              
                 var select = document.createElement('select');
                 select.innerHTML = '<option value="">select a color</option>'
                 + '<option value="color0">yellow</option>' 
@@ -77,19 +79,20 @@ nodes = [
                 select.onchange = function(){
                     var nodeId = sender.node.id;
                     var nodeIndex = nodes.findIndex((node => node.id == nodeId));
-                    console.log(nodeIndex);
-                    var color = document.getElementById("color").value;
-                    nodes[nodeIndex].tags = [color];
-                    console.log(nodes);
+                    if (nodes[nodeIndex].tags == undefined)
+                      console.log(nodes[nodeIndex].tags);
+                     var color = document.getElementById("color").value;                        
+                      nodes[nodeIndex].tags = [color];
+                  
                 };
                 
                 txt.parentNode.appendChild(select);
               
             }
         }
-
-          
-  });
+      }
+         
+    });
 
 
     chart.load(nodes);
