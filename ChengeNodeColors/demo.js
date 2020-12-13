@@ -57,7 +57,6 @@ nodes = [
     ];
 
     chart.editUI.on('field', function(sender, args){
-      console.log(sender.node.id);
       if ((sender.node.id != "color2Group") && (sender.node.id != "color1Group")) {
         if (args.type == 'edit' && args.name == 'title'){
 
@@ -80,14 +79,10 @@ nodes = [
                     var nodeId = sender.node.id;
                     var nodeIndex = nodes.findIndex((node => node.id == nodeId));
                     if (nodes[nodeIndex].tags == undefined)
-                      console.log(nodes[nodeIndex].tags);
-                     var color = document.getElementById("color").value;                        
-                      nodes[nodeIndex].tags = [color];
-                  
-                };
-                
+                      var color = document.getElementById("color").value;                        
+                      nodes[nodeIndex].tags = [color];  
+                };                
                 txt.parentNode.appendChild(select);
-              
             }
         }
       }
