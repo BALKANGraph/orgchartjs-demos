@@ -1,43 +1,44 @@
 
 window.onload = function () { 
-    var chart = new OrgChart(document.getElementById("tree"), {
-      mouseScrool: OrgChart.action.none,
-      nodeBinding: {
-               img_0: "img",
-          field_0: "name",
-          field_1: "company",
-      },
-     nodes: [
-          { id: 1, name: "Amber McKenzie", company: "BALKANGraph", img: "https://cdn.balkan.app/shared/2.jpg" },
-          { id: 2, pid: 1, name: "Ava Field", company: "BALKANGraph", img: "https://cdn.balkan.app/shared/3.jpg"},
-          { id: 3, pid: 1, name: "Rhys Harper", company: "BALKANGraph", img: "https://cdn.balkan.app/shared/4.jpg"}
-      ]
-  });   
-  
-  chart.editUI.on('field', function(sender, args){
-     if (args.type == 'details' && args.name == 'company'){
+  var chart = new OrgChart(document.getElementById("tree"), {
+    nodeBinding: {
+        field_0: "name"
+    },
+    nodes: [
+        { id: 1, name: "Google", page: "google.com" },
+        { id: 2, pid: 1, name: "Docs", page: "docs.google.com" },
+        { id: 3, pid: 1, name: "Mail", page: "mail.google.com" }
+    ]
+});
+chart.editUI.on('field', function(sender, args){
 
-          var txt = args.field.querySelector('input');
-          var txtVal = txt.value;
+     if (args.type == 'details' && args.name == 'page'){ 
+
+          var txt = args.field.querySelector('input'); 
+          var txtVal = txt.value; 
           if (txt){
                                  
+              var node = chart.get(sender.node.id);
+              var a = document.createElement('a'); 
+              var linkText = document.createTextNode(node.page); 
+              a.appendChild(linkText); 
+              a.title = "my title text"; 
 
-          var a = document.createElement('a');
-      		var linkText = document.createTextNode("BALKANGraph.com");
-      	  a.appendChild(linkText);
-          a.title = "my title text";
-          a.href = "https://balkangraph.com/";
-          a.target = "_blank";
-     
+
+              a.href = "https://" + node.page; 
+              a.target = "_blank"; 
                
-              var parent = args.field.querySelector('div');
-              var br = document.createElement("br");
-              parent.appendChild(br);
-              parent.appendChild(a);
+              var parent = args.field.querySelector('div'); 
+              var br = document.createElement("br"); 
+              parent.appendChild(br); 
+              parent.appendChild(a); 
 
-              txt.remove();
+              txt.remove(); 
 
           }
       }
   });
+
+
+
 };
