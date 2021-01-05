@@ -1,0 +1,7 @@
+---
+authors: 
+  - "BALKAN Software"
+  - "Plamen Peshev"
+description: "This OrgChart JS demo is showing default image if image is missing in the node data."
+name: "Default image - OrgChart JS | BALKANGraph"
+...
