@@ -26,6 +26,8 @@ window.onload = function () {
         
          
          chart.on('init', function (sender) {
+            alert("You have " + chart.roots.length + " roots.\n" +
+                "See the result of console.log(chart.roots) for more details.");
             console.log(chart.roots);
         });  
 
