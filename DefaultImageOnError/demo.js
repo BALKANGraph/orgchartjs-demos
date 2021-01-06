@@ -10,11 +10,7 @@ window.onload = function () {
         nodeBinding: {
             field_0: "Employee Name",
             field_1: "Title",
-            img_0:  function (sender, node) {
-            	if (!chart.get(node.id).Photo)
-              	return "https://cdn.balkan.app/shared/OrgChart-JS.svg";
-              else return chart.get(node.id).Photo;
-            }
+            img_0: "Photo"
         },
         nodeMenu: {
             details: { text: "Details" },
@@ -31,7 +27,7 @@ window.onload = function () {
         { id: 4, pid: 2, "Employee Name": "Elliot Patel", Title: "Sales", Photo: "https://cdn.balkan.app/shared/5.jpg" },
         { id: 5, pid: 2, "Employee Name": "Lynn Hussain", Title: "Sales", Photo: "https://cdn.balkan.app/shared/6.jpg" },
         { id: 6, pid: 3, "Employee Name": "Tanner May", Title: "Developer", Photo: "https://cdn.balkan.app/shared/7.jpg" },
-        { id: 7, pid: 3, "Employee Name": "Fran Parsons", Title: "Developer" }
+        { id: 7, pid: 3, "Employee Name": "Fran Parsons", Title: "Developer", Photo: "https://cdn.balkan.app/shared/8.jpg" }
     ];
 
 
