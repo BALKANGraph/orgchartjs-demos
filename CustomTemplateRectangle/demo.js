@@ -12,7 +12,7 @@ window.onload = function () {
     OrgChart.templates.myTemplate.ripple = {
       radius: 15,
       color: "#0890D3",
-      rect: { x: -10, y: 0, width: 300, height: 80, rx: 15, ry: 15 }
+      rect: { x: 0, y: 0, width: 300, height: 80, rx: 15, ry: 15 }
   };
 
     OrgChart.templates.myTemplate.field_0 = '<text width="210" class="field_0" style="font-size: 18px;" font-weight="bold" fill="#322b28" x="170" y="25" text-anchor="middle">{val}</text>';
