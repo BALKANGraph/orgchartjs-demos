@@ -1,4 +1,3 @@
-
 window.onload = function () { 
 
     var serachIcon = '<svg height="24pt" fill="grey" viewBox="0 -52 512 512" width="24pt"><path d="m0 0h113.292969v113.292969h-113.292969zm0 0"/><path d="m149.296875 0h362.703125v113.292969h-362.703125zm0 0"/><path d="m0 147.007812h113.292969v113.292969h-113.292969zm0 0"/><path d="m149.296875 147.007812h362.703125v113.292969h-362.703125zm0 0"/><path d="m0 294.011719h113.292969v113.296875h-113.292969zm0 0"/><path d="m149.296875 294.011719h362.703125v113.296875h-362.703125zm0 0"/></svg>'
@@ -29,32 +28,39 @@ window.onload = function () {
     };
     
     
-    OrgChart.searchUI.createItem = function (img, item) {
-        return '<tr data-search-item-id="' + item.id + '" style="border-top:1px solid #d7d7d7; padding: 7px 0 7px 0;cursor:pointer;">'
-        + '<td>'
-        + img
-        + '</td>'
-        + '<td width:83%">'
-        + item.textId
-        + '</td>'
+    
+    OrgChart.searchUI.createItem = function (img, id, first, second) {
+            var data = chart.get(id);
+            return '<tr data-search-item-id="' + id + '" style="border-top:1px solid #d7d7d7; padding: 7px 0 7px 0;cursor:pointer;">'
+            + '<td>'
+            + img
+            + '</td>'
             + '<td width:83%">'
-        + item.textInNode
-        + '</td>'
-        + '</tr>';
-    };
+            + data.name
+            + '</td>'
+            + '<td width:83%">'
+            + data.title
+            + '</td>'
+            + '<td width:83%">'
+            + first
+            + '</td>'
+            + '</tr>';
+        };
+        
     
-    
+        OrgChart.templates.ana.field_2 = '<text width="130" text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>';
     
         var chart = new OrgChart(document.getElementById("tree"), {
             nodeBinding: {
                 field_0: "name",
                 field_1: "title",
+                field_2: "rrr",
                 img_0: "img",
             },
             nodes: [
                 { id: 1, name: "Denny Curtis", title: "CEO", 
                 img: "https://cdn.balkan.app/shared/2.jpg" },
-                { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", img: "https://cdn.balkan.app/shared/3.jpg" },
+                { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", rrr: "ttttt", img: "https://cdn.balkan.app/shared/3.jpg" },
                 { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", img: "https://cdn.balkan.app/shared/4.jpg" },
                 { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
                 { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
@@ -63,4 +69,3 @@ window.onload = function () {
             ]
         });
     };
-    
