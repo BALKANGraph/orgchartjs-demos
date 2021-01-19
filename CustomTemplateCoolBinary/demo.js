@@ -17,8 +17,7 @@ window.onload = function () {
     OrgChart.templates.cool.svg = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background-color:#F2F2F2;display:block;" width="{w}" height="{h}" viewBox="{viewBox}">{content}</svg>';
     
     OrgChart.templates.empty = Object.assign({}, OrgChart.templates.cool);
-    OrgChart.templates.empty.node = '<rect filter="url(#cool-shadow)"  x="0" y="0" height="190" width="310" fill="#ffffff" stroke-width="1" stroke="#eeeeee" rx="10" ry="10"></rect><rect fill="#ffffff" x="100" y="10" width="200" height="100" rx="10" ry="10" filter="url(#cool-shadow)"></rect>' + 
-    '<rect stroke="#eeeeee" stroke-width="1" x="10" y="120" width="220" fill="#ffffff" rx="10" ry="10" height="60"></rect><rect stroke="#eeeeee" stroke-width="1" x="240" y="120" width="60" fill="#ffffff" rx="10" ry="10" height="60"></rect>' +
+    OrgChart.templates.empty.node = '<rect filter="url(#cool-shadow)"  x="0" y="0" height="190" width="310" fill="#ffffff" stroke-width="1" stroke="#eeeeee" rx="10" ry="10"></rect>' + 
     '<circle cx="155" cy="95" fill="#ffffff" r="30" stroke="#afafaf" stroke-width="2"></circle>' + 
     '<circle cx="155" cy="95" fill="#afafaf" r="23" stroke="#afafaf" stroke-width="2"></circle>' + 
     '<line x1="140" y1="95" x2="170" y2="95" stroke-width="4" stroke="#ffffff" />' +
