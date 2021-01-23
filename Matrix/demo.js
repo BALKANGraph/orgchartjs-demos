@@ -46,11 +46,11 @@ window.onload = function () {
     OrgChart.templates.lightBlue.size = [250, 30];
     OrgChart.templates.lightBlue.node = '<rect x="0" y="0" height="30" width="{w}" fill="#a1b8e1" rx="1" ry="1"></rect>';
     OrgChart.templates.lightBlue.field_0 = '<text width="230" style="font-size: 16px;" fill="white" x="125" y="20" text-anchor="middle">{val}</text>';
-    OrgChart.templates.lightBlue.link = '<path stroke-linejoin="round" stroke="#a1b8e1" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
+    OrgChart.templates.lightBlue.link = '<path stroke-linejoin="round" stroke="#4473c4" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
 
     OrgChart.templates.lightGreen = Object.assign({}, OrgChart.templates.lightBlue);
     OrgChart.templates.lightGreen.node = '<rect x="0" y="0" height="30" width="{w}" fill="#b7d6a3" rx="1" ry="1"></rect>';
-    OrgChart.templates.lightGreen.link = '<path stroke-linejoin="round" stroke="#b7d6a3" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
+    OrgChart.templates.lightGreen.link = '<path stroke-linejoin="round" stroke="#70ad47" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
 
 
 //fill="#b7d6a3"
