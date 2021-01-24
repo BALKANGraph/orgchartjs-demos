@@ -56,14 +56,19 @@ window.onload = function () {
 
     OrgChart.templates.lightGreen.link = '<path stroke-linejoin="round" marker-end="url(#arrow2)" stroke="#70ad47" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
 
-//fill="#b7d6a3"
-
-
     var chart = new OrgChart(document.getElementById("tree"), {
       layout: OrgChart.mixed,
       template: "yellow",
       enableDragDrop: true,
-    nodeBinding: {
+      menu: {
+        importCSV: { 
+            text: "Import CSV",
+            icon: OrgChart.icon.csv(24,24, '#7A7A7A'),
+            onClick: function(){ chart.importCSV(); }
+        },
+        csv: { text: "Export CSV" }
+      },
+      nodeBinding: {
           field_0: "name",
           field_1: "title",
           img_0: "img"
