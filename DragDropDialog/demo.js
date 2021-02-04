@@ -10,23 +10,26 @@ window.onload = function () {
   });
 
   chart.on("drop", function(sender, draggedNodeId, droppedNodeId){
-    $( function() {
-      $( "#dialog" ).dialog({
-        buttons: {
-          OK: function() {
-            $( this ).dialog( "close" );
-            var node = chart.get(draggedNodeId);
-            console.log(node);
-            chart.updateNode({ id: draggedNodeId, pid: droppedNodeId, name: node.name});
-          },
-          Cancel: function() {
-            $( this ).dialog( "close" );
-            
-          }
-        }
-      });
-    } );
-    return false;
+    if (sender._canUpdateLink(draggedNodeId, droppedNodeId))
+      {
+        $( function() {
+          $( "#dialog" ).dialog({
+            buttons: {
+              OK: function() {
+                $( this ).dialog( "close" );
+                var node = chart.get(draggedNodeId);
+                console.log(node);
+                chart.updateNode({ id: draggedNodeId, pid: droppedNodeId, name: node.name});
+              },
+              Cancel: function() {
+                $( this ).dialog( "close" );
+                
+              }
+            }
+          });
+        });
+        return false;
+      }
   });
 
 
