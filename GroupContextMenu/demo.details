@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "Demonstrates how to: add context menu in groups, override menu items in dragDropMenu and use drop event to prevent dgag or drop specified node."
-name: " Context Menu in Groups - Demos | BALKAN OrgChartJS"
+name: " Context Menu in Groups - OrgChart JS | BALKANGraph"
 ...

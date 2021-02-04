@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "This demo shows you how to change the node colors from a dropdown selection list in the edit form."
-name: "Change node colors in Edit form - Demos | BALKAN OrgChartJS"
+name: "Change node colors in Edit form - OrgChart JS | BALKANGraph"
 ...

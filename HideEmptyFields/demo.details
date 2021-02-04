@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "Hide fields for nodes that have no data for these fields in details menu."
-name: "Hide empty fields - Demos | BALKAN OrgChartJS"
+name: "Hide empty fields - OrgChart JS | BALKANGraph"
 ...
