@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "Demonstrates how to define custom template with custom detail view and add footer in the exported PDF document"
-name: "Custom Template With Custom Details View - OrgChart JS | BALKANGraph"
+name: "Custom Template With Custom Details View - Demos | BALKAN OrgChartJS"
 ...
