@@ -91,8 +91,8 @@ window.onload = function () {
           }        
         }
         
-        chart.on('init', function (sender) {
-          var data = sender.get(13);
+        chart.on('click', function (sender, args) {
+          var data = sender.get(args.node.id);
           highlight(data);
         });  
 
