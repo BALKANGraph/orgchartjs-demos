@@ -34,7 +34,7 @@ window.onload = function () {
     nodeMouseClick: OrgChart.action.none,
     template: 'aTemplate',
     nodeBinding: {
-        field_0: "value"
+        field_0: "id"
     },
     tags: {
       "y": {
@@ -81,7 +81,8 @@ var nodes = [
 
     ];
 
-    var highlightedNode = false;
+    var highlighted = false;
+    var highlightedNode = 0;
     
     
       function highlight(node){
@@ -104,18 +105,32 @@ var nodes = [
         }        
       }
 
+
       chart.on('click', function (sender, args) {
         var data = sender.get(args.node.id);
-        if (!highlightedNode) {         
+
+        if (!highlighted) {         
           highlight(data);
-          highlightedNode = true;
-          
+          highlighted = true;
+          highlightedNode = args.node.id;
+        }
+        else if (highlightedNode != args.node.id) {
+          unHighlight(sender.get(highlightedNode));
+          highlight(data);
+          highlighted = true;
+          highlightedNode = args.node.id;
         }
         else {
-          unHighlight(data);
-          highlightedNode = false;
+          console.log(highlightedNode);
+          unHighlight(sender.get(highlightedNode));
+          highlightedNode = 0;
+          highlighted = false;
         }
 
       });  
+
+
     chart.load(nodes);
+
+
 }
