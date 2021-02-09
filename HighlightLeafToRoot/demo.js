@@ -34,7 +34,7 @@ window.onload = function () {
     nodeMouseClick: OrgChart.action.none,
     template: 'aTemplate',
     nodeBinding: {
-        field_0: "id"
+        field_0: "value"
     },
     tags: {
       "y": {
