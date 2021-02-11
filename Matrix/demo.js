@@ -56,6 +56,12 @@ OrgChart.templates.rootTemplate.link = '';
 
   OrgChart.templates.lightGreen.link = '<path stroke-linejoin="round" marker-end="url(#arrow2)" stroke="#70ad47" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
 
+  OrgChart.templates.split.link = '<path stroke-linejoin="round" stroke="#aeaeae" stroke-width="1px" fill="none" d="{edge}" />';
+
+  OrgChart.templates.split.node = '';
+  OrgChart.templates.split.size = [0,0];
+
+
   var chart = new OrgChart(document.getElementById("tree"), {
     layout: OrgChart.mixed,
     template: "yellow",
