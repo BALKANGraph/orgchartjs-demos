@@ -2,7 +2,7 @@
 
 window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
-        roots: [2],
+   //     roots: [2],
         align: OrgChart.ORIENTATION
     });
 
