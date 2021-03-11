@@ -134,7 +134,7 @@ window.onload = function () {
         { id: "it-team", pid: "top-management", tags: ["it-team", "department"], name: "IT department" },
         { id: "sales-team", pid: "top-management", tags: ["sales-team", "department"], name: "Sales department" },
 
-        { id: 1, stpid: "top-management", name: "Nicky Phillips", title: "CEO", img: "https://cdn.balkan.app/shared/1.jpg", tags: ["seo-menu"] },
+        { id: 1, stpid: "top-management", name: "Nicky Phillips", title: "CEO", img: "https://cdn.balkan.app/shared/anim/1.gif", tags: ["seo-menu"] },
         { id: 2, pid: 1, name: "Rowan Hall", title: "Shareholder (51%)", img: "https://cdn.balkan.app/shared/2.jpg", tags: ["menu-without-add"] },
         { id: 3, pid: 1, name: "Danni Anderson", title: "Shareholder (49%)", img: "https://cdn.balkan.app/shared/3.jpg", tags: ["menu-without-add"] },
 
