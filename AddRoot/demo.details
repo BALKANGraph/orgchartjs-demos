@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo demonstrates how to add a root node."
+description: "This OrgChart JS example demonstrates how to add a root node."
 name: "Add root node - Demos | BALKAN OrgChartJS"
 ...
