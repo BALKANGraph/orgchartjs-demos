@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Demosntrates how to add Title and Legend inside chart"
+description: "This OrgChart JS example demonstrates how to add a title and a Legend inside chart."
 name: "Custom HTML inside chart - Demos | BALKAN OrgChartJS"
 ...

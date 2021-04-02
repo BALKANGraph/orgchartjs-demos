@@ -72,19 +72,19 @@ window.onload = function () {
         subtreeSeparation: 70,
         levelSeparation: 80,
         editUI:  new editForm(),
-        menu: {
-            saveAsPdf:{
-                text: 'Save PDF',
-                icon: OrgChart.icon.pdf(24,24, '#7A7A7A'),
-                onClick: function(){
-                    chart.exportPDF({
-                        footer: '<table style="width:100%;height: 45px;"><tr><td style="width:209px;"><img src="https://balkangraph.com/js/exp/l.png" /></td><td><div style="display:inline-block;border-top:2px solid #88A4B3;width:100%;"></div></td></tr></table>',
-                        margin: [50, 40, 90, 40]
-                        //footer: 'ASFDASDF'
-                    })
-                }
-            }
-        },
+        // menu: {
+        //     saveAsPdf:{
+        //         text: 'Save PDF',
+        //         icon: OrgChart.icon.pdf(24,24, '#7A7A7A'),
+        //         onClick: function(){
+        //             chart.exportPDF({
+        //                 footer: '<table style="width:100%;height: 45px;"><tr><td style="width:209px;"><img src="https://balkangraph.com/js/exp/l.png" /></td><td><div style="display:inline-block;border-top:2px solid #88A4B3;width:100%;"></div></td></tr></table>',
+        //                 margin: [50, 40, 90, 40]
+        //                 //footer: 'ASFDASDF'
+        //             })
+        //         }
+        //     }
+        // },
         nodeBinding:{
             name: 'Name',
             title: 'Title',

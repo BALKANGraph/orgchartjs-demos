@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Creating department node with different size."
+description: "Creating department node with different (custom) size in OrgChart JS."
 name: "Custom node size - Demos | BALKAN OrgChartJS"
 ...
