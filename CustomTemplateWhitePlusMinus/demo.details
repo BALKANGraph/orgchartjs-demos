@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "OrgChart JS demo for custom simple white template with custom Expand/Collapse (Plus/Minus) button ans show nodeMenu on node hover."
+description: "OrgChart JS demo for custom simple white template with custom Expand/Collapse (Plus/Minus) button and nodeMenu button on node hover."
 name: "Custom Template simple White with custom +/- - Demos | BALKAN OrgChartJS"
 ...

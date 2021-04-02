@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "OrgChart JS demo for createing a tooltip to show the node data."
+description: "OrgChart JS demo for creating a tooltip to show node data."
 name: "Custom Template with tooltip - Demos | BALKAN OrgChartJS"
 ...

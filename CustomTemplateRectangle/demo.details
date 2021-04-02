@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Custom rectangle template with rounded corners."
+description: "OrgChart JS custom template with rectangle nodes and rounded corners."
 name: "Custom Template Rectangle - Demos | BALKAN OrgChartJS"
 ...
