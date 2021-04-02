@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "A4 format export with title and html on the top."
-name: "A4 Export with title - Demos | BALKAN OrgChartJS"
+description: "How to export the chart in A4 format with header and footer."
+name: "A4 Export with header and footer - Demos | BALKAN OrgChartJS"
 ...
