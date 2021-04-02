@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows you how you can collapse the neighbors on the expanded node."
+description: "This OrgChart JS demo shows you how you can collapse the neighbors on the expanded node."
 name: "Collapse Neighbors on Expand - Demos | BALKAN OrgChartJS"
 ...

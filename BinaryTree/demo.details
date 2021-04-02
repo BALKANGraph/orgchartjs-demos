@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Binary Tree with dynamically created Empty nodes, if there is only one child"
+description: "OrgChart JS Binary Tree with dynamically created Empty nodes, if there is only one child."
 name: "Binary Tree with Empty nodes - Demos | BALKAN OrgChartJS"
 ...

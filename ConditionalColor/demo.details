@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Conditional formatting quickly highlights important nodes in a OrgChart."
+description: "Conditional node colors in OrgChart JS."
 name: "Conditional Color - Demos | BALKAN OrgChartJS"
 ...

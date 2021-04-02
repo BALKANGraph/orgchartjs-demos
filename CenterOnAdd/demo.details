@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Center added new node in middle of the screen"
+description: "Center the new added node in middle of the screen with OrgChart JS."
 name: "Center on add - Demos | BALKAN OrgChartJS"
 ...

@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Conditional formatting a field."
+description: "Conditional formatting a field, changing its color in OrgChart JS."
 name: "Conditional formatting a field - Demos | BALKAN OrgChartJS"
 ...

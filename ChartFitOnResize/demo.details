@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Chart fit on resize window with a legend."
+description: "This OrgChart JS demonstrates chart fit on resize window with a legend."
 name: "Chart fit on resize window with a legend - Demos | BALKAN OrgChartJS"
 ...
