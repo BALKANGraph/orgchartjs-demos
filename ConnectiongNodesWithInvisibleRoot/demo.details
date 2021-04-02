@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Connectiong nodes with invisible/hidden root or how to make visual (fake) roots."
+description: "Connecting nodes with invisible/hidden root or how to make visual (fake) roots in OrgChart JS."
 name: "Visual roots - Demos | BALKAN OrgChartJS"
 ...

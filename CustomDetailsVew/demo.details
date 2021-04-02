@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Custom details view with custom template."
+description: "Custom template with custom details view in OrgChart JS."
 name: "Custom details view - Demos | BALKAN OrgChartJS"
 ...
