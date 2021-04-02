@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Dotted line for new boxes which gets generated when Add is cliked"
+description: "Dotted line border for new nodes generated when Add is clicked from nodeMenu in OrgChart JS."
 name: "Dotted Line when Add - Demos | BALKAN OrgChartJS"
 ...
