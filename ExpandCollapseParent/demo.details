@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Expand collapse parent nodes."
+description: "Expand/collapse parent nodes in OrgChart JS."
 name: "Expand/collapse parent nodes - Demos | BALKAN OrgChartJS"
 ...

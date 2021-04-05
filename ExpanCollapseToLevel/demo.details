@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Change the expand/collapse level of the orgchart on change event of an input."
+description: "Change the OrgChart JS expand/collapse level on change event of an input."
 name: "Expand/collapse to level - Demos | BALKAN OrgChartJS"
 ...

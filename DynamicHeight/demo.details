@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows you how you can create a chart with dynamic height of nodes."
+description: "This OrgChart JS demo shows you how you can create a chart with dynamic height of nodes."
 name: "Dynamic Height of Nodes - Demos | BALKAN OrgChartJS"
 ...

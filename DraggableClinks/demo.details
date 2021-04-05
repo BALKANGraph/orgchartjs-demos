@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Drag And Drop Clinks from one node to another"
+description: "Drag and drop clinks from one node to another with OrgChart JS."
 name: "Draggable Clinks - Demos | BALKAN OrgChartJS"
 ...

@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows you how to replase the function in custom field with data in edit/details form. "
+description: "This OrgChart JS demo shows you how to replace the function in custom field with data in edit/details form. "
 name: "Replace custom field function - Demos | BALKAN OrgChartJS"
 ...
