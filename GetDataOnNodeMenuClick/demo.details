@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Get field data on node menu click."
+description: "Get field data on node menu click with OrgChart JS."
 name: "Get field data on node menu click. - Demos | BALKAN OrgChartJS"
 ...

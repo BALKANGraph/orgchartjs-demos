@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Get root nodes."
+description: "Get root nodes with OrgChart JS."
 name: "Get Roots - Demos | BALKAN OrgChartJS"
 ...

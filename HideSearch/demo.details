@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows you how to hide the search result on search click."
+description: "This OrgChart JS demo shows you how to hide the search result on search click."
 name: "Hiding Search Result - Demos | BALKAN OrgChartJS"
 ...
