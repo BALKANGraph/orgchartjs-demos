@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Add PNG picture as menu icon."
+description: "Adding an html element (PNG picture) as menu icon in OrgChart JS."
 name: "Html Element Icon - Demos | BALKAN OrgChartJS"
 ...

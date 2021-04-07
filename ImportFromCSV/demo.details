@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Client side import from CSV file"
+description: "Client side import from CSV file in OrgChart JS."
 name: "Import from CSV - Demos | BALKAN OrgChartJS"
 ...

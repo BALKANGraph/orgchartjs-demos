@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Highlight particular leaf node and the parents to the root."
+description: "Highlight particular leaf node and its parents to the root with OrgChart JS."
 name: "Highlight from a Leaf to The Root - Demos | BALKAN OrgChartJS"
 ...
