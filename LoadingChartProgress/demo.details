@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo demostrates how to add loading chart progress."
+description: "This OrgChart JS example demonstrates how to add loading chart progress."
 name: "Loading chart progress - Demos | BALKAN OrgChartJS"
 ...
