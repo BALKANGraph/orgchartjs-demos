@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Focus node style"
-name: "Focus node style - Demos | BALKAN OrgChartJS"
+description: "Changing the style (color) of the clicked node with OrgChart JS."
+name: "Focus node style on Click - Demos | BALKAN OrgChartJS"
 ...
