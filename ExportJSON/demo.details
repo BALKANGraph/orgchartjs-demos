@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo demonstrates how to export in JSON file."
+description: "This OrgChart JS demo demonstrates how to export the chart in an JSON file."
 name: "Export in JSON - Demos | BALKAN OrgChartJS"
 ...
