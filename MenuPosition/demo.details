@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This example changes the menu position."
+description: "This OrgChart JS example changes the main menu position."
 name: "Menu position - Demos | BALKAN OrgChartJS"
 ...

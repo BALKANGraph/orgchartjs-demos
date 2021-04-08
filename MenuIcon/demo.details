@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This example change the main menu icon."
+description: "This OrgChart JS example changes the main menu icon."
 name: "Menu icon change - Demos | BALKAN OrgChartJS"
 ...
