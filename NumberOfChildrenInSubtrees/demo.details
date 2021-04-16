@@ -1,0 +1,7 @@
+---
+authors: 
+  - "BALKAN Software"
+  - "Plamen Peshev"
+description: "This OrgChart JS example demonstrates how to count number of children if all nodes are in groups (subtrees). Groups itself are not counting."
+name: "Number Of Children In Subtrees - Demos | BALKAN OrgChartJS"
+...

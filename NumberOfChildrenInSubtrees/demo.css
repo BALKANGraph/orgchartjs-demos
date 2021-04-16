@@ -1,0 +1,29 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Helvetica;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+[node-id="g0"] rect {
+    fill:rgb(245, 124, 0);
+  }
+  
+  [node-id="g31"] rect,
+  [node-id="g32"] rect,
+  [node-id="g41"] rect,
+  [node-id="g42"] rect {
+    fill:rgb(3, 155, 229);
+  }
+  
+  [node-id="g3"] rect,
+  [node-id="g4"] rect {
+    fill:rgb(255, 202, 40);
+  }
