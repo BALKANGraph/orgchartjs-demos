@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "OrgChart JS demo demonstrates how to chage the toolbar icons with your own images"
+description: "This OrgChart JS example demonstrates how to change the toolbar icons with other images."
 name: "Toolbar icons - Demos | BALKAN OrgChartJS"
 ...

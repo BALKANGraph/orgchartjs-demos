@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "OrgChart JS demo demonstrates how wrap a hyperlink field."
+description: "This OrgChart JS example demonstrates how wrap a long hyperlink field."
 name: "Hyperlink Text Overflow - Demos | BALKAN OrgChartJS"
 ...
