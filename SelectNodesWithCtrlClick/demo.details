@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Select particular nodes with Ctrl key + left mouse button."
+description: "This OrgChart JS demo shows you how you can create functionality for selecting several nodes. Select particular nodes with Ctrl key + left mouse button."
 name: "Select nodes with Ctrl key. - Demos | BALKAN OrgChartJS"
 ...

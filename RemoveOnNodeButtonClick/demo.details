@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This example demonstrates how you can remove (delete) node on a field click."
+description: "This OrgChart JS example demonstrates how you can remove (delete) node on a field click."
 name: "Remove Node on field click - Demos | BALKAN OrgChartJS"
 ...

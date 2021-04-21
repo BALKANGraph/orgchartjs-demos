@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Select from drop down menu and loading different charts."
+description: "This OrgChart JS demo shows you how to create dropdown select menu for loading different charts."
 name: "DropDoun select to load different charts. - Demos | BALKAN OrgChartJS"
 ...

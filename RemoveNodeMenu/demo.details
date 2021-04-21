@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This example demonstrates how you can remove (hide) node menu button for a specific node."
+description: "This OrgChart JS example demonstrates how you can remove (hide) node menu button for a specific node."
 name: "Remove Node Menu button - Demos | BALKAN OrgChartJS"
 ...

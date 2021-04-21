@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Family Tree with groups"
+description: "This OrgChart JS example demonstrates Family Tree created using groups."
 name: "Family Tree With Groups - Demos | BALKAN OrgChartJS"
 ...

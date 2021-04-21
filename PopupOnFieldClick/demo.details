@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows how you can create popup window that is showing when you ckick on a field in a node."
+description: "This OrgChart JS demo shows how you can create popup window that is showing when you click on a field in a node."
 name: "Popup on field click - Demos | BALKAN OrgChartJS"
 ...
