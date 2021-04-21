@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Export the chart with a different template."
+description: "This OrgChart JS example demonstrates you how to export the chart with another template."
 name: "Template Change On Export - Demos | BALKAN OrgChartJS"
 ...

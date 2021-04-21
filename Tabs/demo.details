@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "OrgChart JS and jquery tabs integration"
+description: "This OrgChart JS example shows you how to integrate jquery tabs."
 name: "jquery tabs integration - Demos | BALKAN OrgChartJS"
 ...

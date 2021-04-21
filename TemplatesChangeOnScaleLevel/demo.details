@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "OrgChart JS templates are changing according the scale (zoom) level."
+description: "This OrgChart JS example show how templates can change according the scale (zoom) level. Zoom in/out to see the result."
 name: "Templates change on scale(zoom) level - Demos | BALKAN OrgChartJS"
 ...

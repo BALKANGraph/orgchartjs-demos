@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows how to set single and double click on a node."
+description: "This OrgChart JS demo shows you how to set single and double click on a node."
 name: "Single and double click on a node - Demos | BALKAN OrgChartJS"
 ...
