@@ -33,8 +33,8 @@ window.onload = function () {
     template: "disco",
     levelSeparation: 50,
     nodeBinding: {
-        field_0: "User",
-        field_1: "RoleDesc",
+        field_0: "name",
+        field_1: "title",
         baloon: "remarks"
     },
     collapse: {
