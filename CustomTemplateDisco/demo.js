@@ -57,14 +57,16 @@ chart.on('field', function(sender, args){
 });
 
 var nodes = [
-      { id: 1, User: "Mr.A", RoleDesc: "Country Manager",remarks:"Test Remarks",tags:['remark']},
-     { id: 2, User: "Mr.B", RoleDesc: "Sales Manager",pid:1},
-     { id: 3, User: "Mr.c", RoleDesc: "Sales Executive",pid:2},
-     { id: 4, User: "Mr.d", RoleDesc: "Sales Executive",pid:2,remarks:"Test Remarks1",tags:['remark']}
+  { id: 1, name: "Denny Curtis", title: "CEO", emp: 33682, remarks: "Test Remarks 1" },
+  { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", emp: 18660 },
+  { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", emp: 08606, remarks: "Test Remarks 2" },
+  { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", emp: 18606 },
+  { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", emp: 18315, remarks: "Test Remarks 3" },
+  { id: 6, pid: 3, name: "Tanner May", title: "Developer", emp: 34621 }
 
-    ];
+];
 
  
-    chart.load(nodes);
+chart.load(nodes);
 
 }
