@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows navigation using Tab and Arrows, and using <a href ='https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn'>Screen Reader<a/>:"
+description: "This OrgChart JS demo shows navigation using Tab and Arrows, and using <a href='https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn' target='_blank'>Screen Reader<a/>:"
 name: "Keyboard Navigarion - Demos | BALKAN OrgChartJS"
 ...
