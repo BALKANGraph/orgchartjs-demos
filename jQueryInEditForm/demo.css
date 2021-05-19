@@ -1,0 +1,21 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: Helvetica;
+}
+
+#tree {
+  width: 100%;
+  height: 100%;
+}
+
+.select2-selection__choice {
+  color: #000 !important;
+}
+[data-field-name="state"] [val]{
+  display: none;
+}
