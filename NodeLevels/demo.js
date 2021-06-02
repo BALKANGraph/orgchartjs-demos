@@ -2,10 +2,15 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
         enableSearch: false,
         nodeBinding: {
-            field_0: function(sender, node){return 'level: ' + node.level},
+            field_0: null,
         },
     });
     
+    chart.on('field', function(sender, args){
+        if (args.name == null){
+            args.value = "level: " + chart.getNode(args.data.id).level;   
+        }
+    });
     
     chart.load([
 { id: 1},
