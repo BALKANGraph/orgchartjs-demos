@@ -5,11 +5,8 @@ window.onload = function () {
         nodeBinding: {
             field_0: "Employee Name",
             field_1: "Title",
-            img_0:  function (sender, node) {
-            	if (!chart.get(node.id).Photo)
-              	return "https://cdn.balkan.app/shared/OrgChart-JS.svg";
-              else return chart.get(node.id).Photo;
-            }
+            img_0: "Photo"
+            
         },
         nodeMenu: {
             details: { text: "Details" },
@@ -18,7 +15,7 @@ window.onload = function () {
             remove: { text: "Remove" }
         }           
   });
-
+ 
   nodes = [
         { id: 1, "Employee Name": "Denny Curtis", Title: "CEO", Photo: "https://cdn.balkan.app/shared/2.jpg" },
         { id: 2, pid: 1, "Employee Name": "Ashley Barnett", Title: "Sales Manager", Photo: "https://cdn.balkan.app/shared/3.jpg" },
@@ -28,8 +25,12 @@ window.onload = function () {
         { id: 6, pid: 3, "Employee Name": "Tanner May", Title: "Developer", Photo: "https://cdn.balkan.app/shared/7.jpg" },
         { id: 7, pid: 3, "Employee Name": "Fran Parsons", Title: "Developer" }
     ];
-
-
-
-chart.load(nodes);    
-};
+ 
+    chart.on('field', function(sender, args){
+        if (args.name == "Photo" && args.value == undefined) {
+            args.value = "https://cdn.balkan.app/shared/OrgChart-JS.svg";
+        }
+      });
+ 
+ chart.load(nodes);    
+ };
