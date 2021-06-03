@@ -54,7 +54,6 @@ window.onload = function () {
              var arg = {
                  count: 0
              };
-             console.log(args);
              iterate(sender, chart.getNode(args.data.id), arg);
              args.value = arg.count;
          }
