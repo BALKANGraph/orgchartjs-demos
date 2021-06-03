@@ -16,21 +16,7 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img",
-            field_number_children:  function (sender, node) {	
-              var args = {
-                   count: 0,
-                   mainNodeId: node.id
-              };
-              if (node.stParent && node.childrenIds.length == 0) {
-                console.log("node " + node.id + " is in group");
-                iterate(sender, node.stParent, args);
-                return args.count;
-              }
-              else {
-                iterate(sender, node, args);
-                return args.count;
-              }
-            }
+            field_number_children: "numberOfChildren"
         },
         tags: {
             "group": {
@@ -73,6 +59,23 @@ window.onload = function () {
       }
     } 
 
+    chart.on('field', function(sender, args){
+         if (args.name == "numberOfChildren"){
+            var argsCount = {
+                   count: 0,
+                   mainNodeId: args.data.id
+              };
+              var node = chart.getNode(args.data.id);
+              if (node.stParent && node.childrenIds.length == 0) {
+                iterate(sender, node.stParent, argsCount);
+                args.value = argsCount.count;
+              }
+              else {
+                iterate(sender, node, argsCount);
+                args.value = argsCount.count;
+              }
+        }
+     });
 
     chart.load([
           { id: "g0", tags: ["group"] },
