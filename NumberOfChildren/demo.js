@@ -1,4 +1,3 @@
-
 window.onload = function () {
     var nodes = [
         { id: 1, name: "Jack Hill", title: "Chairman and CEO", email: "amber@domain.com", img: "https://cdn.balkan.app/shared/1.jpg" },
@@ -30,16 +29,20 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img",
-            field_number_children: function(sender, node){
-            	return OrgChart.childrenCount(sender, node);
-            }
+            field_number_children: null
+        }
+    });
+
+    chart.on('field', function(sender, args){
+        if (args.name == null){
+            args.value = OrgChart.childrenCount(sender, chart.getNode(args.data.id));
         }
     });
 
         chart.editUI.on('field', function(sender, args){
-                if (String(args.name).includes('childrenCount(sender, node)')){
-                            return false;
-                }
+            if (args.name == null){
+                return false;
+            }
         });
     
     chart.load(nodes);
