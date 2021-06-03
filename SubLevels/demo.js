@@ -1,5 +1,3 @@
-
-
 window.onload = function () {
     OrgChart.templates.noMenuTemplate = Object.assign({}, OrgChart.templates.luba);
  OrgChart.templates.noMenuTemplate.nodeMenuButton =  '';
@@ -7,9 +5,7 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
          template: 'luba',
          nodeBinding: {
-             field_0:  function(sender, node){
-                 return sender.get(node.id).tags[0];
-             },
+             field_0: "subLevel",
              field_1: "id"
          },
          nodeMenu: {
@@ -35,14 +31,23 @@ window.onload = function () {
                  template: "noMenuTemplate"
              }
          },
-         nodes: [
+         
+     });
+
+     var nodes = [
              { id: 1, tags: ["sub level 0", "no menu"] },
              { id: 2, pid: 1, tags: ["sub level 0"]},            
              { id: 3, pid: 1, tags: ["sub level 1"] },
              { id: 4, pid: 1, tags: ["sub level 2"] },
              { id: 5, pid: 1, tags: ["sub level 3"] }
  
-         ]
+         ];
+
+    chart.on('field', function(sender, args){
+        if (args.name == "subLevel"){
+            args.value = sender.get(args.node.id).tags[0];
+        }
      });
+
+     chart.load(nodes);
  };
- 
