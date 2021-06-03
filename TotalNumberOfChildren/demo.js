@@ -30,13 +30,7 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img",
-            field_number_children:  function (sender, node) {	
-                var args = {
-                    count: 0
-                };
-               iterate(sender, node, args);
-               return args.count + 1;
-            }
+            field_number_children: "numberOfChldren"
         }
     });
 
@@ -48,6 +42,16 @@ window.onload = function () {
             iterate(c, node, args);  
         }
     }
+
+    chart.on('field', function(sender, args){
+        if (args.name == "numberOfChldren"){
+            var arg = {
+                    count: 0
+            };
+            iterate(sender, args.node, arg);
+            args.value = arg.count + 1;
+        }
+     });
 
     chart.load(nodes);
     
