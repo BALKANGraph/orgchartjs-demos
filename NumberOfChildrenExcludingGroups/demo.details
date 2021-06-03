@@ -3,5 +3,5 @@ authors:
   - "BALKAN Software"
   - "Plamen Peshev"
 description: "This OrgChart JS example demonstrates how to count number of children in the groups excluding groups itself."
-name: "Number Of Children Excluding Groups - Demos | BALKAN OrgChartJS"
+name: "Number Of Children In Groups - Demos | BALKAN OrgChartJS"
 ...

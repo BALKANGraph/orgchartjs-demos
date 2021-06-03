@@ -15,13 +15,7 @@ window.onload = function () {
             field_0: "name",
             field_1: "title",
             img_0: "img",
-            field_number_children:  function (sender, node) {	
-                var args = {
-                    count: 0
-                };
-               iterate(sender, node, args);
-               return args.count;
-            }
+            field_number_children: "numberOfChildren"
         },
         tags: {
             "group": {
@@ -52,10 +46,19 @@ window.onload = function () {
             	iterate(c, node, args);  
             
         }
-
-        
        	args.count += n.stChildrenIds.length;
     }
+
+     chart.on('field', function(sender, args){
+         if (args.name == "numberOfChildren"){
+             var arg = {
+                 count: 0
+             };
+             console.log(args);
+             iterate(sender, chart.getNode(args.data.id), arg);
+             args.value = arg.count;
+         }
+     });
 
 
     chart.load([
@@ -63,7 +66,6 @@ window.onload = function () {
         { id: "devs", name: "Dev Team", pid: 4, tags: ["devs-group", "group"], description: "Research and Development" },
         { id: "sales", name: "Sales Team", pid: 9, tags: ["sales-group", "group"], description: "Sales and Marketing" },
         { id: 1, name: "Billy Moore", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
-        
         { id: 4, pid: 1, name: "Billie Rose", title: "Dev Team Lead", img: "https://cdn.balkan.app/shared/5.jpg" },
         { id: "hrs", pid: 1, name: "HR Team", tags: ["hrs-group", "group"], description: "Human Resource | London" },
         { id: 5, stpid: "hrs", name: "Glenn Bell", title: "HR", img: "https://cdn.balkan.app/shared/10.jpg" },
