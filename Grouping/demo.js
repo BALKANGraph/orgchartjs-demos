@@ -4,6 +4,7 @@
             OrgChart.templates.group.nodeMenuButton = '';
             OrgChart.templates.group.min = Object.assign({}, OrgChart.templates.group);
             OrgChart.templates.group.min.imgs = "{val}";
+            OrgChart.templates.group.min.img_0 = "";
             OrgChart.templates.group.min.description = '<text width="230" text-overflow="multiline" style="font-size: 14px;" fill="#aeaeae" x="125" y="100" text-anchor="middle">{val}</text>';
 
 
@@ -22,19 +23,7 @@
                     addAsChild: { text: "Add as child" }
                 },
                 nodeBinding: {
-                    imgs: function (sender, node) {
-                        if (node.min) {
-                            var val = '';
-                            var count = node.stChildrenIds.length > 5 ? 5 : node.stChildrenIds.length;
-                            var x = node.w / 2 - (count * 32) / 2;
-
-                            for (var i = 0; i < count; i++) {
-                                var data = sender.get(node.stChildrenIds[i]);
-                                val += '<image xlink:href="' + data.img + '" x="' + (x + i * 32) + '" y="45" width="32" height="32" ></image>';
-                            }
-                            return val;
-                        }
-                    },
+                    imgs: "img",
                     description: "description",
                     field_0: "name",
                     field_1: "title",
@@ -87,6 +76,19 @@
                     }
                 }
                 return false;
+            });
+
+            chart.on('field', function(sender, args){    
+                if (args.node.min) {
+                  if (args.name == "img") {
+                    var count = args.node.stChildrenIds.length > 5 ? 5 : args.node.stChildrenIds.length;
+                    var x = args.node.w / 2 - (count * 32) / 2;
+                    for (var i = 0; i < count; i++) {
+                        var data = sender.get(args.node.stChildrenIds[i]);
+                        args.value += '<image xlink:href="' + data.img + '" x="' + (x + i * 32) + '" y="45" width="32" height="32" ></image>';
+                    }
+                  }                     
+              }     
             });
 
             chart.load([
