@@ -44,8 +44,6 @@ window.onload = function () {
         }
         chart.draw();
       }
-
     });
 
 };
-    
