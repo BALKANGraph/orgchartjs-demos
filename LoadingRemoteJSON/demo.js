@@ -5,7 +5,7 @@ var chart = new OrgChart(document.getElementById("tree"), {
     }
 });
 
-fetchJSONFile('https://balkangraph.com/js/demos/remote-json-nodes.json', function(data){
+fetchJSONFile('https://balkan.app/OrgChartJS-Demos/json.json', function(data){
     debugger;
     chart.load(data);
 });
