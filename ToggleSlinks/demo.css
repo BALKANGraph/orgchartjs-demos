@@ -1,0 +1,38 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+    overflow: hidden;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    top: 50px;
+    z-index: 5000000;
+    padding: 5px;
+    font-size: large;
+    border: none;
+    float: right;
+    margin: 5px;
+    margin-top: 50px;
+
+  }
+  #orange{
+    background-color: #F57C00;
+
+  }
+  #blue{
+    margin-right: 100px;
+    background-color: #039BE5;
+
+  }
+  #yellow{
+    background-color: #FFCA28;
+
+  }
