@@ -1,8 +1,9 @@
 window.onload = function () {
     OrgChart.templates.noMenuTemplate = Object.assign({}, OrgChart.templates.luba);
  OrgChart.templates.noMenuTemplate.nodeMenuButton =  '';
- 
-    var chart = new OrgChart(document.getElementById("tree"), {
+ OrgChart.templates.subLevel.link = '<path stroke-linejoin="round" stroke="#aeaeae" stroke-width="1px" fill="none" d="{rounded}" />';
+    
+ var chart = new OrgChart(document.getElementById("tree"), {
          template: 'luba',
          nodeBinding: {
              field_0: "subLevel",
