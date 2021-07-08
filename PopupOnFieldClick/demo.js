@@ -37,6 +37,13 @@ OrgChart.templates.ana.field_1 = '{val}';
         }
      });
 
+     // on node click
+    // chart.on('click', function(sender, args){    
+    //   showPopup();
+    //   var data = sender.get(args.node.id);
+    //   jQuery("#dialog").text(data.name );
+    // });   
+
     chart.load(nodes);
 
 };
