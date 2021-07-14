@@ -11,6 +11,7 @@ window.onload = function () {
         orientation: OrgChart.orientation.bottom_left,
         enableSearch: false,
         nodeBinding: {
+            field_0: 'name',
             tooltip: 'tooltip'
         }
     });
@@ -43,6 +44,35 @@ window.onload = function () {
         }
     });
 
+    // chart.on('redraw', function (sender) {
+    //     var nodeElements = sender.element.querySelectorAll('[node-id]');
+    //     var fieldElements = sender.element.querySelectorAll('[node-id] text');
+    //     for (var i = 0; i < fieldElements.length; i++) {
+    //         var nodeElement = nodeElements[i];
+    //         var fieldElement = fieldElements[i];
+    //         fieldElement.addEventListener('mouseover', function () {
+    //             var id = this.parentElement.getAttribute('node-id');
+    //             var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
+    //             if (!tooltipElement) return;
+    //             var transformStart = OrgChart._getTransform(tooltipElement);     
+    //             var transformEnd = transformStart.slice(0);
+    //             transformEnd[0] = 1;
+    //             transformEnd[3] = 1;
+    //             OrgChart.anim(tooltipElement, { transform: transformStart }, { transform: transformEnd }, 300, OrgChart.anim.outBack);
+    //         });
+    //         fieldElement.addEventListener('mouseleave', function () {
+    //             var id = this.parentElement.getAttribute('node-id');
+    //             var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
+    //             if (!tooltipElement) return;
+    //             var transformStart = OrgChart._getTransform(tooltipElement);
+    //             var transformEnd = transformStart.slice(0);
+    //             transformEnd[0] = 0.001;
+    //             transformEnd[3] = 0.001;
+    //             OrgChart.anim(tooltipElement, { transform: transformStart }, { transform: transformEnd }, 300, OrgChart.anim.inBack);
+    //         });
+    //     }
+    // });
+
 
     OrgChart.events.on('render', function (sender, args) {
         for (var i = 0; i < args.res.visibleNodeIds.length; i++) {
@@ -62,13 +92,13 @@ window.onload = function () {
     });
 
 
-    chart.load([{ id: 0 },
-    { id: 1, pid: 0, tooltip: '1 my fancy tooltip' },
-    { id: 2, pid: 0, tooltip: '2 my fancy tooltip' },
-    { id: 3, pid: 1, tooltip: '3 my fancy tooltip' },
-    { id: 4, pid: 1, tooltip: '4 my fancy tooltip' },
-    { id: 5, pid: 2, tooltip: '5 my fancy tooltip' },
-    { id: 6, pid: 2, tooltip: '6 my fancy tooltip' }
+    chart.load([{ id: 0, name: "node0" },
+    { id: 1, pid: 0, name: "node1", tooltip: '1 my fancy tooltip' },
+    { id: 2, pid: 0, name: "node2", tooltip: '2 my fancy tooltip' },
+    { id: 3, pid: 1, name: "node3", tooltip: '3 my fancy tooltip' },
+    { id: 4, pid: 1, name: "node4", tooltip: '4 my fancy tooltip' },
+    { id: 5, pid: 2, name: "node5", tooltip: '5 my fancy tooltip' },
+    { id: 6, pid: 2, name: "node6", tooltip: '6 my fancy tooltip' }
     ]);
 
 
