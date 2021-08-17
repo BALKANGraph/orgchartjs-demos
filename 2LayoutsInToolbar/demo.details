@@ -2,6 +2,5 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows you how you can have two nodeMenu buttons."
-name: "2 node menu buttons - Demos | BALKAN OrgChartJS"
-...
+description: "This OrgChart JS demo shows you how you can have only two layouts oppening from the toolbar."
+name: "2 node layouts from toolbar"
