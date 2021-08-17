@@ -4,16 +4,13 @@ window.onload = function () {
         nodeBinding: {
             field_0: null,
         },
+                    collapse: {
+                level: 2
+            },
     });
     
-    chart.on('field', function(sender, args){
-        if (args.name == null){
-            args.value = "level: " + chart.getNode(args.data.id).level;   
-        }
-    });
-    
-    chart.load([
-{ id: 1},
+    var nodes = [
+			{ id: 1},
             { id: 2, pid: 1},
             { id: 3, pid: 2},
             { id: 4, pid: 3},
@@ -68,15 +65,24 @@ window.onload = function () {
             { id: 53, pid: 29},
             { id: 54, pid: 30},
             { id: 55, pid: 31},
-        ]);
+        ];
+        
+    chart.on('field', function(sender, args){
+        if (args.name == null){
+            args.value = "level: " + chart.getNode(args.data.id).level;   
+        }
+    });
+    
+    chart.load(nodes);
         
         document.querySelector('#GetLevels').addEventListener('click', function(){
         	var levels = [];
+          chart.expand(null, "all");
         	for(var id in chart.nodes){
           	var node = chart.nodes[id];
-          	levels.push(node.level)
+          	levels.push(node.level);
           }
           alert('levels = ' + (Math.max.apply(null, levels) + 1) );
-          
+           chart.load(nodes);
         });
 };
