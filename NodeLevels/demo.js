@@ -1,3 +1,4 @@
+
 window.onload = function () { 
     var chart = new OrgChart(document.getElementById("tree"), {
         enableSearch: false,
@@ -75,14 +76,25 @@ window.onload = function () {
     
     chart.load(nodes);
         
+    function getLevel(node){	
+        var pnode = chart.nodes[node.pid];
+        if (pnode){
+            node._myLevel++;
+            getLevel(pnode);
+        }
+    }
         document.querySelector('#GetLevels').addEventListener('click', function(){
-        	var levels = [];
-          chart.expand(null, "all");
-        	for(var id in chart.nodes){
-          	var node = chart.nodes[id];
-          	levels.push(node.level);
-          }
-          alert('levels = ' + (Math.max.apply(null, levels) + 1) );
-           chart.load(nodes);
+        	var maxLevel = 0;
+
+            for(var id in chart.nodes){
+                var node = chart.nodes[id];
+                node._myLevel = 0;
+                getLevel(node);
+                if (node._myLevel > maxLevel){
+                    maxLevel = node._myLevel;
+                }
+            }
+            alert('levels = ' + maxLevel + 1 );
+
         });
 };
