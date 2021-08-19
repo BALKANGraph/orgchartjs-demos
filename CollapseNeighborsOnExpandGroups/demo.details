@@ -1,0 +1,7 @@
+---
+authors: 
+  - "BALKAN Software"
+  - "Plamen Peshev"
+description: "This OrgChart JS demo shows you how you can collapse the neighbors on the expanded node if you are using subtrees/groups."
+name: "Collapse Neighbors on Expand with subtrees/groups - Demos | BALKAN OrgChartJS"
+...
