@@ -7,6 +7,7 @@ OrgChart.templates.floatingTemplate.node = '<rect x="0" y="0" height="60" width=
 OrgChart.templates.floatingTemplate.field_0 = '<text width="230" style="font-size: 18px;" fill="#039BE5" x="125" y="35" text-anchor="middle">{val}</text>';
 
 var chart = new OrgChart(document.getElementById("tree"), {
+    nodeMouseClick: OrgChart.action.none,
     enableDragDrop: true,
     nodeBinding: {
         field_0: "name"
@@ -39,13 +40,19 @@ chart.on('drop', function (sender, draggedNodeId, droppedNodeId) {
     var nodeMoved = nodes.filter(n => {
         return n.id === draggedNodeId
     });
-    if (nodeMoved[0].tags != undefined) {
+    
+
+    if (nodeMoved[0].tags != undefined && nodeMoved[0].tags.indexOf("invisible") == -1)  {
       nodeMoved[0].tags.pop();
       nodeMoved[0].tags = ["moved"];
     }
     
     var draggedNode = sender.getNode(draggedNodeId);
     var droppedNode = sender.getNode(droppedNodeId);
+
+    if (draggedNode.tags.indexOf("invisible") != -1) {
+        return false;
+    }
   
     if (draggedNode.tags != undefined && droppedNode.tags.indexOf("floatingNode") != -1 ){
       var draggedNodeData = sender.get(draggedNode.id);
@@ -64,6 +71,7 @@ chart.on('drop', function (sender, draggedNodeId, droppedNodeId) {
       sender.updateNode(draggedNodeData);
       return false;
     }
+
 
 });
 
