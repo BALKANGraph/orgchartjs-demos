@@ -1,5 +1,5 @@
 OrgChart.templates.myInvisibleGroup = Object.assign({}, OrgChart.templates.group);
-OrgChart.templates.myInvisibleGroup.node = "";
+OrgChart.templates.myInvisibleGroup.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#ffffff" opacity="0" stroke-width="0"></rect>';;
 
 OrgChart.templates.floatingTemplate = Object.assign({}, OrgChart.templates.ana);
 OrgChart.templates.floatingTemplate.size = [250, 60];
@@ -39,7 +39,32 @@ chart.on('drop', function (sender, draggedNodeId, droppedNodeId) {
     var nodeMoved = nodes.filter(n => {
         return n.id === draggedNodeId
     });
-    nodeMoved[0].tags.pop();
+    if (nodeMoved[0].tags != undefined) {
+      nodeMoved[0].tags.pop();
+      nodeMoved[0].tags = ["moved"];
+    }
+    
+    var draggedNode = sender.getNode(draggedNodeId);
+    var droppedNode = sender.getNode(droppedNodeId);
+  
+    if (draggedNode.tags != undefined && droppedNode.tags.indexOf("floatingNode") != -1 ){
+      var draggedNodeData = sender.get(draggedNode.id);
+      draggedNodeData.pid = null;
+      draggedNodeData.stpid = droppedNode.stpid;
+      draggedNodeData.tags = ["floatingNode"];
+      sender.updateNode(draggedNodeData);
+      return false;
+    }
+
+    if ((droppedNode.tags.indexOf("invisible") != -1 && draggedNode.tags.indexOf("invisible") == -1)) {
+      var draggedNodeData = sender.get(draggedNode.id);
+      draggedNodeData.pid = null;
+      draggedNodeData.stpid = droppedNode.id;
+      draggedNodeData.tags = ["floatingNode"];
+      sender.updateNode(draggedNodeData);
+      return false;
+    }
+
 });
 
     chart.load(nodes);
