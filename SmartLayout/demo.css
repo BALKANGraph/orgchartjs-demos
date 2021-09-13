@@ -12,3 +12,14 @@ html, body {
     height: 100%;
 }
 
+[data-top] {
+    cursor: pointer;
+}
+
+.see_more {
+    cursor: pointer;
+}
+
+.see_more:hover text {
+    fill: #F57C00 !important;
+}
