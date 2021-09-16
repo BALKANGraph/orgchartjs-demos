@@ -57,6 +57,17 @@ chart.on('drop', function(){
     }
 });
 
+chart.on('redraw', function (sender, args) {
+    		
+    var fo = document.querySelectorAll('input');
+
+for(var i = 0; i < fo.length; i++){
+    fo[i].addEventListener('mousedown', function(e){
+                  e.preventDefault();
+                  e.cancelBubble = true;
+              });
+    }
+});
 
     chart.load([
         { id: "1", html: "asdfasd" },
