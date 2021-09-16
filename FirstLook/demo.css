@@ -39,7 +39,7 @@ html, body {
     fill: #ffffff;
 }
 
-.assistant [control-node-menu-id]>circle {
+.assistant [data-ctrl-n-menu-id]>circle {
     fill: #aeaeae;
 }
 
@@ -51,7 +51,7 @@ html, body {
     fill: #039BE5;
 }
 
-.it-team>[control-node-menu-id] line {
+.it-team>[data-ctrl-n-menu-id] line {
     stroke: #039BE5;
 }
 
@@ -67,7 +67,7 @@ html, body {
     fill: #ecaf00;
 }
 
-.hr-team>[control-node-menu-id] line {
+.hr-team>[data-ctrl-n-menu-id] line {
     stroke: #ecaf00;
 }
 
@@ -83,7 +83,7 @@ html, body {
     fill: #F57C00;
 }
 
-.sales-team>[control-node-menu-id] line {
+.sales-team>[data-ctrl-n-menu-id] line {
     stroke: #F57C00;
 }
 

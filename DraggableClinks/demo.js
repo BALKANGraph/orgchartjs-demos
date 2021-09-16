@@ -1,5 +1,5 @@
 OrgChart.events.on('redraw', function (sender) {
-    var clinkElements = sender.element.querySelectorAll('[c-link-from]');
+    var clinkElements = sender.element.querySelectorAll('[data-c-l-from]');
     for (var i = 0; i < clinkElements.length; i++) {
         var clinkElement = clinkElements[i];
         clinkElement.addEventListener('click', function () {
@@ -9,8 +9,8 @@ OrgChart.events.on('redraw', function (sender) {
             }
             this.classList.add('clink-selected');
 
-            var from = this.getAttribute('c-link-from');
-            var to = this.getAttribute('c-link-to');
+            var from = this.getAttribute('data-c-l-from');
+            var to = this.getAttribute('data-c-l-to');
 
             for (var j = 0; j < sender.config.clinks.length; j++) {
                 var clink = sender.config.clinks[j];
@@ -24,7 +24,7 @@ OrgChart.events.on('redraw', function (sender) {
         });
     }
 
-    var nodeElements = sender.getSvg().querySelectorAll('[node-id]');
+    var nodeElements = sender.getSvg().querySelectorAll('[data-n-id]');
     for (var i = 0; i < nodeElements.length; i++) {
         nodeElements[i].sender = sender;
         nodeElements[i].addEventListener('mousedown', mousedownHandler);
@@ -56,7 +56,7 @@ function mousedownHandler(e) {
 
 
 
-    var fromnode = sender.getNode(this.getAttribute('node-id'));
+    var fromnode = sender.getNode(this.getAttribute('data-n-id'));
     var tonode = null;
 
 
@@ -77,7 +77,7 @@ function mousedownHandler(e) {
     };
 
     var mouseenterHandler = function () {
-        tonode = sender.getNode(this.getAttribute('node-id'));
+        tonode = sender.getNode(this.getAttribute('data-n-id'));
     }
 
     var mouseleaveHandler = function () {
@@ -94,7 +94,7 @@ function mousedownHandler(e) {
         svg.removeEventListener('mouseup', leaveHandler);
         svg.removeEventListener('mouseleave', leaveHandler);
 
-        var nodeElements = sender.getSvg().querySelectorAll('[node-id]');
+        var nodeElements = sender.getSvg().querySelectorAll('[data-n-id]');
         for (var i = 0; i < nodeElements.length; i++) {
             nodeElements[i].removeEventListener('mouseenter', mouseenterHandler);
             nodeElements[i].removeEventListener('mouseleave', mouseleaveHandler);
@@ -108,7 +108,7 @@ function mousedownHandler(e) {
     svg.addEventListener('mouseup', leaveHandler);
     svg.addEventListener('mouseleave', leaveHandler);
 
-    var nodeElements = sender.getSvg().querySelectorAll('[node-id]');
+    var nodeElements = sender.getSvg().querySelectorAll('[data-n-id]');
     for (var i = 0; i < nodeElements.length; i++) {
         nodeElements[i].addEventListener('mouseenter', mouseenterHandler);
         nodeElements[i].addEventListener('mouseleave', mouseleaveHandler);

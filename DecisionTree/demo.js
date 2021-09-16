@@ -5,7 +5,7 @@ window.onload = function () {
     OrgChart.templates.belinda.plus = "";
     OrgChart.templates.belinda.minus = "";
     OrgChart.templates.belinda.img_0 = '<clipPath id="{randId}"><circle cx="90" cy="60" r="40"></circle></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="50" y="20" width="80" height="80" ></image>';
-    OrgChart.templates.belinda.field_0 = '<text width="170" class="field_0" style="font-size: 14px;" text-anchor="middle" fill="#ffffff"  x="90" y="130">{val}</text>';
+    OrgChart.templates.belinda.field_0 = '<text data-width="170" class="field_0" style="font-size: 14px;" text-anchor="middle" fill="#ffffff"  x="90" y="130">{val}</text>';
     OrgChart.templates.yes = Object.assign({}, OrgChart.templates.belinda);
     OrgChart.templates.yes.size = [60, 60];
     OrgChart.templates.yes.node = '<circle cx="30" cy="30" r="30" fill="#F57C00" stroke-width="1" stroke="#aeaeae"></circle>';

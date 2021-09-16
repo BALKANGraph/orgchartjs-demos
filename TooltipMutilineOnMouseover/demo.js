@@ -9,11 +9,11 @@ window.onload = function () {
     });
     
     chart.on('redraw', function (sender) {
-        var nodeElements = sender.element.querySelectorAll('[node-id]');
+        var nodeElements = sender.element.querySelectorAll('[data-n-id]');
         for (var i = 0; i < nodeElements.length; i++) {
             var nodeElement = nodeElements[i];
             nodeElement.addEventListener('mouseover', function (e) {
-                var id = this.getAttribute('node-id');
+                var id = this.getAttribute('data-n-id');
                 var tooltip = document.getElementById("tooltip");
                 var tooltipContent = document.querySelector(".tooltip-content");
                
@@ -37,13 +37,13 @@ window.onload = function () {
 
     // tooltip on a field
     // chart.on('redraw', function (sender) {
-    //     var nodeElements = sender.element.querySelectorAll('[node-id]');
-    //     var fieldElements = sender.element.querySelectorAll('[node-id] text');
+    //     var nodeElements = sender.element.querySelectorAll('[data-n-id]');
+    //     var fieldElements = sender.element.querySelectorAll('[data-n-id] text');
     //     for (var i = 0; i < fieldElements.length; i++) {
     //        var nodeElement = nodeElements[i];
     //         var fieldElement = fieldElements[i];
     //        fieldElement.addEventListener('mouseover', function (e) {
-    //             var id = nodeElement.getAttribute('node-id');
+    //             var id = nodeElement.getAttribute('data-n-id');
     //             var tooltip = document.getElementById("tooltip");
     //             var tooltipContent = document.querySelector(".tooltip-content");
                

@@ -53,23 +53,23 @@ window.onload = function () {
                 node = node.parent;
             }
 
-            var nodeElements = document.querySelectorAll('[node-id]');
+            var nodeElements = document.querySelectorAll('[data-n-id]');
             for (var i = 0; i < nodeElements.length; i++) {
-                var id = nodeElements[i].getAttribute('node-id');
+                var id = nodeElements[i].getAttribute('data-n-id');
                 if (skipBlur.indexOf(id) == -1)
                     nodeElements[i].setAttribute('filter', 'url(#f1)');
             }
 
-            var expcollElements = document.querySelectorAll('[control-expcoll-id]');
+            var expcollElements = document.querySelectorAll('[data-ctrl-ec-id]');
             for (var i = 0; i < expcollElements.length; i++) {
-                var id = expcollElements[i].getAttribute('control-expcoll-id');
+                var id = expcollElements[i].getAttribute('data-ctrl-ec-id');
                 if (skipBlur.indexOf(id) == -1)
                     expcollElements[i].setAttribute('filter', 'url(#f1)');
             }
 
-            var linksElements = document.querySelectorAll('[link-id]');
+            var linksElements = document.querySelectorAll('[data-l-id]');
             for (var i = 0; i < linksElements.length; i++) {
-                var id = linksElements[i].getAttribute('link-id');
+                var id = linksElements[i].getAttribute('data-l-id');
 
                 if (skipBlurLink.indexOf(id) == -1)
                     linksElements[i].setAttribute('filter', 'url(#f1)');

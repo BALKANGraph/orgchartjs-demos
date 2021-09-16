@@ -5,8 +5,8 @@ window.onload = function () {
   OrgChart.templates.myTemplate.size = [125, 170];
   OrgChart.templates.myTemplate.node = '<rect x="0" y="0" height="170" width="125" fill="#ffffff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
 
-  OrgChart.templates.myTemplate.field_0 = '<text width="100" text-overflow="multiline" style="font-size: 24px;font-weight: bold;" fill="#2D2D2D" x="62.5" y="85" text-anchor="middle">{val}</text>';
-  OrgChart.templates.myTemplate.field_1 = '<text width="110" text-overflow="multiline"  style="font-size: 14px;" fill="#2D2D2D" x="62.5" y="132" text-anchor="middle">{val}</text>';
+  OrgChart.templates.myTemplate.field_0 = '<text data-width="100" data-text-overflow="multiline" style="font-size: 24px;font-weight: bold;" fill="#2D2D2D" x="62.5" y="85" text-anchor="middle">{val}</text>';
+  OrgChart.templates.myTemplate.field_1 = '<text data-width="110" data-text-overflow="multiline"  style="font-size: 14px;" fill="#2D2D2D" x="62.5" y="132" text-anchor="middle">{val}</text>';
 
   OrgChart.templates.myTemplate.img_0 = '<clipPath id="{randId}"><circle cx="60" cy="37" r="30"></circle></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="30" y="7"  width="60" height="60"></image>';
 

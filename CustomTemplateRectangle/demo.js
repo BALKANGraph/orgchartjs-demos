@@ -15,8 +15,8 @@ window.onload = function () {
       rect: { x: 0, y: 0, width: 300, height: 80, rx: 15, ry: 15 }
   };
 
-    OrgChart.templates.myTemplate.field_0 = '<text width="210" class="field_0" style="font-size: 18px;" font-weight="bold" fill="#322b28" x="170" y="25" text-anchor="middle">{val}</text>';
-    OrgChart.templates.myTemplate.field_1 = '<text width="210" class="field_1" style="font-size: 14px;" font-weight="bold" fill="#231f20" x="170" y="60" text-anchor="middle">{val}</text>';
+    OrgChart.templates.myTemplate.field_0 = '<text data-width="210" class="field_0" style="font-size: 18px;" font-weight="bold" fill="#322b28" x="170" y="25" text-anchor="middle">{val}</text>';
+    OrgChart.templates.myTemplate.field_1 = '<text data-width="210" class="field_1" style="font-size: 14px;" font-weight="bold" fill="#231f20" x="170" y="60" text-anchor="middle">{val}</text>';
     OrgChart.templates.myTemplate.img_0 = '<clipPath id="{randId}"><circle cx="35" cy="40" r="46"></circle></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="-15" y="-10"  width="100" height="100"></image>';
 
     var chart = new OrgChart(document.getElementById("tree"), {

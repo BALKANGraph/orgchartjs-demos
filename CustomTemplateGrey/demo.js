@@ -8,14 +8,14 @@ window.onload = function () {
     '<circle stroke="#757575" stroke-width="3" fill="#757575" cx="100" cy="40" r="10"></circle> ' + 
     '<path d="M82,70 C82,50 118,50 118,70" stroke="#757575" stroke-width="1" fill="#757575"></path>';
 
-  OrgChart.templates.grey.field_0 = '<text width="160" style="font-size: 16px;" fill="#1b9ce2" x="100" y="120" text-anchor="middle" font-weight="bold">{val}</text>';
-  OrgChart.templates.grey.field_1 = '<text width="160" style="font-size: 16px;" fill="#828282" x="100" y="140" text-anchor="middle" font-weight="bold">{val}</text>';
+  OrgChart.templates.grey.field_0 = '<text data-width="160" style="font-size: 16px;" fill="#1b9ce2" x="100" y="120" text-anchor="middle" font-weight="bold">{val}</text>';
+  OrgChart.templates.grey.field_1 = '<text data-width="160" style="font-size: 16px;" fill="#828282" x="100" y="140" text-anchor="middle" font-weight="bold">{val}</text>';
 
   OrgChart.templates.grey.img_0 = 
     '<clipPath id="{randId}"><circle  cx="100" cy="55" r="35"></circle></clipPath>' +
     '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="15"  width="80" height="80"></image>';
 
-    OrgChart.templates.grey.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,270,5)" control-node-menu-id="{id}">' + 
+    OrgChart.templates.grey.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,270,5)" data-ctrl-n-menu-id="{id}">' + 
     '<rect x="-105" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
     '<circle cx="-100" cy="15" r="2.5" fill="#1b9ce2"></circle><circle cx="-93" cy="15" r="2.5" fill="#1b9ce2"></circle><circle cx="-86" cy="15" r="2.5" fill="#1b9ce2"></circle></g>';
 

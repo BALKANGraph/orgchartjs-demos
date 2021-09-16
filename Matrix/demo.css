@@ -12,16 +12,16 @@ html, body {
     height: 100%;
 }
 
-[link-id='[1][1_split_2]']  path,
-[link-id='[1_split_2][1_split_1]'] path,
-[link-id="[1_split_1][1_split_0]"] path {
+[data-l-id='[1][1_split_2]']  path,
+[data-l-id='[1_split_2][1_split_1]'] path,
+[data-l-id="[1_split_1][1_split_0]"] path {
   stroke: #4473c4;
   stroke-width: 3px;
 }
 
-[link-id='[3][3_split_2]']  path,
-[link-id='[3_split_2][3_split_1]'] path,
-[link-id="[3_split_1][3_split_0]"] path {
+[data-l-id='[3][3_split_2]']  path,
+[data-l-id='[3_split_2][3_split_1]'] path,
+[data-l-id="[3_split_1][3_split_0]"] path {
   stroke: #70ad47;
   stroke-width: 3px;
 }

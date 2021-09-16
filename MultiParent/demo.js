@@ -5,14 +5,14 @@ OrgChart.templates.green.plus = "";
 OrgChart.templates.green.minus = "";
 OrgChart.templates.green.expandCollapseSize = 0;
 OrgChart.templates.green.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#e0ecdb" stroke-width="3" stroke="#aeaeae" rx="1" ry="1"></rect>';
-OrgChart.templates.green.field_0 = '<text width="230" style="font-size: 20px;" font-weight="bold" fill="#6c7a69" x="25" y="45" text-anchor="start">{val}</text>';
-OrgChart.templates.green.field_1 = '<text width="230" style="font-size: 18px;" fill="#6c7a69" x="25" y="80" text-anchor="start">{val}</text>';
+OrgChart.templates.green.field_0 = '<text data-width="230" style="font-size: 20px;" font-weight="bold" fill="#6c7a69" x="25" y="45" text-anchor="start">{val}</text>';
+OrgChart.templates.green.field_1 = '<text data-width="230" style="font-size: 18px;" fill="#6c7a69" x="25" y="80" text-anchor="start">{val}</text>';
 OrgChart.templates.green.link = '<path stroke-linejoin="round" stroke="#aeaeae" stroke-width="3px" fill="none" d="{rounded}" />';
 
 OrgChart.templates.red = Object.assign({}, OrgChart.templates.green);
 OrgChart.templates.red.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#fc2532" stroke-width="3" stroke="#aeaeae" rx="1" ry="1"></rect>';
-OrgChart.templates.red.field_0 = '<text width="230" style="font-size: 20px;" font-weight="bold" fill="#e0ecdb" x="25" y="45" text-anchor="start">{val}</text>';
-OrgChart.templates.red.field_1 = '<text width="230" style="font-size: 18px;" fill="#e0ecdb" x="25" y="80" text-anchor="start">{val}</text>';
+OrgChart.templates.red.field_0 = '<text data-width="230" style="font-size: 20px;" font-weight="bold" fill="#e0ecdb" x="25" y="45" text-anchor="start">{val}</text>';
+OrgChart.templates.red.field_1 = '<text data-width="230" style="font-size: 18px;" fill="#e0ecdb" x="25" y="80" text-anchor="start">{val}</text>';
 
 OrgChart.templates.noLink = Object.assign({}, OrgChart.templates.green);
 OrgChart.templates.noLink.link = "";

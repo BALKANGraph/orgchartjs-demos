@@ -48,7 +48,7 @@ window.onload = function () {
         };
         
     
-        OrgChart.templates.ana.field_2 = '<text width="130" text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>';
+        OrgChart.templates.ana.field_2 = '<text data-width="130" data-text-overflow="multiline" style="font-size: 14px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>';
     
         var chart = new OrgChart(document.getElementById("tree"), {
             nodeBinding: {

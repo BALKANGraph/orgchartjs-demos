@@ -1,14 +1,14 @@
 window.onload = function () {
          
   OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
-  OrgChart.templates.myTemplate.field_0 = '<text width="230" class="field_0"  style="font-size: 20px;" fill="#ffffff" x="125" y="95" text-anchor="middle">{val}</text>';
-  OrgChart.templates.myTemplate.field_1 = '<text width="130" text-overflow="multiline" class="field_1"  style="font-size: 16px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>';
-  OrgChart.templates.myTemplate.field_2 = '<text width="130" text-overflow="multiline" class="field_1"  style="font-size: 14px;" fill="#ffffff" x="215" y="60" text-anchor="end">{val}</text>';
+  OrgChart.templates.myTemplate.field_0 = '<text data-width="230" class="field_0"  style="font-size: 20px;" fill="#ffffff" x="125" y="95" text-anchor="middle">{val}</text>';
+  OrgChart.templates.myTemplate.field_1 = '<text data-width="130" data-text-overflow="multiline" class="field_1"  style="font-size: 16px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>';
+  OrgChart.templates.myTemplate.field_2 = '<text data-width="130" data-text-overflow="multiline" class="field_1"  style="font-size: 14px;" fill="#ffffff" x="215" y="60" text-anchor="end">{val}</text>';
 
 
 OrgChart.templates.myTemplate.scaleLessThen = {
     "0.6": {
-        field_0: '<text width="180" class="field_0" style="font-size: 28px;" fill="#ffffff" x="160" y="100" text-anchor="middle">{val}</text>',
+        field_0: '<text data-width="180" class="field_0" style="font-size: 28px;" fill="#ffffff" x="160" y="100" text-anchor="middle">{val}</text>',
         field_1: '',
         field_2: '',
         nodeMenuButton: ""
@@ -27,8 +27,8 @@ OrgChart.templates.myTemplate.scaleLessThen = {
             + '<line x1="4" y1="5" x2="26" y2="5" stroke-width="1" stroke="#aeaeae"></line>',
     },
     "0.8": {
-        field_0: '<text width="230" class="field_0"  style="font-size: 24px;" fill="#ffffff" x="125" y="95" text-anchor="middle">{val}</text>',
-        field_1: '<text width="130" text-overflow="multiline" class="field_1"  style="font-size: 16px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>',
+        field_0: '<text data-width="230" class="field_0"  style="font-size: 24px;" fill="#ffffff" x="125" y="95" text-anchor="middle">{val}</text>',
+        field_1: '<text data-width="130" data-text-overflow="multiline" class="field_1"  style="font-size: 16px;" fill="#ffffff" x="230" y="30" text-anchor="end">{val}</text>',
         field_2: '',
     }
 

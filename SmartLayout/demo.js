@@ -18,16 +18,16 @@ window.onload = function () {
         OrgChart.templates.big.plus = '<rect x="0" y="45" height="40" width="170" fill="#039BE5" stroke-width="1" stroke="#aeaeae"></rect><path fill="#fff" d="M75,65 L85,75 L95,65"></path>'
             + '<text text-anchor="middle" style="font-size: 12px;cursor:pointer;" fill="#fff" x="85" y="60">({collapsed-children-count})</text>';
         OrgChart.templates.big.expandCollapseSize = 170;
-        OrgChart.templates.big.field_0 = '<text width="150" text-overflow="multiline" style="font-size: 16px;" fill="#757575" x="10" y="210" text-anchor="start">{val}</text>',
-            OrgChart.templates.big.field_1 = '<text width="150" text-overflow="multiline" style="font-size: 12px;" fill="#757575" x="10" y="245" text-anchor="start">{val}</text>';
+        OrgChart.templates.big.field_0 = '<text data-width="150" data-text-overflow="multiline" style="font-size: 16px;" fill="#757575" x="10" y="210" text-anchor="start">{val}</text>',
+            OrgChart.templates.big.field_1 = '<text data-width="150" data-text-overflow="multiline" style="font-size: 12px;" fill="#757575" x="10" y="245" text-anchor="start">{val}</text>';
         OrgChart.templates.big.up = '';
 
         OrgChart.templates.small = Object.assign({}, OrgChart.templates.ana);
         OrgChart.templates.small.size = [350, 80];
         OrgChart.templates.small.img_0 = '<image preserveAspectRatio="xMidYMid slice" xlink:href="{val}" x="1" y="1"  width="78" height="78"></image>';
         OrgChart.templates.small.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#f9f9f9" stroke-width="1" stroke="#aeaeae"></rect>';
-        OrgChart.templates.small.field_0 = '<text width="192" text-overflow="multiline" style="font-size: 16px;" fill="#757575" x="88" y="22" text-anchor="start">{val}</text>',
-            OrgChart.templates.small.field_1 = '<text width="192" text-overflow="multiline" style="font-size: 12px;" fill="#757575" x="88" y="57" text-anchor="start">{val}</text>';
+        OrgChart.templates.small.field_0 = '<text data-width="192" data-text-overflow="multiline" style="font-size: 16px;" fill="#757575" x="88" y="22" text-anchor="start">{val}</text>',
+            OrgChart.templates.small.field_1 = '<text data-width="192" data-text-overflow="multiline" style="font-size: 12px;" fill="#757575" x="88" y="57" text-anchor="start">{val}</text>';
         OrgChart.templates.small.minus = '<rect x="0" y="0" height="80" width="50" fill="#039BE5" stroke-width="1" stroke="#aeaeae"></rect><path fill="#fff" d="M75,75 L85,65 L95,75"></path>';
         OrgChart.templates.small.plus = '<rect x="150" y="-65" height="80" width="40" fill="#039BE5" stroke-width="1" stroke="#aeaeae"></rect><path fill="#fff" d="M160,-10 170,0 L180,-10"></path>'
             + '<text text-anchor="middle" style="font-size: 12px;cursor:pointer;" fill="#fff" x="170" y="-30">({collapsed-children-count})</text>';
@@ -158,17 +158,17 @@ window.onload = function () {
         chart.on("redraw", function (sender) {
             var upElements = document.querySelectorAll('[data-top]');
             for (var i = 0; i < upElements.length; i++) {
-                var nodeId = upElements[i].parentNode.getAttribute('node-id');
+                var nodeId = upElements[i].parentNode.getAttribute('data-n-id');
 
                 var node = sender.getNode(nodeId);
 
                 upElements[i].addEventListener('click', function (e) {
                     var target = e.target;
-                    while (target && !target.hasAttribute('node-id')) {
+                    while (target && !target.hasAttribute('data-n-id')) {
                         target = target.parentNode;
                     }
 
-                    var id = target.getAttribute('node-id');
+                    var id = target.getAttribute('data-n-id');
                     var node = sender.getNode(id);
                     var pnode = sender.getNode(node.pid);
 

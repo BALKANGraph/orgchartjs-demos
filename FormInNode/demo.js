@@ -28,11 +28,11 @@ var chart = new OrgChart(document.getElementById("tree"), {
 				inputTableElements[i].addEventListener('keyup', function(e){
         
         	    var element = e.target;
-                while(element && !element.hasAttribute('node-id')){
+                while(element && !element.hasAttribute('data-n-id')){
                 	element  = element.parentNode;
                 }
                 
-                var id = element.getAttribute('node-id');
+                var id = element.getAttribute('data-n-id');
                 var data = chart._get(id);
                 data.html = this.value;
         				chart.update(data);

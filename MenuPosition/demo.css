@@ -12,6 +12,6 @@ html, body {
     height: 100%;
 }
 
-[control-export-menu] {
+[data-ctrl-menu] {
     left: 150px;
   }

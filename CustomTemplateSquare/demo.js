@@ -27,9 +27,9 @@ window.onload = function () {
       '<clipPath id="{randId}"><circle  cx="70" cy="20" r="30"></circle></clipPath>' +
       '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="40" y="-10"  width="60" height="60"></image>';
 
-    OrgChart.templates.myTemplate.field_0 = '<text width="160" style="font-size: 15px;" fill="#757575" x="70" y="65" text-anchor="middle" font-weight="bold">{val}</text>';
-    OrgChart.templates.myTemplate.field_1 = '<text width="120" style="font-size: 12px;" fill="#757575" x="70" y="85" text-anchor="middle" font-weight="bold">{val}</text>';
-    OrgChart.templates.myTemplate.field_2 = '<text width="120" style="font-size: 12px;" fill="#757575" x="70" y="105" text-anchor="middle" font-weight="bold">{val}</text>';
+    OrgChart.templates.myTemplate.field_0 = '<text data-width="160" style="font-size: 15px;" fill="#757575" x="70" y="65" text-anchor="middle" font-weight="bold">{val}</text>';
+    OrgChart.templates.myTemplate.field_1 = '<text data-width="120" style="font-size: 12px;" fill="#757575" x="70" y="85" text-anchor="middle" font-weight="bold">{val}</text>';
+    OrgChart.templates.myTemplate.field_2 = '<text data-width="120" style="font-size: 12px;" fill="#757575" x="70" y="105" text-anchor="middle" font-weight="bold">{val}</text>';
 
     OrgChart.templates.myTemplate.link = 
       '<path stroke-linejoin="round" stroke="red" stroke-width="1px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}" />';
@@ -41,7 +41,7 @@ window.onload = function () {
       '<circle cx="15" cy="5" r="13" fill="#ffffff" stroke="red" stroke-width="1"></circle>' + 
       '<line x1="8" y1="5" x2="22" y2="5" stroke-width="1" stroke="red"></line><line x1="15" y1="-2" x2="15" y2="12" stroke-width="1" stroke="red"></line>';
 
-    OrgChart.templates.myTemplate.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,225,105)" control-node-menu-id="{id}">' + 
+    OrgChart.templates.myTemplate.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,225,105)" data-ctrl-n-menu-id="{id}">' + 
     '<rect x="-110" y="0" fill="red" fill-opacity="0" width="22" height="22"></rect>' + 
     '<circle cx="-102" cy="15" r="1" fill="red"></circle><circle cx="-98" cy="15" r="1" fill="red"></circle><circle cx="-94" cy="15" r="1" fill="red"></circle></g>';
   

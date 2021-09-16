@@ -6,11 +6,11 @@ window.onload = function () {
         '<rect rx="5" x="0" y="0" height="100" width="250" fill="white" stroke-width="1" stroke="black"></rect>';
 
     OrgChart.templates.myTemplate.name =
-        '<text width="220" text-overflow="multiline" class="field_0" style="font-size: 15px;" font-weight="bold" fill="black" x="125" y="20" text-anchor="middle">{val}</text>';
+        '<text data-width="220" data-text-overflow="multiline" class="field_0" style="font-size: 15px;" font-weight="bold" fill="black" x="125" y="20" text-anchor="middle">{val}</text>';
     OrgChart.templates.myTemplate.managerTitle =
-        '<text width="220"  style="font-size: 15px;" font-weight="bold" fill="black" x="125" y="60" text-anchor="middle">{val}</text>';
+        '<text data-width="220"  style="font-size: 15px;" font-weight="bold" fill="black" x="125" y="60" text-anchor="middle">{val}</text>';
     OrgChart.templates.myTemplate.pmName =
-        '<text width="220" class="field_0" style="font-size: 15px;" text-decoration="underline" fill="black" x="125" y="80" text-anchor="middle">{val}</text>';
+        '<text data-width="220" class="field_0" style="font-size: 15px;" text-decoration="underline" fill="black" x="125" y="80" text-anchor="middle">{val}</text>';
 
 
 
@@ -94,7 +94,7 @@ window.onload = function () {
             var fieldName = 'manager_' + i;
             y = (120 + i * 20);
             OrgChart.templates[templateName][fieldName] =
-                '<text width="220" class="field_0" style="font-size: 15px;" text-decoration="underline" fill="black" x="125" y="' + y + '" text-anchor="middle">{val}</text>';
+                '<text data-width="220" class="field_0" style="font-size: 15px;" text-decoration="underline" fill="black" x="125" y="' + y + '" text-anchor="middle">{val}</text>';
 
         }
 
@@ -103,7 +103,7 @@ window.onload = function () {
             var fieldName = 'employee_' + i;
             y = (m * 20 + i * 20 - 40);
             OrgChart.templates[templateName][fieldName] =
-                '<text width="220" class="field_0" style="font-size: 15px;" text-decoration="underline" fill="blue" x="125" y="' + y + '" text-anchor="middle">{val}</text>';
+                '<text data-width="220" class="field_0" style="font-size: 15px;" text-decoration="underline" fill="blue" x="125" y="' + y + '" text-anchor="middle">{val}</text>';
 
         }
 

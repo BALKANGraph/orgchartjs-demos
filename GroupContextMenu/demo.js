@@ -30,11 +30,11 @@ window.onload = function () {
         for (var id in sender.nodes) {
             var node = sender.nodes[id];
             if (node.stChildrenIds.length) {
-                var nodeElement = document.querySelector('[node-id=' + node.id + ']');
+                var nodeElement = document.querySelector('[data-n-id=' + node.id + ']');
                 if (nodeElement) {
                     nodeElement.addEventListener('contextmenu', function (e) {
                         e.preventDefault();
-                        var id = this.getAttribute('node-id');
+                        var id = this.getAttribute('data-n-id');
                         groupContextMenu.show(e.pageX, e.pageY, id, null, {
                             addInGroup: {
                                 text: "Add New In Group",

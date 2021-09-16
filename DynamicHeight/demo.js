@@ -5,10 +5,10 @@ window.onload = function () {
     OrgChart.templates.dynamic.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#039BE5" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
      
     OrgChart.templates.dynamic.field_0 = '<g class="my-text" transform="translate(0, 0)">' +
-      '<text width="230" text-overflow="multiline" style="font-size: 18px;" fill="#fff" x="125" y="95" text-anchor="middle">{val}</text>' + 
+      '<text data-width="230" data-text-overflow="multiline" style="font-size: 18px;" fill="#fff" x="125" y="95" text-anchor="middle">{val}</text>' + 
     '</g>';
     OrgChart.templates.dynamic.field_1 = '<g class="my-text" transform="translate(0, 0)">' +
-      '<text width="230" text-overflow="multiline" style="font-size: 18px;" fill="#fff" x="125" y="75" text-anchor="middle">{val}</text>' + 
+      '<text data-width="230" data-text-overflow="multiline" style="font-size: 18px;" fill="#fff" x="125" y="75" text-anchor="middle">{val}</text>' + 
     '</g>';
 
 
@@ -23,19 +23,19 @@ window.onload = function () {
   });
 
   chart.on('redraw', function (sender) {
-    var allNodesRect = document.querySelectorAll('[node-id] rect');
+    var allNodesRect = document.querySelectorAll('[data-n-id] rect');
 
     for (i = 0; i < allNodesRect.length; i++) {
-      var allNodeTspans = document.querySelectorAll('[node-id="' + (i + 1) + '"] text tspan');
+      var allNodeTspans = document.querySelectorAll('[data-n-id="' + (i + 1) + '"] text tspan');
       heightMinus = 160 - (20 * allNodeTspans.length);
-      var node = document.querySelector('[node-id="' + (i + 1) + '"] rect');
+      var node = document.querySelector('[data-n-id="' + (i + 1) + '"] rect');
       node.style.height += 240 - heightMinus ;
       node.style.y += heightMinus;
       var y = node.style.y;
       if (i > 0) {
         node.outerHTML += '<line x1="125" y1="0" x2="125" y2="' + y + '" stroke="#aeaeae" stroke-width="1px" fill="none"></line>';
       }
-      var allNodeFields = document.querySelectorAll('[node-id="' + (i + 1) + '"] .my-text');
+      var allNodeFields = document.querySelectorAll('[data-n-id="' + (i + 1) + '"] .my-text');
       for (j = 0; j < allNodeFields.length; j++) {
 
         allNodeFields[j].setAttribute('transform','translate(0,' + (heightMinus - 30) + ')');

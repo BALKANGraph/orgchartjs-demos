@@ -23,13 +23,13 @@ OrgChart.templates.white.img_0 =
   '<clipPath id="{randId}"><circle  cx="90" cy="80" r="21"></circle></clipPath>' +
   '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="60" y="50"  width="60" height="60"></image>';
 
-  OrgChart.templates.white.field_0 = '<text width="180" class="field_0"  style="font-size: 14px;" font-weight="bold" fill="#353535" x="90" y="130" text-anchor="middle">{val}</text>';
-  OrgChart.templates.white.field_1 = '<text width="180" class="field_1"  style="font-size: 14px;" fill="#5b5b5b" x="90" y="150" text-anchor="middle">{val}</text>';
-  OrgChart.templates.white.field_2 = '<text width="180" class="field_2"  style="font-size: 14px;" font-weight="bold" fill="#353535" x="90" y="25" text-anchor="middle">{val}</text>';
+  OrgChart.templates.white.field_0 = '<text data-width="180" class="field_0"  style="font-size: 14px;" font-weight="bold" fill="#353535" x="90" y="130" text-anchor="middle">{val}</text>';
+  OrgChart.templates.white.field_1 = '<text data-width="180" class="field_1"  style="font-size: 14px;" fill="#5b5b5b" x="90" y="150" text-anchor="middle">{val}</text>';
+  OrgChart.templates.white.field_2 = '<text data-width="180" class="field_2"  style="font-size: 14px;" font-weight="bold" fill="#353535" x="90" y="25" text-anchor="middle">{val}</text>';
  
   OrgChart.templates.white.plus = '';
   OrgChart.templates.white.minus = '';
-  OrgChart.templates.white.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,225,105)" control-node-menu-id="{id}">' +
+  OrgChart.templates.white.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,225,105)" data-ctrl-n-menu-id="{id}">' +
    
     '<line x1="-65" y1="51.5" x2="-52" y2="51.5" style="stroke:#aeaeae;stroke-width:1.5" />' +
     '<line x1="-65" y1="55" x2="-52" y2="55" style="stroke:#aeaeae;stroke-width:1.5" />' +

@@ -4,7 +4,7 @@ OrgChart.templates.myInvisibleGroup.node = '<rect x="0" y="0" height="{h}" width
 OrgChart.templates.floatingTemplate = Object.assign({}, OrgChart.templates.ana);
 OrgChart.templates.floatingTemplate.size = [250, 60];
 OrgChart.templates.floatingTemplate.node = '<rect x="0" y="0" height="60" width="250" fill="#ffffff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
-OrgChart.templates.floatingTemplate.field_0 = '<text width="230" style="font-size: 18px;" fill="#039BE5" x="125" y="35" text-anchor="middle">{val}</text>';
+OrgChart.templates.floatingTemplate.field_0 = '<text data-width="230" style="font-size: 18px;" fill="#039BE5" x="125" y="35" text-anchor="middle">{val}</text>';
 
 var chart = new OrgChart(document.getElementById("tree"), {
     nodeMouseClick: OrgChart.action.none,

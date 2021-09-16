@@ -20,7 +20,7 @@ chart.editUI.on('hide', function () {
 
 chart.editUI.on('field', function (sender, args) {
   if (args.type == 'edit' && args.name == 'state') {
-    var inp = args.field.querySelector('[val]');
+    var inp = args.field.querySelector('[data-val]');
     var value = inp.value;
     if (!OrgChart.isNullOrEmpty(value)) {
       value = value.split(',');
@@ -49,7 +49,7 @@ chart.editUI.on('field', function (sender, args) {
         else {
           value = "";
         }
-        var inp = args.field.querySelector('[val]');
+        var inp = args.field.querySelector('[data-val]');
         inp.setAttribute('val', value);
         inp.value = value;
       });

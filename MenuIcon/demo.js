@@ -3,7 +3,7 @@ var svgIcon = '<img src="https://cdn.balkan.app/shared/hamburger.png">';
 
 window.onload = function () { 
 
-OrgChart.templates.ana.exportMenuButton = '<div style="position:absolute;right:{p}px;top:{p}px; width:40px;height:50px;cursor:pointer" control-export-menu=""  >' + svgIcon + '</div>';
+OrgChart.templates.ana.exportMenuButton = '<div style="position:absolute;right:{p}px;top:{p}px; width:40px;height:50px;cursor:pointer" data-ctrl-menu=""  >' + svgIcon + '</div>';
 
     var chart = new OrgChart(document.getElementById("tree"), {
     		template: "ana",

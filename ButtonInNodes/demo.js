@@ -29,7 +29,7 @@ window.onload = function () {
         btns[i].addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
-          alert("My logic goes here for node with id: " + this.parentNode.getAttribute('node-id'));
+          alert("My logic goes here for node with id: " + this.parentNode.getAttribute('data-n-id'));
 
         })
       }

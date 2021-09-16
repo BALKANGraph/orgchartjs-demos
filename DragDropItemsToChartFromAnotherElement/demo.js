@@ -30,7 +30,7 @@ window.onload = function () {
 
     chart.on('redraw', function(){
 
-        var nodeElements = document.querySelectorAll('[node-id]');
+        var nodeElements = document.querySelectorAll('[data-n-id]');
         
         for(var i = 0; i < nodeElements.length; i++){
             var nodeElement = nodeElements[i];
@@ -47,11 +47,11 @@ window.onload = function () {
 
                 var nodeElement = ev.target;
                 
-                while(!nodeElement.hasAttribute('node-id')){
+                while(!nodeElement.hasAttribute('data-n-id')){
                     nodeElement = nodeElement.parentNode;
                     
                 }                
-                var pid = nodeElement.getAttribute('node-id');  
+                var pid = nodeElement.getAttribute('data-n-id');  
 
                 
                 chart.addNode({

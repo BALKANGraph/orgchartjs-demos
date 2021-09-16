@@ -3,8 +3,8 @@
 window.onload = function () {
     OrgChart.templates.header = Object.assign({}, OrgChart.templates.ana);
     OrgChart.templates.header.svg = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="display:block;background-color: #BFE0F1" width="{w}" height="{h}" viewBox="{viewBox}">{content}</svg>';
-    OrgChart.templates.header.header1 =  '<text text-anchor="middle" width="400" style="font-size: 18px;font-weight:bold;" fill="#3F7D95" x="200" y="20">{val}</text>';
-    OrgChart.templates.header.header2 =  '<text text-anchor="middle" width="400"  style="font-size: 18px;" fill="#3F7D95" x="200" y="40">{val}</text>';
+    OrgChart.templates.header.header1 =  '<text text-anchor="middle" data-width="400" style="font-size: 18px;font-weight:bold;" fill="#3F7D95" x="200" y="20">{val}</text>';
+    OrgChart.templates.header.header2 =  '<text text-anchor="middle" data-width="400"  style="font-size: 18px;" fill="#3F7D95" x="200" y="40">{val}</text>';
     OrgChart.templates.header.size = [400, 50];
     OrgChart.templates.header.node = '';
     OrgChart.templates.header.link = '<path stroke-linejoin="round" stroke="#fff" stroke-width="1px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}" />';
@@ -54,7 +54,7 @@ window.onload = function () {
     OrgChart.templates.green1.size = [220, 90];
     OrgChart.templates.green1.node = '<rect x="0" y="0" height="90" width="220" fill="#fff" stroke-width="16" stroke="#68C6EA"></rect>';
     OrgChart.templates.green1.node += '<text style="font-size: 14px;" fill="#676464; font-weight:bold;" x="17" y="30">Strategy</text>';
-    OrgChart.templates.green1.strategy = '<text width="190" text-overflow="multiline" style="font-size: 14px;" fill="#676464" x="17" y="50">{val}</text>';
+    OrgChart.templates.green1.strategy = '<text data-width="190" data-text-overflow="multiline" style="font-size: 14px;" fill="#676464" x="17" y="50">{val}</text>';
 
     OrgChart.templates.red1 = Object.assign({}, OrgChart.templates.green1);
     OrgChart.templates.orange1 = Object.assign({}, OrgChart.templates.green1);
@@ -71,7 +71,7 @@ window.onload = function () {
     OrgChart.templates.green_percent1.node += '<rect fill="#fff" x="10" y="10" width="250" height="250"></rect>';
     OrgChart.templates.green_percent1.node += '<rect fill="#fff" x="270" y="10" width="120" height="120"></rect>';
     OrgChart.templates.green_percent1.node += '<text style="font-size: 14px;font-weight:bold;" fill="#676464" x="17" y="35">Goal</text>';
-    OrgChart.templates.green_percent1.goal = '<text text-overflow="multiline" width="230"  style="font-size: 14px;" fill="#676464" x="17" y="55">{val}</text>'
+    OrgChart.templates.green_percent1.goal = '<text data-text-overflow="multiline" data-width="230"  style="font-size: 14px;" fill="#676464" x="17" y="55">{val}</text>'
 
     
     OrgChart.templates.red_percent1 = Object.assign({}, OrgChart.templates.green_percent1);
@@ -102,10 +102,10 @@ window.onload = function () {
     OrgChart.templates.green_percent2.node += '<text text-anchor="end"  style="font-size: 14px;font-weight:bold;" fill="#676464" x="380" y="230">Designation</text>';
 
     OrgChart.templates.green_percent2.goal = '';
-    OrgChart.templates.green_percent2.goalShort = '<text text-overflow="multiline" width="230"  style="font-size: 14px;" fill="#676464" x="17" y="55">{val}</text>';
+    OrgChart.templates.green_percent2.goalShort = '<text data-text-overflow="multiline" data-width="230"  style="font-size: 14px;" fill="#676464" x="17" y="55">{val}</text>';
     OrgChart.templates.green_percent2.photo = '<image preserveAspectRatio="xMaxYMax slice" xlink:href="{val}" x="10" y="140"  width="120" height="120"></image>';
-    OrgChart.templates.green_percent2.designation = '<text text-anchor="end"  width="230"  style="font-size: 14px;" fill="#676464" x="380" y="250">{val}</text>';
-    OrgChart.templates.green_percent2.goalOwner = '<text width="230"  style="font-size: 14px;" fill="#676464" x="150" y="180">{val}</text>';
+    OrgChart.templates.green_percent2.designation = '<text text-anchor="end"  data-width="230"  style="font-size: 14px;" fill="#676464" x="380" y="250">{val}</text>';
+    OrgChart.templates.green_percent2.goalOwner = '<text data-width="230"  style="font-size: 14px;" fill="#676464" x="150" y="180">{val}</text>';
 
     OrgChart.templates.red_percent2 = Object.assign({}, OrgChart.templates.green_percent2);
 
@@ -127,7 +127,7 @@ window.onload = function () {
     OrgChart.templates.green2.node += '<text style="font-size: 14px;" fill="#676464; font-weight:bold;" x="17" y="30">Strategy</text>';
     OrgChart.templates.green2.node += '<text style="font-size: 14px;" fill="#676464; font-weight:bold;" x="17" y="110">Secondary Strategy</text>';
 
-    OrgChart.templates.green2.secondaryStrategy = '<text width="190" text-overflow="multiline" style="font-size: 14px;" fill="#676464" x="17" y="130">{val}</text>';;
+    OrgChart.templates.green2.secondaryStrategy = '<text data-width="190" data-text-overflow="multiline" style="font-size: 14px;" fill="#676464" x="17" y="130">{val}</text>';;
 
     OrgChart.templates.red2 = Object.assign({}, OrgChart.templates.green2);
     OrgChart.templates.orange2 = Object.assign({}, OrgChart.templates.green2);

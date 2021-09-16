@@ -45,9 +45,9 @@ function heatColour(percentage) {
   
       chart.on('redraw', function (sender) {
   
-        var allNodesRect = document.querySelectorAll('[node-id] rect');
+        var allNodesRect = document.querySelectorAll('[data-n-id] rect');
         for (i = 0; i < allNodesRect.length; i++) {
-          var id = allNodesRect[i].parentElement.getAttribute('node-id');
+          var id = allNodesRect[i].parentElement.getAttribute('data-n-id');
           var node = chart.get(id);
           var fillColor = heatColour(node.value);
           allNodesRect[i].style.fill = fillColor; 

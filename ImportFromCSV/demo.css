@@ -11,15 +11,15 @@ html, body {
     height: 100%;
 }
 
-.Devs [node-id] rect {
+.Devs [data-n-id] rect {
     fill: #FFCA28;
 }
 
-.Sales [node-id] rect {
+.Sales [data-n-id] rect {
     fill: #F57C00;
 }
 
-.HRs [node-id] rect {
+.HRs [data-n-id] rect {
     fill: #E25863;
 }
 

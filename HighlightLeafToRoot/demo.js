@@ -5,7 +5,7 @@ window.onload = function () {
   OrgChart.templates.aTemplate.size = [70, 20];
   OrgChart.templates.aTemplate.node = 
     '<rect x="0" y="0" height="{h}" width="{w}" fill="' + colors[0] + '""></rect>';
-  OrgChart.templates.aTemplate.field_0 = '<text width="70" style="font-size: 12px;" fill="#1a1a1a" x="35" y="14" text-anchor="middle">{val}</text>';
+  OrgChart.templates.aTemplate.field_0 = '<text data-width="70" style="font-size: 12px;" fill="#1a1a1a" x="35" y="14" text-anchor="middle">{val}</text>';
   OrgChart.templates.aTemplate.plus = '';
   OrgChart.templates.aTemplate.link = '<path stroke-linejoin="round" stroke="#eeeedd" stroke-width="1px" fill="none" d="{curve}" />';
   OrgChart.templates.aTemplate.minus = '';

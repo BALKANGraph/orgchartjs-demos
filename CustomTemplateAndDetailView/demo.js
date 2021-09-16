@@ -12,10 +12,10 @@ window.onload = function () {
     
     OrgChart.templates.MyTemplate.node = '<rect x="0" y="0" height="200" width="300" fill="#ffffff" stroke-width="4" stroke="#004165" rx="50" ry="50"></rect><line x1="2" y1="125" x2="298" y2="125" stroke="#BED600" stroke-width="2" ></line>';
     OrgChart.templates.MyTemplate.image = '<image preserveAspectRatio="xMidYMid slice"xlink:href="{val}" x="115" y="5" width="70" height="85"></image>';
-    OrgChart.templates.MyTemplate.name = '<text width="220" style="font-size: 24px;font-family: Helvetica;" fill="#4D4E53" x="150" y="115" text-anchor="middle">{val}</text>';
-    OrgChart.templates.MyTemplate.title = '<text width="220" style="font-size: 16px;font-family: Helvetica;" fill="#4D4E53" x="150" y="160" text-anchor="middle">{val}</text>';
-    OrgChart.templates.MyTemplate.division = '<text width="220" style="font-size: 16px;font-family: Helvetica;" fill="#4D4E53" x="150" y="180" text-anchor="middle">{val}</text>';
-    OrgChart.templates.MyTemplate.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,255,170)" control-node-menu-id="{id}"><rect x="-4" y="-10" fill="#000000" fill-opacity="0" width="22" height="22"></rect><circle cx="0" cy="0" r="2" fill="#004165"></circle><circle cx="7" cy="0" r="2" fill="#004165"></circle><circle cx="14" cy="0" r="2" fill="#004165"></circle></g>';
+    OrgChart.templates.MyTemplate.name = '<text data-width="220" style="font-size: 24px;font-family: Helvetica;" fill="#4D4E53" x="150" y="115" text-anchor="middle">{val}</text>';
+    OrgChart.templates.MyTemplate.title = '<text data-width="220" style="font-size: 16px;font-family: Helvetica;" fill="#4D4E53" x="150" y="160" text-anchor="middle">{val}</text>';
+    OrgChart.templates.MyTemplate.division = '<text data-width="220" style="font-size: 16px;font-family: Helvetica;" fill="#4D4E53" x="150" y="180" text-anchor="middle">{val}</text>';
+    OrgChart.templates.MyTemplate.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,255,170)" data-ctrl-n-menu-id="{id}"><rect x="-4" y="-10" fill="#000000" fill-opacity="0" width="22" height="22"></rect><circle cx="0" cy="0" r="2" fill="#004165"></circle><circle cx="7" cy="0" r="2" fill="#004165"></circle><circle cx="14" cy="0" r="2" fill="#004165"></circle></g>';
     
     var editForm = function () {
     };

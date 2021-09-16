@@ -16,6 +16,6 @@ body {
 .select2-selection__choice {
   color: #000 !important;
 }
-[data-field-name="state"] [val]{
+[data-f-name="state"] [data-val]{
   display: none;
 }

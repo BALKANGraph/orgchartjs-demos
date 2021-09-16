@@ -1,4 +1,4 @@
-var field_template = '<text width="230" text-overflow="ellipsis"  style="font-size: 24px;" fill="#757575" x="125" y="100" text-anchor="middle">{val}</text>';						
+var field_template = '<text data-width="230" data-text-overflow="ellipsis"  style="font-size: 24px;" fill="#757575" x="125" y="100" text-anchor="middle">{val}</text>';						
 OrgChart.templates.olivia.field_0 = '{val}';
 
            var chart = new OrgChart(document.getElementById("tree"), {

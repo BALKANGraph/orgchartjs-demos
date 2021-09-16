@@ -3,7 +3,7 @@ window.onload = function () {
   OrgChart.templates.yellow = Object.assign({}, OrgChart.templates.ana);
   OrgChart.templates.yellow.size = [250, 40];
   OrgChart.templates.yellow.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#ffd68b" stroke-width="1" stroke="#ffbf00" rx="1" ry="1"></rect>';
-  OrgChart.templates.yellow.field_0 = '<text width="230" style="font-size: 18px;" fill="black" x="125" y="25" text-anchor="middle">{val}</text>';
+  OrgChart.templates.yellow.field_0 = '<text data-width="230" style="font-size: 18px;" fill="black" x="125" y="25" text-anchor="middle">{val}</text>';
   OrgChart.templates.yellow.plus = '';
   OrgChart.templates.yellow.minus = '';
   OrgChart.templates.yellow.link = '<path stroke-linejoin="round" stroke="#ffd68b" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';
@@ -11,15 +11,15 @@ window.onload = function () {
   OrgChart.templates.yellowRounded = Object.assign({}, OrgChart.templates.yellow);
   OrgChart.templates.yellowRounded.size = [200, 40];
   OrgChart.templates.yellowRounded.node = '<rect x="0" y="0" height="{h}" width="200" fill="#ffd68b" stroke-width="1" stroke="#ffbf00" rx="10" ry="10"></rect>';
-  OrgChart.templates.yellowRounded.field_0 = '<text width="120" text-overflow="multiline" style="font-size: 16px;" fill="black" x="100" y="18" text-anchor="middle">{val}</text>';
+  OrgChart.templates.yellowRounded.field_0 = '<text data-width="120" data-text-overflow="multiline" style="font-size: 16px;" fill="black" x="100" y="18" text-anchor="middle">{val}</text>';
 
   OrgChart.templates.yellowEllipse = Object.assign({}, OrgChart.templates.yellow);
   OrgChart.templates.yellowEllipse.node = '<ellipse cx="120" cy="30" rx="80" ry="30" fill="#ffd68b" rx="10" ry="10" />';
-  OrgChart.templates.yellowEllipse.field_0 = '<text width="150" text-overflow="multiline" style="font-size: 16px;" fill="black" x="125" y="30" text-anchor="middle">{val}</text>';
+  OrgChart.templates.yellowEllipse.field_0 = '<text data-width="150" data-text-overflow="multiline" style="font-size: 16px;" fill="black" x="125" y="30" text-anchor="middle">{val}</text>';
   
   OrgChart.templates.blue = Object.assign({}, OrgChart.templates.yellow);
   OrgChart.templates.blue.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#4473c4" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
-  OrgChart.templates.blue.field_0 = '<text width="230" style="font-size: 18px;" fill="white" x="125" y="35" text-anchor="middle">{val}</text>';
+  OrgChart.templates.blue.field_0 = '<text data-width="230" style="font-size: 18px;" fill="white" x="125" y="35" text-anchor="middle">{val}</text>';
 
 OrgChart.templates.hiddenTemplate = Object.assign({}, OrgChart.templates.yellow);
 OrgChart.templates.hiddenTemplate.size = [0, 0];
@@ -32,7 +32,7 @@ OrgChart.templates.rootTemplate.link = '';
 
   OrgChart.templates.blueRoot = Object.assign({}, OrgChart.templates.rootTemplate);
   OrgChart.templates.blueRoot.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#4473c4" stroke-width="1" stroke="#2f528f" rx="1" ry="1"></rect>';
-  OrgChart.templates.blueRoot.field_0 = '<text width="230" style="font-size: 18px;" fill="white" x="125" y="25" text-anchor="middle">{val}</text>';
+  OrgChart.templates.blueRoot.field_0 = '<text data-width="230" style="font-size: 18px;" fill="white" x="125" y="25" text-anchor="middle">{val}</text>';
 
 
   OrgChart.templates.greenRoot = Object.assign({}, OrgChart.templates.blueRoot);
@@ -45,7 +45,7 @@ OrgChart.templates.rootTemplate.link = '';
   OrgChart.templates.lightBlue = Object.assign({}, OrgChart.templates.yellow);
   OrgChart.templates.lightBlue.size = [250, 30];
   OrgChart.templates.lightBlue.node = '<rect x="0" y="0" height="30" width="{w}" fill="#a1b8e1" rx="1" ry="1"></rect>';
-  OrgChart.templates.lightBlue.field_0 = '<text width="230" style="font-size: 16px;" fill="white" x="125" y="20" text-anchor="middle">{val}</text>';
+  OrgChart.templates.lightBlue.field_0 = '<text data-width="230" style="font-size: 16px;" fill="white" x="125" y="20" text-anchor="middle">{val}</text>';
   OrgChart.templates.lightBlue.defs = '<marker id="arrow1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse"><path fill="#4473c4" d="M 0 0 L 10 5 L 0 10 z" /></marker>';
 
   OrgChart.templates.lightBlue.link = '<path stroke-linejoin="round" marker-end="url(#arrow1)" stroke="#4473c4" stroke-width="3px" fill="none" d="M{xa},{ya} {xb},{yb} {xc},{yc} L{xd},{yd}"/>';

@@ -18,9 +18,9 @@ var chart = new OrgChart(document.getElementById("tree"), {
 
 
     chart.on('redraw', (sender) => {
-      var allNodesRect = document.querySelectorAll('[node-id] rect');
+      var allNodesRect = document.querySelectorAll('[data-n-id] rect');
       for (i = 0; i < allNodesRect.length; i++) {
-        var node = document.querySelector('[node-id="' + (i + 1) + '"] rect');
+        var node = document.querySelector('[data-n-id="' + (i + 1) + '"] rect');
         node.style.fill = nodes[i].color;
       }
     });
@@ -30,7 +30,7 @@ var chart = new OrgChart(document.getElementById("tree"), {
       var style = document.createElement('style');
       style.id = "myStyles";
       for (i = 0; i < nodes.length; i++) {
-        css = '[node-id="' + (i + 1) + '"] rect { fill:'+ nodes[i].color +' }';
+        css = '[data-n-id="' + (i + 1) + '"] rect { fill:'+ nodes[i].color +' }';
         style.appendChild(document.createTextNode(css));
       }
       head.appendChild(style);

@@ -6,13 +6,13 @@ window.onload = function () {
         });
 
         chart.on('redraw', function(){
-	          var nodeElements = document.querySelectorAll('[node-id]');
+	          var nodeElements = document.querySelectorAll('[data-n-id]');
             for(var i = 0; i < nodeElements.length; i++){
   	            nodeElements[i].addEventListener('mouseover', function(e){
                     e.preventDefault();
                     
                     if (e.target.tagName != 'text'){
-                        var nodeId = this.getAttribute('node-id');
+                        var nodeId = this.getAttribute('data-n-id');
                         chart.editUI.show(nodeId, true);                
                     }
 

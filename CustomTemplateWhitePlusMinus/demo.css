@@ -11,11 +11,11 @@ html, body{
   height:100%;
 }
 
- [control-node-menu-id]{
+ [data-ctrl-n-menu-id]{
 	display: none;
 }
 
-.node:hover [control-node-menu-id]{
+.node:hover [data-ctrl-n-menu-id]{
 	display: initial;
 	display: block;
 }

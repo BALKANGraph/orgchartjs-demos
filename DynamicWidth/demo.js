@@ -3,7 +3,7 @@ window.onload = function () {
   OrgChart.templates.dynamic = Object.assign({}, OrgChart.templates.ana);
   OrgChart.templates.dynamic.size = [300, 40];
   OrgChart.templates.dynamic.node = '<rect x="0" y="0" height="{h}" width="{w}" fill="#039BE5" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';     
-  OrgChart.templates.dynamic.field_0 = '<text width="270" style="font-size: 18px;" fill="#fff" x="150" y="25" text-anchor="middle">{val}</text>';
+  OrgChart.templates.dynamic.field_0 = '<text data-width="270" style="font-size: 18px;" fill="#fff" x="150" y="25" text-anchor="middle">{val}</text>';
 
 
 var fieldWidth = 0;
@@ -16,10 +16,10 @@ var chart = new OrgChart(document.getElementById("tree"), {
 });
 
 chart.on('redraw', function (sender) {
-  var allNodesRect = document.querySelectorAll('[node-id] rect');
+  var allNodesRect = document.querySelectorAll('[data-n-id] rect');
   for (i = 0; i < allNodesRect.length; i++) {
-    var nodeText = document.querySelector('[node-id="' + (i + 1) + '"] text');
-    var nodeRect = document.querySelector('[node-id="' + (i + 1) + '"] rect');
+    var nodeText = document.querySelector('[data-n-id="' + (i + 1) + '"] text');
+    var nodeRect = document.querySelector('[data-n-id="' + (i + 1) + '"] rect');
     fieldWidth = nodeText.getComputedTextLength();
     nodeRect.style.width = fieldWidth + 20;
     console.log(fieldWidth);

@@ -33,7 +33,7 @@ OrgChart.templates.ana.field_1 = '{val}';
 
     chart.on('field', function(sender, args){
         if (args.name == "title"){
-            args.value = '<a onclick="showPopup()" href="#"><text width="130" text-overflow="multiline" class="field_1" style="font-size: 14px;" fill="#ffffff" x="200" y="30" text-anchor="middle">{val}</text></a>'.replace('{val}', args.data.title)
+            args.value = '<a onclick="showPopup()" href="#"><text data-width="130" data-text-overflow="multiline" class="field_1" style="font-size: 14px;" fill="#ffffff" x="200" y="30" text-anchor="middle">{val}</text></a>'.replace('{val}', args.data.title)
         }
      });
 

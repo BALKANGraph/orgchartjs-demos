@@ -27,9 +27,9 @@ window.onload = function () {
   OrgChart.templates.myTemplate.img_0 = '<clipPath id="{randId}"><circle cx="340" cy="160" r="60"></circle></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="280" y="100"  width="120" height="120"></image>';
   OrgChart.templates.myTemplate.img_1 = '<clipPath id="{randId}"><circle cx="600" cy="160" r="59"></circle></clipPath><circle cx="600" cy="160" r="60" fill="none" stroke="white" stroke-width="2" ></circle><image preserveAspectRatio="xMidYMid slice" clip-path="url(#{randId})" xlink:href="{val}" x="540" y="100"  width="120" height="120"></image>';
   
-  OrgChart.templates.myTemplate.field_0 = '<text width="165" class="field_0" style="font-size: 18px;" fill="#039BE5" x="340" y="40" text-anchor="middle">{val}</text>';
-  OrgChart.templates.myTemplate.field_1 = '<text width="165" class="field_1" style="font-size: 14px;" fill="#F57C00" x="340" y="60" text-anchor="middle">{val}</text>';
-  OrgChart.templates.myTemplate.field_2 = '<text width="165" class="field_0" style="font-size: 18px;" fill="#039BE5" x="600" y="60" text-anchor="middle">{val}</text>';
+  OrgChart.templates.myTemplate.field_0 = '<text data-width="165" class="field_0" style="font-size: 18px;" fill="#039BE5" x="340" y="40" text-anchor="middle">{val}</text>';
+  OrgChart.templates.myTemplate.field_1 = '<text data-width="165" class="field_1" style="font-size: 14px;" fill="#F57C00" x="340" y="60" text-anchor="middle">{val}</text>';
+  OrgChart.templates.myTemplate.field_2 = '<text data-width="165" class="field_0" style="font-size: 18px;" fill="#039BE5" x="600" y="60" text-anchor="middle">{val}</text>';
   
   var chart = new OrgChart(document.getElementById("tree"), {
       nodeMouseClick: OrgChart.none,

@@ -27,7 +27,7 @@ chart.on('redraw', function(sender){
         var rectElement = screenReaderTextElement.parentNode;
         var nodeElement = rectElement.parentNode;
 
-        var id = nodeElement.getAttribute('node-id');
+        var id = nodeElement.getAttribute('data-n-id');
         var data = sender._get(id);
         var node = sender.getNode(id);
 
@@ -38,7 +38,7 @@ chart.on('redraw', function(sender){
 
         rectElement.addEventListener('keydown',  function(e){
             var currentNodeElement = e.target.parentNode;
-            var id = currentNodeElement.getAttribute('node-id');
+            var id = currentNodeElement.getAttribute('data-n-id');
             var node = sender.getNode(id);
 
             if (e.keyCode == 39){//right

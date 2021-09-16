@@ -61,8 +61,8 @@ window.onload = function() {
         function findNodeId(element){
             while(element){
                 element = element.parentNode;
-                if (element.getAttribute('node-id')){
-                    return element.getAttribute('node-id');
+                if (element.getAttribute('data-n-id')){
+                    return element.getAttribute('data-n-id');
                 }
             }
             return null;

@@ -234,10 +234,10 @@ var removeIcon = '<svg width="24" height="24" fill="red" viewBox="-47 0 512 512"
       rect: { x: 0, y: 0, width: 300, height: 80, rx: 40, ry: 40 }
   };
 
-  OrgChart.templates.myTemplate.field_0 = '<text width="210" class="field_0" style="font-size: 18px;" fill="#ffffff" x="80" y="30" text-anchor="start">{val}</text>';
-  OrgChart.templates.myTemplate.field_1 = '<text width="210" class="field_1" style="font-size: 14px;" fill="#ffffff" x="80" y="55" text-anchor="start">{val}</text>';
+  OrgChart.templates.myTemplate.field_0 = '<text data-width="210" class="field_0" style="font-size: 18px;" fill="#ffffff" x="80" y="30" text-anchor="start">{val}</text>';
+  OrgChart.templates.myTemplate.field_1 = '<text data-width="210" class="field_1" style="font-size: 14px;" fill="#ffffff" x="80" y="55" text-anchor="start">{val}</text>';
 
-  OrgChart.templates.myTemplate.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,285,33)" control-node-menu-id="{id}"><rect x="-4" y="-10" fill="#000000" fill-opacity="0" width="22" height="22"></rect><circle cx="0" cy="0" r="2" fill="#ffffff"></circle><circle cx="0" cy="7" r="2" fill="#ffffff"></circle><circle cx="0" cy="14" r="2" fill="#ffffff"></circle></g>';
+  OrgChart.templates.myTemplate.nodeMenuButton = '<g style="cursor:pointer;" transform="matrix(1,0,0,1,285,33)" data-ctrl-n-menu-id="{id}"><rect x="-4" y="-10" fill="#000000" fill-opacity="0" width="22" height="22"></rect><circle cx="0" cy="0" r="2" fill="#ffffff"></circle><circle cx="0" cy="7" r="2" fill="#ffffff"></circle><circle cx="0" cy="14" r="2" fill="#ffffff"></circle></g>';
 
   OrgChart.templates.green = Object.assign({}, OrgChart.templates.myTemplate);
   OrgChart.templates.green.node = '<rect x="0" y="0" height="80" width="300" fill="#48af56" stroke-width="1" stroke="#aeaeae" rx="40" ry="40"></rect>' +
@@ -249,8 +249,8 @@ var removeIcon = '<svg width="24" height="24" fill="red" viewBox="-47 0 512 512"
     '<path d="M25,54 C25,32 55,32 55,54 L24,54" stroke="#fff" stroke-width="2" fill="#ffe68d"></path>' +
     '<circle stroke="#fff" stroke-width="2" fill="#ffe68d" cx="40" cy="30" r="8"></circle> ';
 
-  OrgChart.templates.yellow.field_0 = '<text width="210" class="field_0" style="font-size: 18px;" fill="#757575" x="80" y="30" text-anchor="start">{val}</text>';
-  OrgChart.templates.yellow.field_1 = '<text width="210" class="field_1" style="font-size: 14px;" fill="#757575" x="80" y="55" text-anchor="start">{val}</text>';
+  OrgChart.templates.yellow.field_0 = '<text data-width="210" class="field_0" style="font-size: 18px;" fill="#757575" x="80" y="30" text-anchor="start">{val}</text>';
+  OrgChart.templates.yellow.field_1 = '<text data-width="210" class="field_1" style="font-size: 14px;" fill="#757575" x="80" y="55" text-anchor="start">{val}</text>';
 
   OrgChart.toolbarUI.expandAllIcon = expandAllIcon;
 //  OrgChart.toolbarUI.fitIcon = '<img width="32" src=https://cdn.balkan.app/shared/plan.png />';

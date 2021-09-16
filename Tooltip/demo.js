@@ -2,7 +2,7 @@ window.onload = function () {
 
     var tooltip = '<g data-t-id="{id}" transform="matrix(0.001,0,0,0.001,{x},{y})" ><path stroke="#FFCA28" fill="#fff" d="M 0,0 L -10,-10 H -85 Q -90,-10 -90,-15  V -65   Q -90,-70 -85,-70 H 85 Q 90,-70 90,-65 V -15 Q 90,-10 85,-10 H 10  L 0,0 z" ></path>{text}</g>';
 
-    var tooltipText = '<text text-anchor="middle" width="130" fill="#F57C00" x="0" y="-32">{val}</text>';
+    var tooltipText = '<text text-anchor="middle" data-width="130" fill="#F57C00" x="0" y="-32">{val}</text>';
 
 
 
@@ -17,11 +17,11 @@ window.onload = function () {
     });
 
     chart.on('redraw', function (sender) {
-        var nodeElements = sender.element.querySelectorAll('[node-id]');
+        var nodeElements = sender.element.querySelectorAll('[data-n-id]');
         for (var i = 0; i < nodeElements.length; i++) {
             var nodeElement = nodeElements[i];
             nodeElement.addEventListener('mouseover', function () {
-                var id = this.getAttribute('node-id');
+                var id = this.getAttribute('data-n-id');
                 var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
                 if (!tooltipElement) return;
                 var transformStart = OrgChart._getTransform(tooltipElement);
@@ -32,7 +32,7 @@ window.onload = function () {
                 OrgChart.anim(tooltipElement, { transform: transformStart }, { transform: transformEnd }, 300, OrgChart.anim.outBack);
             });
             nodeElement.addEventListener('mouseleave', function () {
-                var id = this.getAttribute('node-id');
+                var id = this.getAttribute('data-n-id');
                 var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
                 if (!tooltipElement) return;
                 var transformStart = OrgChart._getTransform(tooltipElement);
@@ -45,13 +45,13 @@ window.onload = function () {
     });
 
     // chart.on('redraw', function (sender) {
-    //     var nodeElements = sender.element.querySelectorAll('[node-id]');
-    //     var fieldElements = sender.element.querySelectorAll('[node-id] text');
+    //     var nodeElements = sender.element.querySelectorAll('[data-n-id]');
+    //     var fieldElements = sender.element.querySelectorAll('[data-n-id] text');
     //     for (var i = 0; i < fieldElements.length; i++) {
     //         var nodeElement = nodeElements[i];
     //         var fieldElement = fieldElements[i];
     //         fieldElement.addEventListener('mouseover', function () {
-    //             var id = this.parentElement.getAttribute('node-id');
+    //             var id = this.parentElement.getAttribute('data-n-id');
     //             var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
     //             if (!tooltipElement) return;
     //             var transformStart = OrgChart._getTransform(tooltipElement);     
@@ -61,7 +61,7 @@ window.onload = function () {
     //             OrgChart.anim(tooltipElement, { transform: transformStart }, { transform: transformEnd }, 300, OrgChart.anim.outBack);
     //         });
     //         fieldElement.addEventListener('mouseleave', function () {
-    //             var id = this.parentElement.getAttribute('node-id');
+    //             var id = this.parentElement.getAttribute('data-n-id');
     //             var tooltipElement = document.querySelector('[data-t-id="' + id + '"]');
     //             if (!tooltipElement) return;
     //             var transformStart = OrgChart._getTransform(tooltipElement);

@@ -27,7 +27,7 @@ function tglHandler(tglWrapper, x, id)
 function tglHandler1(tglWrapper)
 {
     var tgl = tglWrapper.querySelector('.tgl1');
-    var node = chart.get(tgl.parentElement.parentElement.getAttribute('node-id'));
+    var node = chart.get(tgl.parentElement.parentElement.getAttribute('data-n-id'));
     var cx = tgl.getAttribute('cx');
     if (cx == 32) {
         tgl.setAttribute("cx", 42);
@@ -59,8 +59,8 @@ window.onload = function ()
         + '<text style="font-size: 12px;" fill="#353535" x="90" y="95" text-anchor="middle" font-weight="bold">Switch On</text>'
         ;
 
-    OrgChart.templates.mainTemplate.field_0 = '<text width="148" class="field_0"  style="font-size: 14px;" font-weight="bold" fill="#353535" x="84" y="35" text-anchor="middle">{val}</text>';
-    OrgChart.templates.mainTemplate.field_1 = '<text width="148" class="field_1"  style="font-size: 12px;" fill="#5b5b5b" x="84" y="60" text-anchor="middle">{val}</text>';
+    OrgChart.templates.mainTemplate.field_0 = '<text data-width="148" class="field_0"  style="font-size: 14px;" font-weight="bold" fill="#353535" x="84" y="35" text-anchor="middle">{val}</text>';
+    OrgChart.templates.mainTemplate.field_1 = '<text data-width="148" class="field_1"  style="font-size: 12px;" fill="#5b5b5b" x="84" y="60" text-anchor="middle">{val}</text>';
 
     OrgChart.templates.mainTemplateBlue = Object.assign({}, OrgChart.templates.mainTemplate);
     OrgChart.templates.mainTemplateBlue.node =

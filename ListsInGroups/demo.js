@@ -4,7 +4,7 @@ window.onload = function () {
     OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
     OrgChart.templates.myTemplate.size = [250, 20];
     OrgChart.templates.myTemplate.node = '';
-    OrgChart.templates.myTemplate.name  = '<text width="230" style="font-size: 16px;" fill="blue" x="125" y="15" text-anchor="middle">{val}</text>';
+    OrgChart.templates.myTemplate.name  = '<text data-width="230" style="font-size: 16px;" fill="blue" x="125" y="15" text-anchor="middle">{val}</text>';
     OrgChart.templates.myTemplate.img_0 = '';
 
       var chart = new OrgChart(document.getElementById("tree"), {

@@ -4,7 +4,7 @@ window.onload = function () {
     OrgChart.templates.group.min = Object.assign({}, OrgChart.templates.group);
     OrgChart.templates.group.min.imgs = "{val}";
     OrgChart.templates.group.min.img_0 = "";
-    OrgChart.templates.group.min.description = '<text width="230" text-overflow="multiline" style="font-size: 14px;" fill="#aeaeae" x="125" y="100" text-anchor="middle">{val}</text>';
+    OrgChart.templates.group.min.description = '<text data-width="230" data-text-overflow="multiline" style="font-size: 14px;" fill="#aeaeae" x="125" y="100" text-anchor="middle">{val}</text>';
 
 
     var chart = new OrgChart(document.getElementById("tree"), {

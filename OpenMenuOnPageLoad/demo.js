@@ -16,7 +16,7 @@ window.onload = function () {
     });
     
     chart.on('init', function(){
-        var menu = document.querySelector('[control-export-menu]');
+        var menu = document.querySelector('[data-ctrl-menu]');
     		menu.click();
     });
     

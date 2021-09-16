@@ -11,7 +11,7 @@ html, body{
     height:100%;
   }
   
-  [data-field-name] [lbl]{
+  [data-f-name] [data-lbl]{
     display: none;
   }
   

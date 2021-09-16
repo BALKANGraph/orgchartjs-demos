@@ -31,7 +31,7 @@ window.onload = function () {
                 '</svg>';      
                 
             OrgChart.templates.group.min = Object.assign({}, OrgChart.templates.group);
-            OrgChart.templates.group.min.name = '<text width="230" text-overflow="multiline" style="font-size: 24px;" fill="#aeaeae" x="125" y="65" text-anchor="middle">{val}</text>';
+            OrgChart.templates.group.min.name = '<text data-width="230" data-text-overflow="multiline" style="font-size: 24px;" fill="#aeaeae" x="125" y="65" text-anchor="middle">{val}</text>';
             OrgChart.templates.group.minBtn = btnMinimize +
                 '<rect data-btn-min="{val}" x="410" y="17" height="24" width="24" fill="red" fill-opacity="0" opastroke-width="1" stroke="#aeaeae"></rect>';
             OrgChart.templates.group3 = Object.assign({}, OrgChart.templates.group);
