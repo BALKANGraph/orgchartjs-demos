@@ -80,7 +80,7 @@ chart.on('redraw', function () {
           e.preventDefault();
           e.stopPropagation();
         //  alert("My logic goes here for node with id: " + this.parentNode.getAttribute('data-n-id'));
-         window.open("https://balkangraph.com");
+         window.open("https://balkan.app");
         })
       }
     });

@@ -13,7 +13,7 @@ window.onload = function () {
                    icon: OrgChart.icon.pdf(24, 24),
                    onClick: function () {
                        chart.exportPDF({
-                           header: '<img  src="https://balkangraph.com/content/img/logo.png" />',
+                           header: '<img  src="https://balkan.app/content/img/logo.png" />',
                            footer: 'my footer goes here',
                            format: 'A4',
                            margin: [90, 20, 60, 20]

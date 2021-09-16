@@ -45,11 +45,11 @@ OrgChart.templates.myTemplate.scaleLessThen = {
             img_0: "img"
         },
         nodes: [
-            { id: 1, name: "Billy Moore", title: "CEO", img: "https://balkangraph.com/js/img/2.jpg" },
-            { id: 2, pid: 1, name: "Billie Rose", title: "Dev Team Lead", department: "Development", img: "https://balkangraph.com/js/img/5.jpg" },
+            { id: 1, name: "Billy Moore", title: "CEO", img: "https://balkan.app/js/img/2.jpg" },
+            { id: 2, pid: 1, name: "Billie Rose", title: "Dev Team Lead", department: "Development", img: "https://balkan.app/js/img/5.jpg" },
 
-            { id: 3, pid: 1, tags: ["HRs"], name: "Glenn Bell", title: "HR", department: "Human Resources", img: "https://balkangraph.com/js/img/10.jpg" },
-            { id: 4, pid: 1, tags: ["HRs", "Node with unique template"], name: "Blair Francis", title: "HR", department: "Human Resources", img: "https://balkangraph.com/js/img/11.jpg" }
+            { id: 3, pid: 1, tags: ["HRs"], name: "Glenn Bell", title: "HR", department: "Human Resources", img: "https://balkan.app/js/img/10.jpg" },
+            { id: 4, pid: 1, tags: ["HRs", "Node with unique template"], name: "Blair Francis", title: "HR", department: "Human Resources", img: "https://balkan.app/js/img/11.jpg" }
         ]
     });    
 };
