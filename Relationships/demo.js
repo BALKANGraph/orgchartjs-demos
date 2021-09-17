@@ -368,7 +368,7 @@ chart.nodeCircleMenuUI.on('click', function (sender, args) {
 
 function setClinkStrokeWidth(removeClink, width) {
     if (removeClink) {
-        var clinkElement = chart.element.querySelector('[c-link-from="' + removeClink.from + '"][c-link-to="' + removeClink.to + '"] path');
+        var clinkElement = chart.element.querySelector('[data-c-l-from="' + removeClink.from + '"][data-c-l-to="' + removeClink.to + '"] path');
         if (clinkElement) {
             clinkElement.setAttribute('stroke-width', width);
         }

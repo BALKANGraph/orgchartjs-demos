@@ -11,10 +11,10 @@ html, body {
     height: 100%;
 }
 
-[c-link-from]:hover {
+[data-c-l-from]:hover {
     cursor: pointer !important;
 }
 
-[c-link-from]:hover>path:first-child {
+[data-c-l-from]:hover>path:first-child {
     stroke-width: 3;
 }
