@@ -29,10 +29,10 @@
 
 
         chart.on('redraw', function (sender) {
-            var allNodesRect = document.querySelectorAll('[node-id] rect');
+            var allNodesRect = document.querySelectorAll('[data-n-id] rect');
             for (i = 0; i < allNodesRect.length; i++) {
-                var text = document.querySelectorAll('[node-id="' + (i + 1) + '"] text');
-                var allNodeTspans = document.querySelectorAll('[node-id="' + (i + 1) + '"] text tspan');
+                var text = document.querySelectorAll('[data-n-id="' + (i + 1) + '"] text');
+                var allNodeTspans = document.querySelectorAll('[data-n-id="' + (i + 1) + '"] text tspan');
                 
 
                 if (allNodeTspans.length == 2) {
