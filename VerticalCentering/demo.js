@@ -10,11 +10,11 @@
             + '<rect x="0" y="75" height="25" width="100" fill="#a6a59a"  stroke-width="3" stroke="#808080"></rect>'
             + '<rect x="100" y="75" height="25" width="100" fill="#e2eafb" stroke-width="3" stroke="#808080"></rect>';
         OrgChart.templates.small.link = '<path stroke-linejoin="round" stroke="#808080" stroke-width="3px" fill="none" d="{rounded}" />';
-        OrgChart.templates.small.field_0 = '<text width="158" text-overflow="ellipsis" style="font-size: 18px;" fill="#fff" x="80" y="18" text-anchor="middle">{val}</text>';
-        OrgChart.templates.small.field_1 = '<text width="192" text-overflow="multiline" style="font-size: 18px;" fill="#757575" x="100" y="57" text-anchor="middle">{val}</text>';
-        OrgChart.templates.small.field_2 = '<text width="38" text-overflow="ellipsis" style="font-size: 18px;" fill="#808080" font-weight="bold" x="180" y="19" text-anchor="middle">{val}</text>';
-        OrgChart.templates.small.field_3 = '<text width="98" text-overflow="ellipsis" style="font-size: 18px;" fill="#fff" font-weight="bold" x="50" y="94" text-anchor="middle">{val}</text>';
-        OrgChart.templates.small.field_4 = '<text width="98" text-overflow="ellipsis" style="font-size: 18px;" fill="#808080" font-weight="bold" x="150" y="94" text-anchor="middle">{val}</text>';
+        OrgChart.templates.small.field_0 = '<text width="158" data-text-overflow="ellipsis" style="font-size: 18px;" fill="#fff" x="80" y="18" text-anchor="middle">{val}</text>';
+        OrgChart.templates.small.field_1 = '<text width="192" data-text-overflow="multiline" style="font-size: 18px;" fill="#757575" x="100" y="57" text-anchor="middle">{val}</text>';
+        OrgChart.templates.small.field_2 = '<text width="38" data-text-overflow="ellipsis" style="font-size: 18px;" fill="#808080" font-weight="bold" x="180" y="19" text-anchor="middle">{val}</text>';
+        OrgChart.templates.small.field_3 = '<text width="98" data-text-overflow="ellipsis" style="font-size: 18px;" fill="#fff" font-weight="bold" x="50" y="94" text-anchor="middle">{val}</text>';
+        OrgChart.templates.small.field_4 = '<text width="98" data-text-overflow="ellipsis" style="font-size: 18px;" fill="#808080" font-weight="bold" x="150" y="94" text-anchor="middle">{val}</text>';
 
         var chart = new OrgChart(document.getElementById('tree'), {
             template: 'small',
