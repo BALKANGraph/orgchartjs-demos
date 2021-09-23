@@ -44,11 +44,13 @@ window.onload = function () {
  
          ];
 
-    chart.on('field', function(sender, args){
-        if (args.name == "subLevel"){
-            args.value = sender.get(args.node.id).tags[0];
-        }
-     });
+         chart.on('field', function(sender, args){
+            if (args.name == "subLevel" && !args.node.id.toString().includes("sub_level_index")){
+              console.log(args.node.id);
+                args.value = sender.get(args.node.id).tags[0];
+            }
+         });
+    
 
      chart.load(nodes);
  };
