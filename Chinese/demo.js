@@ -50,7 +50,7 @@ chart.on('redraw', function (sender) {
             var text = document.querySelectorAll('[data-n-id="' + (i + 1) + '"] text');
             var allNodeTspans = document.querySelectorAll('[data-n-id="' + (i + 1) + '"] text tspan');
             if (allNodeTspans.length > 0)
-              newY = allNodeTspans.length*27 - 30;
+                var newY = (allNodeTspans.length - 1)*27;
             if (text[1])
                 text[1].setAttribute("x", newY);
         }
