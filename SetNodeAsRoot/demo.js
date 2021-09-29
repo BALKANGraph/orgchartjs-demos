@@ -9,7 +9,7 @@ window.onload = function () {
                 onClick: function(nodeId){
                     if (chart.config.roots.indexOf(nodeId) == -1){
                         chart.config.roots.push(nodeId);
-                        chart.draw(OrgChart.action.update, {id: nodeId});
+                        chart.draw();
                     }
                 }
             }
