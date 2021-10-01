@@ -134,7 +134,10 @@ window.onload = function () {
             "it-team-member": {
               template: "itTemplate",
             }
-        }
+        },
+        clinks: [
+            { from: 11, to: 18 }
+        ]
     });
 
     chart.nodeCircleMenuUI.on('click', function (sender, args) {
