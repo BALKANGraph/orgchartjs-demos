@@ -1,4 +1,4 @@
-OrgChart.templates.ana.html = '<foreignobject class="node" x="50" y="40" width="160" height="150"><div class="table-section"><form><input value="{val}" id="txtNewNodeContentID" type="text" class="input-field"><br /><button type="button" class="btn">Submit</button></form></div></foreignobject>';
+OrgChart.templates.ana.html = '<foreignobject style="pointer-events: none;" x="50" y="40" width="160" height="150"><div class="table-section"><form><input value="{val}" id="txtNewNodeContentID" type="text" class="input-field"><br /><button type="button" class="btn">Submit</button></form></div></foreignobject>';
         
 var chart = new OrgChart(document.getElementById("tree"), {
 		enableDragDrop: true,
@@ -42,32 +42,34 @@ var chart = new OrgChart(document.getElementById("tree"), {
 
             });
 
-chart.on('drag', function(){
-    var txts = document.querySelectorAll('foreignobject');
-    for(var i = 0; i < txts.length; i++){
-        txts[i].style.pointerEvents = 'none';
-    }
-});
+// To prevent drag and drop clicking on the form, use the commented code
+
+// chart.on('drag', function(){
+//     var txts = document.querySelectorAll('foreignobject');
+//     for(var i = 0; i < txts.length; i++){
+//         txts[i].style.pointerEvents = 'none';
+//     }
+// });
       
 
-chart.on('drop', function(){
-    var txts = document.querySelectorAll('foreignobject');
-    for(var i = 0; i < txts.length; i++){
-        txts[i].style.pointerEvents = '';
-    }
-});
+// chart.on('drop', function(){
+//     var txts = document.querySelectorAll('foreignobject');
+//     for(var i = 0; i < txts.length; i++){
+//         txts[i].style.pointerEvents = '';
+//     }
+// });
 
-chart.on('redraw', function (sender, args) {
+// chart.on('redraw', function (sender, args) {
     		
-    var fo = document.querySelectorAll('input');
+//     var fo = document.querySelectorAll('input');
 
-for(var i = 0; i < fo.length; i++){
-    fo[i].addEventListener('mousedown', function(e){
-                  e.preventDefault();
-                  e.cancelBubble = true;
-              });
-    }
-});
+// for(var i = 0; i < fo.length; i++){
+//     fo[i].addEventListener('mousedown', function(e){
+//                   e.preventDefault();
+//                   e.cancelBubble = true;
+//               });
+//     }
+// });
 
     chart.load([
         { id: "1", html: "asdfasd" },
