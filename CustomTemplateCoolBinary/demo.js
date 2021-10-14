@@ -53,16 +53,19 @@ chart = new OrgChart(document.getElementById('tree'), {
 });
 
 chart.on('click', function (sender, args) {
-  
-    if (args.node.templateName == "empty") {
+  var target = args.event.target;
+  if (target && target.classList.contains('arrow')) {
+      window.open("https://balkan.app");
+  }
+  else if (args.node.templateName == "empty") {
       sender.editUI.show(args.node.id, false);
-    }
-    else{
+  }
+  else {
       sender.editUI.show(args.node.id, true);
-    }
+  }
 
-    return false;
-});  
+  return false;
+});
 
 chart.on('update', function (sender, oldNode, newNode) {
   var lNodeId = newNode.id + "l";
@@ -72,18 +75,6 @@ chart.on('update', function (sender, oldNode, newNode) {
     .add({id: rNodeId, pid: newNode.id, tags: ["empty"]})
     .draw();
 });  
-
-chart.on('redraw', function () {
-      var btns = document.querySelectorAll('.arrow');
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener('click', function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-        //  alert("My logic goes here for node with id: " + this.parentNode.getAttribute('data-n-id'));
-         window.open("https://balkan.app");
-        })
-      }
-    });
 
 
 chart.load([
