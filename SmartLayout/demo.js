@@ -86,7 +86,7 @@ window.onload = function () {
         });
 
         chart.on('field', function (sender, args) {
-            if (args.name == 'up' && args.node.templateName == 'big' && !OrgChart.isNullOrEmpty(args.node.pid)) {
+            if (args.name == 'up' && args.node.templateName == 'big' && !OrgChart.isNEU(args.node.pid)) {
                 if (!args.node.parent) {
                     args.value = '';
                     args.element = '<g data-top=""><rect x="0" y="0" height="20" width="170" fill="#aeaeae" stroke-width="1" stroke="#aeaeae"></rect><path fill="#fff" d="M75,15 L85,5 L95,15"></path></g>';

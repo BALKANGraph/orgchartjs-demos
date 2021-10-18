@@ -250,7 +250,7 @@ chart.nodeCircleMenuUI.on('show', function (sender, args) {
 });
 
 chart.nodeCircleMenuUI.on('drop', function (sender, args) {
-    if (!OrgChart.isNullOrEmpty(args.from) && !OrgChart.isNullOrEmpty(args.to) && args.from != args.to) {
+    if (!OrgChart.isNEU(args.from) && !OrgChart.isNEU(args.to) && args.from != args.to) {
         var action = 'create';
         chart.addClink(args.from, args.to, null, args.menuItem.template).draw(OrgChart.action.update, null, function(){
             var d = null;

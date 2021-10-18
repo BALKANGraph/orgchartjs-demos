@@ -1,7 +1,7 @@
 
 window.onload = function () { 
     var chart = new OrgChart(document.getElementById("tree"), {
-        template: "derek",
+        template: "ana",
         enableDragDrop: true,
         menu: {
             pdf: { text: "Export PDF" },

@@ -12,11 +12,6 @@ window.onload = function () {
             	chart.config.template = "olivia"; 
               chart.draw();
             }},
-            changeToDerek: { text: "derek", icon: OrgChart.icon.details(24,24, '#ccc'), onClick: function () {
-   
-              chart.config.template = "derek"; 
-              chart.draw();
-            }},
             changeToMila: { text: "mila", icon: OrgChart.icon.details(24,24, '#ccc'), onClick: function () {
               
               chart.config.template = "mila"; 

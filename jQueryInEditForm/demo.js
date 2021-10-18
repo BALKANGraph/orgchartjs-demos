@@ -22,7 +22,7 @@ chart.editUI.on('field', function (sender, args) {
   if (args.type == 'edit' && args.name == 'state') {
     var inp = args.field.querySelector('[data-val]');
     var value = inp.value;
-    if (!OrgChart.isNullOrEmpty(value)) {
+    if (!OrgChart.isNEU(value)) {
       value = value.split(',');
     }
     else {
@@ -43,7 +43,7 @@ chart.editUI.on('field', function (sender, args) {
       });
       $('#select').on('change', function () {
         var value = $('#select').val();
-        if (!OrgChart.isNullOrEmpty(value)) {
+        if (!OrgChart.isNEU(value)) {
           value = value;
         }
         else {
