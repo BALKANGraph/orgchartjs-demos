@@ -1,7 +1,8 @@
 var chart;
 window.onload = function () {
     chart = new OrgChart(document.getElementById("tree"), {
-        template: "ana",
+        template: "olivia",
+        mode: 'dark',
         layout: OrgChart.mixed,
         mouseScrool: OrgChart.none,
         menu: {
