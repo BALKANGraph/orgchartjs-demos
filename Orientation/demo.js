@@ -1,7 +1,8 @@
 
 window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
-        template: "olivia",
+        template: "olivia",        
+        enableSearch: false,
         nodes: [
             { id: 1 },
             { id: 2, pid: 1},
