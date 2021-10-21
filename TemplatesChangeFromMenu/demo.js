@@ -2,11 +2,6 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
     enableSearch: false,
         menu: {
-            changeToLuba: { text: "luba", icon: OrgChart.icon.details(24,24, '#ccc'), onClick: function () {
-   
-            	chart.config.template = "luba"; 
-              chart.draw();
-            }},
             changeToOlivia: { text: "olivia", icon: OrgChart.icon.details(24,24, '#ccc'), onClick: function () {
    
             	chart.config.template = "olivia"; 

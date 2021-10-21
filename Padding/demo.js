@@ -1,5 +1,6 @@
 var chart = new OrgChart(document.getElementById("tree"), {
-    template: "luba",
+    template: 'olivia',
+    mode: 'dark',
     layout: OrgChart.mixed,
     mouseScrool: OrgChart.none,
     menu: {

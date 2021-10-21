@@ -1,10 +1,11 @@
 window.onload = function () {
     var selectedId = null;
-        OrgChart.templates.luba.defs += '<filter id="f1" > \
+        OrgChart.templates.olivia.defs += '<filter id="f1" > \
                     <feGaussianBlur in="SourceGraphic" stdDeviation="4" /> \
                     </filter>';
         var chart = new OrgChart(document.getElementById("tree"), {
-            template: 'luba',
+            template: 'olivia',
+            mode: 'dark',
             orientation: OrgChart.orientation.bottom,
             nodeBinding: {
                 field_0: "name",

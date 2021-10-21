@@ -43,8 +43,9 @@ var chart;
 
 
 window.onload = function () {
-    chart = new OrgChart(document.getElementById('tree'), {
-        template: 'luba',
+    chart = new OrgChart(document.getElementById('tree'), {  
+        template: 'olivia',
+        mode: 'dark',
         menu: {
             'csv-import': {
                 icon: OrgChart.icon.csv(24, 24, '#7A7A7A'),

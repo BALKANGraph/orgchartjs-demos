@@ -9,8 +9,9 @@ window.onload = function () {
         }
       
 
-    var chart = new OrgChart(document.getElementById("tree"), {
-        template: "luba",                  
+    var chart = new OrgChart(document.getElementById("tree"), {    
+        template: 'olivia',
+        mode: 'dark',             
         nodeBinding: {
             field_0: "id",
             field_1: "pid"

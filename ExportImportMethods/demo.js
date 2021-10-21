@@ -35,7 +35,8 @@ window.onload = function () {
     });
 
     chart = new OrgChart(document.getElementById("tree"), {
-        template: 'luba',
+        template: 'olivia',
+        mode: 'dark',
         enableSearch: false,
         nodes: [
             { id: 1 },

@@ -2,7 +2,8 @@
 
 window.onload = function () {
     var chart1 = new OrgChart(document.getElementById("chart1"), {
-        template: 'luba',
+        template: 'olivia',
+        mode: 'dark',
         nodeBinding: {
             field_0: "id",
             field_1: "pid"

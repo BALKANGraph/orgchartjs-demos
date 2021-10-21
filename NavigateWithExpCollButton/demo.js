@@ -2,8 +2,9 @@
 
 window.onload = function () {
 
-    var chart = new OrgChart(document.getElementById('tree'), {
-        template: 'luba',
+    var chart = new OrgChart(document.getElementById('tree'), {    
+        template: 'olivia',
+        mode: 'dark',
         nodeMouseClick: OrgChart.action.none,
         enableSearch: false,
         nodeBinding: {

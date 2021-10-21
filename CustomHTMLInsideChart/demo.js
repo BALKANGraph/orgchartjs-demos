@@ -3,7 +3,8 @@
 window.onload = function () {
     var initialized = false;
     var chart = new OrgChart(document.getElementById("tree"), {
-        template: "luba",                  
+        template: 'olivia',
+        mode: 'dark',                
         nodeBinding: {
             field_0: "id",
             field_1: "pid"

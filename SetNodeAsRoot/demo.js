@@ -1,7 +1,8 @@
    
 window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), {
-        template: "luba",
+        template: 'olivia',
+        mode: 'dark',
         nodeMenu: {
             rood:{
                 icon: '',
