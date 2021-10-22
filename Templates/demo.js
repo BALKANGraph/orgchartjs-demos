@@ -3,7 +3,6 @@ window.onload = function () {
     var chart = new OrgChart(document.getElementById("tree"), { 
         template: 'olivia',
         layout: OrgChart.mixed,
-        enableSearch: false,
         nodeBinding: {
             img_0: "img",
             field_0: "name",
