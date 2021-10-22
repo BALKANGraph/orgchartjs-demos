@@ -1,7 +1,0 @@
----
-authors: 
-  - "BALKAN Software"
-  - "Plamen Peshev"
-description: "This OrgChart JS demo shows how to edit a field in the detail view. We are adding a multiline field instead of the existing input field."
-name: "Edit a detail field - Demos | BALKAN OrgChartJS"
-...
