@@ -15,8 +15,7 @@ window.onload = function () {
                         name: "Added Parent"
                     })
                     .update(mainNode)
-                    .draw();
-                    chart.center(id);
+                    .changeRoots(mainNode.id, [id]);
                 }
             },
             add: { text: "Add Child" },
@@ -28,8 +27,6 @@ window.onload = function () {
 
         nodes: [
             { id: 1, name: "Denny Curtis", title: "CEO" },
-        ]
-
+        ]    
     });
-
 };
