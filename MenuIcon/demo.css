@@ -12,3 +12,6 @@ html, body {
     height: 100%;
 }
 
+[data-ctrl-menu] {
+    z-index: 1;
+}
