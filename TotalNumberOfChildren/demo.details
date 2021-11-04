@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to count the total number of children including the parent node itself."
+description: "This Org Chart JS example demonstrates how to count the total number of children including the parent node itself."
 name: "Total Number of Children - Demos | BALKAN OrgChartJS"
 ...

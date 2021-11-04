@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates you how to export a legend (another html element)."
+description: "This Org Chart JS example demonstrates you how to export a legend (another html element)."
 name: "Export legend - Demos | BALKAN OrgChartJS"
 ...

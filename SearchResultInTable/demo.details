@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to customize the search dropdown list to be in a table format."
+description: "This Org Chart JS example demonstrates how to customize the search dropdown list to be in a table format."
 name: "Search result in a table - Demos | BALKAN OrgChartJS"
 ...

@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo defines second root node positioned on the second level."
+description: "This Org Chart JS demo defines second root node positioned on the second level."
 name: "Root From Second Level"
 ...

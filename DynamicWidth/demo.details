@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows you how you can create dynamic width of nodes."
+description: "This Org Chart JS demo shows you how you can create dynamic width of nodes."
 name: "Dynamic Width of Nodes - Demos | BALKAN OrgChartJS"
 ...

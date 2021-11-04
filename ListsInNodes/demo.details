@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to create nodes containing lists with dynamic templates."
+description: "This Org Chart JS example demonstrates how to create nodes containing lists with dynamic templates."
 name: "Lists in nodes with dynamic templates - Demos | BALKAN OrgChartJS"
 ...

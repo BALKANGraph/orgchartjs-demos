@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Fade animation demo with OrgChart JS. To remove the transform, uncomment the commented code."
+description: "Fade animation demo with Org Chart JS. To remove the transform, uncomment the commented code."
 name: "Fade on Expand - Demos | BALKAN OrgChartJS"
 ...

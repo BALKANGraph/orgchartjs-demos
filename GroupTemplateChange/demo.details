@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to change the template color of a group."
+description: "This Org Chart JS example demonstrates how to change the template color of a group."
 name: "Group template change - Demos | BALKAN OrgChartJS"
 ...

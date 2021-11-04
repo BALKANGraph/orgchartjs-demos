@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Custom template with employee number, children count and tooltip on a svg icon."
+description: "Custom Org Chart JS template with employee number, children count and tooltip on a svg icon."
 name: "Custom template children count - Demos | BALKAN OrgChartJS"
 ...

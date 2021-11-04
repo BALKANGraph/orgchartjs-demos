@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to: add context menu in groups, override menu items in dragDropMenu and use drop event to prevent drag or drop specified node."
+description: "This Org Chart JS example demonstrates how to: add context menu in groups, override menu items in dragDropMenu and use drop event to prevent drag or drop specified node."
 name: " Context Menu in Groups - Demos | BALKAN OrgChartJS"
 ...

@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Conditional nodeMenu items in OrgChart JS. How to define node menu items for specific nodes and use font awesome icons."
+description: "Conditional nodeMenu items in Org Chart JS. How to define node menu items for specific nodes and use font awesome icons."
 name: "Conditional Node Menu Items - Demos | BALKAN OrgChartJS"
 ...

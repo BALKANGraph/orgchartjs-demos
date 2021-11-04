@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Highlight selected node and its parents with OrgChart JS. Trace an employee's management chain."
+description: "Highlight selected node and its parents with Org Chart JS. Trace an employee's management chain."
 name: "Highlight selected node and its parents - Demos | BALKAN OrgChartJS"
 ...

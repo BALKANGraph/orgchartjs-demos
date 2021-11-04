@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to undo drag&drops."
+description: "This Org Chart JS example demonstrates how to undo drag&drops."
 name: "Drag&Drop Undo - Demos | BALKAN OrgChartJS"
 ...

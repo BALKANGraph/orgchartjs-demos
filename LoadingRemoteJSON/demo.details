@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to load the data from a remote JSON file."
+description: "This Org Chart JS example demonstrates how to load the data from a remote JSON file."
 name: "Loading remote JSON - Demos | BALKAN OrgChartJS"
 ...

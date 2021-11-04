@@ -2,5 +2,5 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows you how you can have only two layouts oppening from the toolbar."
+description: "This Org Chart JS demo shows you how you can have only two layouts oppening from the toolbar."
 name: "2 node layouts from toolbar"

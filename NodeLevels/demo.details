@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This demo shows you how to get the node levels of the chart nodes and how to count them."
+description: "This Org Chart JS demo shows you how to get the node levels of the chart nodes and how to count them."
 name: "Node Levels - Demos | BALKAN OrgChartJS"
 ...

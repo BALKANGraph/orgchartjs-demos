@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo is showing default image if image is missing in the node data."
+description: "This Org Chart JS demo is showing default image if image is missing in the node data."
 name: "Default Image - Demos | BALKAN OrgChartJS"
 ...

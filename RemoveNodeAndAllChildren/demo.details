@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows how you can remove (delete) node with all its children."
+description: "This Org Chart JS demo shows how you can remove (delete) node with all its children."
 name: "Remove Node And his Children - Demos | BALKAN OrgChartJS"
 ...

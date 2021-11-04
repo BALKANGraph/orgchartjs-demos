@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows you how you can use PDF A4 export for a specific node and its childrens."
+description: "This Org Chart JS demo shows you how you can use PDF A4 export for a specific node and its childrens."
 name: "PDF A4 export for a node - Demos | BALKAN OrgChartJS"
 ...

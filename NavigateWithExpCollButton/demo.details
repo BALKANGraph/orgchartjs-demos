@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Click on the expand button to see the effect"
+description: "Org Chart JS navigation with Expand/Collapse. Click on the expand down or up button to see the effect."
 name: "Navigate with expand collapse button - Demos | BALKAN OrgChartJS"
 ...

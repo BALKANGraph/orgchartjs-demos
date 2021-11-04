@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to count collapsed nodes in the expand/collapse button."
+description: "This Org Chart JS example demonstrates how to count collapsed nodes in the expand/collapse button."
 name: "Count Collapsed Nodes - Demos | BALKAN OrgChartJS"
 ...

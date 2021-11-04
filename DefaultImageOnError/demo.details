@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo is showing default image if image url is not working."
+description: "This Org Chart JS demo is showing default image if image url is not working."
 name: "Default Image On Error - Demos | BALKAN OrgChartJS"
 ...

@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Custom menu for the last level nodes in OrgChart JS. In this demo only the last level nodes have 'Remove' option."
+description: "Custom menu for the last level nodes in Org Chart JS. In this demo only the last level nodes have 'Remove' option."
 name: "Custom menu for the last level nodes - Demos | BALKAN OrgChartJS"
 ...

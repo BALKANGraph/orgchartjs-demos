@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "Hide 'Add new field' in the OrgChart JS edit form."
+description: "Hide 'Add new field' in the Org Chart JS edit form."
 name: "Hide 'Add new field' - Demos | BALKAN OrgChartJS"
 ...

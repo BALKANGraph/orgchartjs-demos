@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how to add custom svg tooltip to a node or a field. Use the commented code for a field"
+description: "This Org Chart JS example demonstrates how to add custom svg tooltip to a node or a field. Use the commented code for a field"
 name: "Tooltip - Demos | BALKAN OrgChartJS"
 ...

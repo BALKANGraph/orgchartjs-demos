@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows how you can manage relationships using the nodeCircleMenu."
+description: "This Org Chart JS demo shows how you can manage relationships using the nodeCircleMenu."
 name: "Relationships - Demos | BALKAN OrgChartJS"
 ...

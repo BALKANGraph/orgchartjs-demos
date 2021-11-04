@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows you how to disable drag and drop on some nodes."
+description: "This Org Chart JS demo shows you how to disable drag and drop on some nodes."
 name: "Disable drag and drop on some nodes - Demos | BALKAN OrgChartJS"
 ...

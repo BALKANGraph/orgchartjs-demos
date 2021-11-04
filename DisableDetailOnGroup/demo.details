@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS demo shows you how to disable details(edit) form show on group click."
+description: "This Org Chart JS demo shows you how to disable details(edit) form show on group click."
 name: "Disable Details on Groups - Demos | BALKAN OrgChartJS"
 ...

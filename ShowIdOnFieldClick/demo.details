@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example show you how to get the 'id' on a field click. Click in a node field to alert the id of the node."
+description: "This Org Chart JS example show you how to get the 'id' on a field click. Click in a node field to alert the id of the node."
 name: "Show ID on a field click - Demos | BALKAN OrgChartJS"
 ...

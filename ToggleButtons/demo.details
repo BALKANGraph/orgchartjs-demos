@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This OrgChart JS example demonstrates how you can add a toggle button to nodes and links."
+description: "This Org Chart JS example demonstrates how you can add a toggle button to nodes and links."
 name: "Toggle Button - Demos | BALKAN OrgChartJS"
 ...
