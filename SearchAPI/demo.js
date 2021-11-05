@@ -22,7 +22,7 @@ window.onload = function () {
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", function () {
             var searchname = this.innerHTML;
-            var result = chart.find(searchname);
+            var result = chart.search(searchname);
             if (result.length == 1) {
                 chart.center(result[0].id);
 
