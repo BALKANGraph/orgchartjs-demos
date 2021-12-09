@@ -2,6 +2,6 @@
 authors: 
   - "BALKAN Software"
   - "Plamen Peshev"
-description: "This Org Chart JS demo shows you how to conditionaly change the layout."
+description: "In this Org Chart JS demo the Layout is changed conditionaly to OrgChart.Tree. You can change it back to normal by clicking on the button."
 name: "Change Layout - Demos | BALKAN OrgChartJS"
 ...

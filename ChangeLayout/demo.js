@@ -30,4 +30,9 @@ window.onload = function () {
   }
 
     chart.load(nodes);
+    
+    document.querySelector('#btn').addEventListener('click', function(){
+    	chart._layoutConfigs['base'].layout = OrgChart.normal;
+      chart.draw();
+    });
 }
