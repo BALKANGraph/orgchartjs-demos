@@ -1,5 +1,27 @@
 function err(image){
-    image.setAttribute("href", "https://cdn.balkan.app/shared/OrgChart-JS.svg")
+    var errImg = image.getAttribute("xlink:href");
+    var node = nodes.find( ({ Photo }) => Photo === errImg );
+    var errImg = image.getAttribute("xlink:href");
+    var node = nodes.find(({ Photo }) => Photo === errImg);
+    var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute("cx", "50"); 
+    circle.setAttribute("cy", "60"); 
+    circle.setAttribute("r", "41"); 
+    circle.setAttribute("fill", "white"); 
+  
+    var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    var name = node["Employee Name"];
+    var initials = name.split(" ").map((n)=>n[0]).join(".")  + ".";
+    text.innerHTML = initials;
+    text.setAttribute("x", "25"); 
+    text.setAttribute("y", "60");
+    text.setAttribute("fill", "#039BE5");
+    text.setAttribute("style", "font-size: 24px;");
+    image.parentNode.appendChild(circle);
+    image.parentNode.appendChild(text);
+
+  // to set image insted of initials, use the code below   
+  // image.setAttribute("href", "https://cdn.balkan.app/shared/OrgChart-JS.svg")
 }
 
 window.onload = function () {
