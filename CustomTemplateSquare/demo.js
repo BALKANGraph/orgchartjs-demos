@@ -155,26 +155,6 @@ window.onload = function () {
        switchSelected(nodeElement);
     });
 
-    chart.editUI.on('field', function(sender, args){
-
-      if (args.type == 'details' && args.name == 'team'){
-        return false;
-      }
-
-       
-      if (args.type == "details" && (args.name == "Business Unit" || args.name == "Work Location" 
-        || args.name == "Work Phone" || args.name == "Mobile Phone") ) {
-        var nodeId = sender.node.id;
-        var result = nodes.filter(obj => {
-          return obj.id === nodeId;
-        })
-
-        if (result[0].Name == 'Vacant') {
-          return false;
-        }
-        
-      }
-	  });
    
     chart.on('init', function(sender){
       sender.editUI.show(1);
