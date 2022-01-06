@@ -48,15 +48,15 @@ window.onload = function () {
                 else {
                     nodeLevel = chart.nodes[i].level;
                 }
-                if (nodeLevel == level){
+                if (nodeLevel == level && !String(chart.nodes[i].id).includes("mirror") && !String(chart.nodes[i].id).includes("split")){
                     collapseIds.push(chart.nodes[i].id);
                 }
-                else if (nodeLevel < level){
+                else if (nodeLevel < level && !String(chart.nodes[i].id).includes("mirror") && !String(chart.nodes[i].id).includes("split")){
                     expandIds.push(chart.nodes[i].id);
                 }
             }
-    
+
             chart.expandCollapse(id, expandIds, collapseIds);
     
-            });
+        });
 };
