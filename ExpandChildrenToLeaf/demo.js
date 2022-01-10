@@ -49,12 +49,14 @@ window.onload = function () {
             }
         };
     
-         chart.on('expcollclick', function (sender, collapsing, id, ids) {
-            var nodesToExpand = [];
-            iterate(sender, chart.getNode(id), nodesToExpand);
-            chart.expand(id, nodesToExpand)
-            return false;
-         });  
+        chart.on('expcollclick', function (sender, collapsing, id, ids) {
+            if (!collapsing) {
+                var nodesToExpand = [];
+                iterate(sender, chart.getNode(id), nodesToExpand);
+                chart.expand(id, nodesToExpand)
+                return false;
+            }
+        });  
     
         chart.load(nodes);
     };
